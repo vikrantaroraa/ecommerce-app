@@ -1,0 +1,32 @@
+.mobile__filter{
+    display: flex;
+    background-color: white; 
+    position: sticky;
+    bottom: 0;
+    z-index: 20;
+}
+
+.mobile__filter .sort{
+    display: flex;
+    flex: 1;
+    /* background-color: lightblue; */
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 0;
+    border: 1px solid lightgray;
+}
+
+.mobile__filter .filter{
+    display: flex;
+    flex: 1;
+    /* background-color: pink; */
+    align-items: center;
+    justify-content: center;
+    border: 1px solid lightgray;
+}
+
+@media only screen and (min-width: 425px){
+    .mobile__filter{
+        display: none;
+    }
+}

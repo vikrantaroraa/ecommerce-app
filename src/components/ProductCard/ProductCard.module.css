@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+
+.card {
+  background-color: white;
+  width: 14rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: space-between;
+  transition: transition 200ms ease-in;
+  margin: 0 10px 30px;
+  height: 480px;
+}
+
+.card img {
+  height: 90%;
+  width: 100%;
+}
+
+/* .card img:hover {
+    transform: scale(1.03);
+} */
+
+.product__name {
+  /* padding: 0.2rem 0.8rem 0.1rem; */
+  font-size: 16px;
+  font-weight: 600;
+  /* background-color: lightcoral; */
+}
+
+.product__name__and__heart {
+  padding: 0.2rem 0.8rem 0.1rem;
+  display: flex;
+  /* background-color: lightgreen; */
+  justify-content: space-between;
+}
+
+.card__description {
+  padding: 0.1rem 0.8rem;
+  text-align: left;
+  /* background-color: lightgreen; */
+}
+
+.card__price {
+  padding: 0.1rem 0.8rem;
+  text-align: left;
+  /* background-color: lightgreen; */
+}
+
+.card__price .price {
+  font-weight: 600;
+  margin-right: 0.3rem;
+}
+
+.card__price .strike__through__price {
+  text-decoration: line-through;
+  color: #7e818c;
+  font-size: 14px;
+  margin-right: 0.3rem;
+}
+
+.card__price .discount__percent {
+  font-size: 13px;
+  /* color: #ff905a; */
+  color: #000;
+}
+
+.card__button {
+  width: 100%;
+  padding: 0.15rem;
+  margin-right: 10rem;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.card:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+@media only screen and (max-width: 425px) {
+  .card {
+    width: 50%;
+    height: 345px;
+    margin: 0;
+    border: 1px solid lightgray;
+    /* background-color: #ff905a; */
+  }
+
+  .card img {
+    height: 85%;
+    width: 100%;
+  }
+
+  .card__price .price {
+    font-size: 14px;
+  }
+
+  .card__price .strike__through__price {
+    font-size: 12px;
+  }
+
+  .card:hover {
+    box-shadow: none;
+  }
+}

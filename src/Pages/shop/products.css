@@ -1,0 +1,71 @@
+.all__products {
+  display: flex;
+  /* background-color: red; */
+  /* width: 100vw; */
+  height: auto;
+}
+
+.all__products .products__filter {
+  background-color: lightgreen;
+  height: auto;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  /* scroll-behavior: auto; */
+}
+
+.all__products .products__container {
+  /* background-color: pink; */
+  height: auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+}
+
+.all__products .products__filter .categories__filter {
+  background-color: aqua;
+  flex: 1;
+  padding: 1.5rem 1rem;
+}
+
+.all__products .products__filter .categories__filter .filter__type {
+  font-weight: 550;
+}
+
+.all__products .products__filter .brand__filter {
+  background-color: lightcoral;
+  flex: 1;
+  padding: 1.5rem 1rem;
+}
+
+.all__products .products__filter .price__filter {
+  background-color: lightgoldenrodyellow;
+  flex: 1;
+  padding: 1.5rem 1rem;
+}
+
+.all__products .products__filter .discount__filter {
+  background-color: lavender;
+  flex: 1;
+  padding: 1.5rem 1rem;
+}
+/* .products{
+    display: flex;
+    background-color: green;
+    flex-direction: row;
+    height: 100%;
+    width: 50%;
+} */
+
+@media only screen and (max-width: 425px) {
+  .all__products .products__filter {
+    display: none;
+  }
+
+  .all__products .products__container {
+    padding: 0;
+    width: 100%;
+  }
+}
