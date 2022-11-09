@@ -1,5 +1,5 @@
-import { CartProductProps } from "./CartProduct.interface";
-import "./CartProduct.css";
+import { CartProductProps } from "src/components/CartProduct/CartProduct.interface";
+import "src/components/CartProduct/CartProduct.css";
 
 const CartProduct = ({
   id,

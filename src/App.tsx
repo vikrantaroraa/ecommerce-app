@@ -1,32 +1,22 @@
-import "./components/ProductCard/ProductCard";
-import "./App.css";
-
-import Header from "./components/Header";
-import MobileFilter from "./components/MobileFilter";
-import Products from "./Pages/shop/products";
-import { useCart } from "./context/cart-context";
-import { useState } from "react";
-import { Cart } from "./Pages/cart/cart";
-
-export function CartHeader() {
-  const { itemsInCart } = useCart();
-  return (
-    <>
-      <h2> Items in cart: {itemsInCart.length} </h2>
-      {console.log({ itemsInCart })}
-    </>
-  );
-}
+import Header from "src/components/Header/Header";
+import MobileFilter from "src/components/MobileFilter/MobileFilter";
+import AllProducts from "src/pages/Shop/AllProducts";
+import Cart from "src/pages/Cart/Cart";
+import Wishlist from "src/pages/Wishlist/Wishlist";
+import { Routes, Route } from "react-router-dom";
+import "src/App.css";
+import ProductDetails from "src/pages/Product/ProductDetails";
 
 function App() {
-  const [route, setRoute] = useState("products");
   return (
     <div className="App">
-      <button onClick={() => setRoute("products")}>Products</button>
-      <button onClick={() => setRoute("cart")}>Cart</button>
       <Header />
-      {route === "products" && <Products />}
-      {route === "cart" && <Cart />}
+      <Routes>
+        <Route path="/" element={<AllProducts />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/product/:productId" element={<ProductDetails />} />
+      </Routes>
       <MobileFilter />
     </div>
   );

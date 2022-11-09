@@ -5,8 +5,10 @@
   height: 5rem;
   -webkit-box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
   box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
-  /* position: fixed; */
-  /* position: -webkit-sticky; */
+  /* position: sticky;
+  position: fixed; */
+  /* top: 0; */
+  width: 100%;
 }
 
 @media only screen and (max-width: 425px) {

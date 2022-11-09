@@ -53,7 +53,6 @@
 }
 
 .card__price .strike__through__price {
-  text-decoration: line-through;
   color: #7e818c;
   font-size: 14px;
   margin-right: 0.3rem;

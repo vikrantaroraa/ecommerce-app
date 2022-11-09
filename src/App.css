@@ -13,3 +13,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }  */
+
+@media only screen and (max-width: 425px) {
+  .App {
+    padding: 10px;
+  }
+}

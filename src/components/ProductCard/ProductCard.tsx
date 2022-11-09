@@ -1,8 +1,6 @@
-import { useState } from "react";
-import styles from "./ProductCard.module.css";
+import styles from "src/components/ProductCard/ProductCard.module.css";
 import { v4 as uuidv4 } from "uuid";
-import { ProductCardProps } from "./ProductCard.interface";
-import { useCart } from "../../context/cart-context";
+import { ProductCardProps } from "src/components/ProductCard/ProductCard.interface";
 
 const ProductCard = ({
   id,
@@ -36,7 +34,7 @@ const ProductCard = ({
         <p className={styles.card__description}>{description}</p>
         <div className={styles.card__price}>
           <span className={styles.price}>Rs.{price}</span>
-          <span className={styles.strike__through__price}>Rs.1099</span>
+          <s className={styles.strike__through__price}>Rs.1099</s>
           <span className={styles.discount__percent}>( 45 % OFF )</span>
         </div>
         <button className={styles.card__button} onClick={onAddToCartClick}>
