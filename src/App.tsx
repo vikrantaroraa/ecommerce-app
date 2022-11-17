@@ -6,6 +6,9 @@ import Wishlist from "src/pages/Wishlist/Wishlist";
 import { Routes, Route } from "react-router-dom";
 import "src/App.css";
 import ProductDetails from "src/pages/Product/ProductDetails";
+import Login from "src/components/Login/Login";
+import ProtectedRoutes from "src/components/ProtectedRoutes/ProtectedRoutes";
+import Address from "src/pages/protectedPages/Address/Address";
 
 function App() {
   return (
@@ -13,9 +16,13 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<AllProducts />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/product/:productId" element={<ProductDetails />} />
+        <Route element={<ProtectedRoutes />}>
+          <Route path="/address" element={<Address />} />
+        </Route>
       </Routes>
       <MobileFilter />
     </div>

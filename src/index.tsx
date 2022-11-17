@@ -7,15 +7,18 @@ import reportWebVitals from "./reportWebVitals";
 import { WishListProvider } from "src/context/wishlist-context";
 import { CartProvider } from "src/context/cart-and-wishlist-context";
 import { BrowserRouter as Router } from "react-router-dom";
+import { AuthProvider } from "src/context/auth-context";
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <WishListProvider>
-        <CartProvider>
-          <App />
-        </CartProvider>
-      </WishListProvider>
+      <AuthProvider>
+        <WishListProvider>
+          <CartProvider>
+            <App />
+          </CartProvider>
+        </WishListProvider>
+      </AuthProvider>
     </Router>
   </React.StrictMode>,
   document.getElementById("root")
