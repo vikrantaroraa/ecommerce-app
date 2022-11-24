@@ -1,0 +1,65 @@
+details {
+  padding: 10px 0px;
+  /* box-shadow: inset 0 0 0 4px;
+  border-radius: 4px; */
+}
+
+details p {
+  display: flex;
+  text-align: left;
+}
+
+details summary {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+details summary::after {
+  content: "+";
+}
+
+details[open] summary::after {
+  content: "-";
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* .content {
+  overflow: hidden;
+  transition: max-height 0.8s ease-out !important;
+  -webkit-transition: 10px 0.8s;
+  -moz-transition: 10px 0.8s;
+  transition: 10px 0.8s;
+} */
+
+.collapsible-component {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  font-size: 16px;
+  /* background-color: lightcoral; */
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.component-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .collapsible-component {
+    font-size: 14px;
+  }
+  .component-title {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}

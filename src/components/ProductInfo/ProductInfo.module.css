@@ -1,0 +1,600 @@
+.product-info {
+  display: flex;
+  /* background-color: lightgrey; */
+  height: 100vh;
+  height: auto;
+  width: 100vh;
+  width: auto;
+}
+
+.product-images-container {
+  width: 50%;
+  height: 600px;
+  display: flex;
+  /* flex: 1; */
+  /* background-color: lightblue; */
+}
+
+.vertical-image-grid-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 600px;
+  width: 30%;
+  /* background-color: lightgreen; */
+}
+
+.product-image {
+  height: 100px;
+  width: 70px;
+  cursor: pointer;
+  /* background-color: red; */
+}
+
+.product-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.active-product-image-container {
+  display: flex;
+  /* background-color: lightpink; */
+  height: 100%;
+  width: 70%;
+  padding: 30px;
+}
+
+.active-product-image {
+  height: 460px;
+  width: 420px;
+  cursor: pointer;
+  /* background-color: lightgrey; */
+}
+
+.active-product-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.product-data-container {
+  width: 50%;
+  height: 100%;
+  /* flex: 1; */
+  /* background-color: lightcyan; */
+  padding: 30px;
+  margin-bottom: 50px;
+}
+
+.name-price-rating-offer {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  flex-direction: column;
+  margin-bottom: 25px;
+  /* background-color: lightpink; */
+}
+
+.product-category-and-type {
+  font-size: 25px;
+  font-weight: 500;
+  color: #4f5362;
+}
+
+.product-name {
+  color: #636363;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.rating-box {
+  display: inline-flex;
+  width: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+  color: #303030;
+  border: 0.3px solid #949494;
+  padding: 3px 8px;
+  font-size: 14px;
+  gap: 5px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.price-and-discount {
+  display: flex;
+  align-items: baseline;
+  justify-content: baseline;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 550;
+}
+
+.actual-price {
+  color: #7e818c;
+  font-size: 15px;
+}
+
+.discount {
+  background-color: #35932a;
+  border-radius: 6px;
+  padding: 5px 15px;
+  color: white;
+}
+
+.inclusive-of-all-taxes-line {
+  font-size: 12px;
+  color: #949494;
+}
+
+.color-and-size-grid {
+  display: flex;
+  flex-direction: column;
+  /* background-color: lightpink; */
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.color-grid {
+  margin-bottom: 15px;
+}
+
+.color-heading,
+.size-heading {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.color-name,
+.size-name {
+  color: #4c4c4c;
+}
+
+.size-options {
+  display: flex;
+  cursor: pointer;
+  padding-left: 5px;
+}
+
+.color-options {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* background-color: lightcyan; */
+  gap: 15px;
+  cursor: pointer;
+}
+
+.color-tile-border {
+  border: 2px solid transparent;
+  padding: 5px;
+  border-radius: 12.22px;
+}
+
+.color-tile {
+  /* width: 35px;
+  height: 35px; */
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  /* border-radius: 5px; */
+  /* margin-right: 25px; */
+  /* margin: 5px; */
+
+  /* width: 31.19px;
+  height: 31.19px;
+  background: #151517;
+  border-radius: 9.00557px; */
+}
+
+.color-tile-selected {
+  border: 2px solid #aa7d6f;
+  padding: 5px;
+  border-radius: 12.22px;
+}
+
+.size-tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  /* border-radius: 10px; */
+  /* border-radius: 5px; */
+  /* background-color: #f6f6f6; */
+  margin-right: 15px;
+  font-size: small;
+  /* border: 1px solid #e4e4e4; */
+
+  /* width: 34.77px;
+  height: 34.77px; */
+  background: #ebebeb;
+  border: 1.2418px solid #e4e4e4;
+  border-radius: 9.93443px;
+}
+
+.size-tile-selected {
+  background-color: #202020;
+  color: #ffffff;
+}
+
+/* .color-tile {
+  box-shadow: 0 0 0 4px hsl(0, 0%, 100%), 0 0 0 7.5px #666666;
+  border-radius: 9px;
+  
+} */
+
+.add-to-bag-and-wishlist-button {
+  display: flex;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  /* background-color: lightpink; */
+}
+
+.add-to-bag-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #202020;
+  border-radius: 7px;
+  color: #ffffff;
+  padding: 10px 55px;
+  font-size: 18px;
+  gap: 15px;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.wishlist-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 180px;
+  border-color: 1px solid #202020;
+  background-color: transparent;
+  border-radius: 7px;
+  color: #2c2c2c;
+  padding: 10px 0px;
+  font-size: 18px;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.delivery-location-and-pincode {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  /* background-color: lightpink; */
+}
+
+.delivery-location-heading {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.delivery-location-paragraph {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #4c4c4c;
+}
+
+.delivery-location-input-and-check-button {
+  display: inline-flex;
+  justify-content: center;
+  justify-content: space-between;
+  border-radius: 7px;
+  padding: 0px 20px;
+  width: 360px;
+  border: 1px solid #ececec;
+  background-color: #f7f7f7;
+  /* background-color: #f6f6f6; */
+}
+
+.delivery-location-input-and-check-button .input {
+  background-color: transparent;
+  border: none;
+  padding: 10px 0px;
+  color: #4c4c4c;
+  outline: none;
+  font-size: 16px;
+  font-weight: 550;
+}
+
+.delivery-location-input-and-check-button .input::placeholder {
+  color: #4c4c4c;
+  font-weight: 550;
+}
+
+.delivery-location-input-and-check-button .check-button {
+  background-color: transparent;
+  border: none;
+  color: #35932a;
+  font-size: 16px;
+  font-weight: 550;
+}
+
+/* The top and bottom margin of 25px is actually handled by giving the margin in .collapsible-component class inside CollapsibleComponent.module.css */
+/* .product-decription-and-exchange {
+} */
+
+/* The styles for the title of CollapsibleComponent comes from its own css file CollapsibleComponent.module.css */
+
+.coupon {
+  display: flex;
+  flex-direction: column;
+  /* background-color: lightpink; */
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.heaading-and-quantity {
+  display: flex;
+  align-items: baseline;
+  /* justify-content: flex-start; */
+  justify-content: baseline;
+  gap: 15px;
+  margin-bottom: 25px;
+  height: auto;
+}
+.coupon-heaading {
+  font-size: 22px;
+  font-weight: 500;
+  align-self: baseline;
+}
+
+.coupon-quantity {
+  font-size: 16px;
+  color: #575757;
+}
+
+.coupon-tile {
+  display: inline-flex;
+  flex-direction: column;
+  height: auto;
+  width: 330px;
+  background-color: #fafafa;
+  border: 1px dashed #9e9e9e;
+  border-radius: 6px;
+  /* padding: 12px; */
+  /* background-color: RED; */
+}
+
+/* .dotted-hr {
+  border-bottom: dashed #9e9e9e;
+} */
+
+.coupon-message {
+  color: #202020;
+  padding: 12px;
+}
+
+.coupon-message .main-message {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* The div with classname ".coupon-message .message-description" has default font-size of 16px */
+
+.see-more {
+  font-weight: 550;
+  margin-left: 5px;
+}
+
+.coupon-code-and-copy-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.coupon-code {
+  font-size: 16px;
+  font-weight: 500;
+  color: #636363;
+}
+
+.copy-button {
+  background-color: transparent;
+  border: none;
+  color: #35932a;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 600px) {
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  .product-images-container {
+    width: 100%;
+    height: 50%;
+    margin-bottom: 10px;
+  }
+
+  /* to be removed later */
+  .product-images-container {
+    background-color: lightpink;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .vertical-image-grid-container {
+    display: none;
+  }
+
+  .active-product-image-container {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* to be removed later */
+
+  .product-data-container {
+    width: 100%;
+    height: 50%;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+
+  .product-category-and-type {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+
+  .product-name {
+    font-size: 15px;
+  }
+
+  .rating-box {
+    font-size: 12px;
+  }
+
+  .price {
+    font-size: 22px;
+  }
+
+  .discount {
+    font-size: 14px;
+  }
+
+  .color-and-size-grid {
+    /* prevent text selection */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+
+    /* Remove blue highlight background that appears on selecting a div with "cursor: pointer" enabled */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .color-heading,
+  .size-heading {
+    font-size: 18px;
+  }
+
+  .color-options {
+    cursor: pointer;
+    gap: 12px;
+  }
+
+  .color-tile {
+    min-width: 32px;
+    min-height: 32px;
+    /* min-width: 35px;
+    min-height: 35px; */
+    /* border-radius: 10px; */
+  }
+
+  .size-tile {
+    min-width: 40px;
+    min-height: 40px;
+    /* border-radius: 10px; */
+    margin-right: 8px;
+  }
+
+  .add-to-bag-and-wishlist-button {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: lightpink; */
+
+    /* Remove blue highlight background that appears on selecting a div with "cursor: pointer" enabled */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .add-to-bag-button {
+    /* flex: 2; */
+    border-radius: 7px;
+    color: #ffffff;
+    padding: 10px 30px;
+    font-size: 15px;
+    gap: 12px;
+    margin-right: 20px;
+    height: 50px;
+    width: 185px;
+  }
+
+  .wishlist-button {
+    /* flex: 1; */
+    border-radius: 7px;
+    /* padding: 10px 30px; */
+    border-color: 1px solid #202020;
+    background-color: transparent;
+    color: #2c2c2c;
+    font-size: 15px;
+    gap: 12px;
+
+    height: 50px;
+    width: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .delivery-location-heading {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .delivery-location-paragraph {
+    font-size: 14px;
+  }
+
+  .delivery-location-input-and-check-button {
+    width: 355px;
+  }
+
+  .delivery-location-input-and-check-button .input {
+    padding: 8px 0px;
+    font-size: 18px;
+  }
+
+  .delivery-location-input-and-check-button .check-button {
+    font-size: 18px;
+  }
+
+  .coupon-heaading {
+    font-size: 20px;
+  }
+
+  .coupon-quantity {
+    font-size: 14px;
+  }
+
+  .coupon-message .main-message {
+    font-size: 18px;
+  }
+
+  .coupon-message .message-description {
+    font-size: 14px;
+  }
+
+  /* .coupon-code {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .copy-button {
+    font-size: 16px;
+    font-weight: 700;
+  } */
+}

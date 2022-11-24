@@ -1,6 +1,6 @@
 import styles from "src/components/ProductCard/ProductCard.module.css";
-import { v4 as uuidv4 } from "uuid";
 import { ProductCardProps } from "src/components/ProductCard/ProductCard.interface";
+import { v4 as uuidv4 } from "uuid";
 
 const ProductCard = ({
   id,
