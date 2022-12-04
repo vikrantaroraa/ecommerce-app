@@ -228,7 +228,7 @@ function ProductInfo() {
         {/* This is Product Description + Returns and exchange section */}
         <div className={styles["product-decription-and-exchange"]}>
           <CollapsibleComponent title="Product Description">
-            <div className="content">
+            <div className={styles["content"]}>
               <p>
                 And this is the text that will be displayed when we expand the
                 details
@@ -237,7 +237,7 @@ function ProductInfo() {
           </CollapsibleComponent>
           <hr />
           <CollapsibleComponent title="Return & Exchange">
-            <div className="content">
+            <div className={styles["content"]}>
               <p>
                 And this is the text that will be displayed when we expand the
                 details

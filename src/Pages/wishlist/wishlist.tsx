@@ -1,5 +1,6 @@
 import WishListProduct from "src/components/WishListProduct/WishListProduct";
 import { useCart } from "src/context/cart-and-wishlist-context";
+// import styles from "src/pages/Wishlist/Wishlist.module.css";
 
 const Wishlist = () => {
   const {

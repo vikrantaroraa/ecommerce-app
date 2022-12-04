@@ -28,7 +28,9 @@ const Header = () => {
         <div className="navigation-link__women">
           <Link to="/address">Address</Link>
         </div>
-        <div className="navigation-kids">KIDS</div>
+        <div className="navigation-kids">
+          <Link to="/shipping">Shipping</Link>
+        </div>
         <div className="navigation-beauty">BEAUTY</div>
         <div className="navigation-decor">DECOR</div>
       </div>

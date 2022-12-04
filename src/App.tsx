@@ -11,17 +11,19 @@ import ProtectedRoutes from "src/components/ProtectedRoutes/ProtectedRoutes";
 import Address from "src/pages/protectedPages/Address/Address";
 // import ProductInfo from "src/components/ProductInfo/ProductInfo";
 import ProductDetails from "src/pages/ProductDetails/ProductDetails";
+import Shipping from "src/pages/Shipping/Shipping";
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Routes>
-        {/* <Route path="/" element={<AllProducts />} /> */}
-        <Route path="/" element={<ProductDetails />} />
+        <Route path="/" element={<AllProducts />} />
+        <Route path="/product" element={<ProductDetails />} />
         <Route path="/login" element={<Login />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/shipping" element={<Shipping />} />
         {/* <Route path="/product/:productId" element={<ProductDetails />} /> */}
         <Route element={<ProtectedRoutes />}>
           <Route path="/address" element={<Address />} />

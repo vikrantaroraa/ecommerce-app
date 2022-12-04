@@ -23,29 +23,29 @@ const AllProducts = () => {
         {ProductsList.map((product) => {
           const { id, name, price, description } = product;
           return (
-            <Link
-              to={`/product/${product.id}`}
-              style={{
-                textDecoration: "none",
-                color: "#000",
-              }}
-            >
-              <ProductCard
-                id={id}
-                name={name}
-                price={price}
-                description={description}
-                onAddToCartClick={() =>
-                  productDispatch({ type: "ADD_TO_CART", payload: product })
-                }
-                onAddToWishListClick={() =>
-                  productDispatch({
-                    type: "ADD_TO_WISHLIST",
-                    payload: product,
-                  })
-                }
-              />
-            </Link>
+            // <Link
+            //   to={`/product/${product.id}`}
+            //   style={{
+            //     textDecoration: "none",
+            //     color: "#000",
+            //   }}
+            // >
+            <ProductCard
+              id={id}
+              name={name}
+              price={price}
+              description={description}
+              onAddToCartClick={() =>
+                productDispatch({ type: "ADD_TO_CART", payload: product })
+              }
+              onAddToWishListClick={() =>
+                productDispatch({
+                  type: "ADD_TO_WISHLIST",
+                  payload: product,
+                })
+              }
+            />
+            // </Link>
           );
         })}
       </div>

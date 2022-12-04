@@ -79,7 +79,7 @@
 @media only screen and (max-width: 425px) {
   .card {
     width: 50%;
-    height: 345px;
+    height: 500px;
     margin: 0;
     border: 1px solid lightgray;
     /* background-color: #ff905a; */

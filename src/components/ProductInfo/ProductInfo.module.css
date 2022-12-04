@@ -3,7 +3,7 @@
   /* background-color: lightgrey; */
   height: 100vh;
   height: auto;
-  width: 100vh;
+  width: 100vw;
   width: auto;
 }
 
@@ -328,6 +328,10 @@
 /* .product-decription-and-exchange {
 } */
 
+/* .content {
+  transition: max-height 5s ease-out;
+  background-color: red;
+} */
 /* The styles for the title of CollapsibleComponent comes from its own css file CollapsibleComponent.module.css */
 
 .coupon {
@@ -560,7 +564,7 @@
   }
 
   .delivery-location-input-and-check-button {
-    width: 355px;
+    width: 100%;
   }
 
   .delivery-location-input-and-check-button .input {

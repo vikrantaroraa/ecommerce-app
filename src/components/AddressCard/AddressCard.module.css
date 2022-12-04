@@ -1,0 +1,51 @@
+.address-card {
+  display: flex;
+  border: 2px solid #2c2c2c;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  /* background-color: lightgray; */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* label {
+  display: flex;
+  gap: 10px;
+} */
+
+.radio-button-container {
+  /* background-color: lightcoral; */
+  margin-top: 4px;
+}
+
+.radio-button-container input {
+  height: 18px;
+  width: 18px;
+  accent-color: #35932a;
+}
+
+.radio-button-container input:focus {
+  accent-color: #35932a;
+}
+
+.address-container {
+  padding-top: 0px;
+  display: flex;
+  flex-direction: column;
+  /* background-color: lightgreen; */
+}
+
+.person-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.address-field {
+  font-size: 15px;
+  font-weight: 500;
+  color: #4c4c4c;
+}
+
+@media screen and (max-width: 660px) {
+}

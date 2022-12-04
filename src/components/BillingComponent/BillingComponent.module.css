@@ -1,0 +1,81 @@
+.billing-component {
+  display: flex;
+  flex-direction: column;
+  height: 610px;
+  height: fit-content;
+  /* change the below width to min-width */
+  width: 400px;
+  background-color: #f7f5f5;
+  padding: 25px;
+}
+
+.price-summary-heading {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.summary-data-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.hr-separator {
+  margin-bottom: 18px;
+}
+
+.coupon-code-applied-messsage-container {
+  padding: 10px;
+  border: 2px solid #202020;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: #e8e8e8;
+}
+
+.discount-value {
+  color: #35932a;
+}
+
+.total-savings-messsage-container {
+  display: flex;
+  padding: 10px;
+  border: 2px solid #35932a;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  /* background-color: lightcoral; */
+  /* font-size: 14px; */
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.you-pay-row {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.proceed-to-buy-button {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding: 10px;
+  background-color: #35932a;
+  border: 1px solid #35932a;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 940px) {
+  .billing-component {
+    width: 100%;
+  }
+
+  .coupon-code-applied-messsage-container {
+    width: fit-content;
+  }
+
+  .total-savings-messsage-container {
+    width: fit-content;
+  }
+}
