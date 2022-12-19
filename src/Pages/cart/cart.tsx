@@ -5,20 +5,13 @@ import { useCart } from "src/context/cart-and-wishlist-context";
 import styles from "src/pages/Cart/Cart.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const {
     state: { cart },
     dispatch: cartDispatch,
   } = useCart();
-
-  const calculateCartTotal = () => {
-    let cartTotal = 0;
-    cart.map((item: any) => {
-      cartTotal += item.quantity * item.price;
-    });
-    return cartTotal;
-  };
 
   const totalItemsInCart = () => {
     let totalItems = 0;
@@ -60,19 +53,27 @@ const Cart = () => {
             />
           );
         })}
-        <div className={styles["add-more-items-div-container"]}>
-          <div className={styles["text-and-bookmark-icon-container"]}>
-            <img src={bookmarkIcon} alt="add more icon" />
-            <p>
-              {totalItemsInCart() === 0
-                ? "Add items from wishlist"
-                : "Add more from wishlist"}
-            </p>
+        <Link
+          to="/wishlist"
+          style={{
+            textDecoration: "none",
+            color: "#000",
+          }}
+        >
+          <div className={styles["add-more-items-div-container"]}>
+            <div className={styles["text-and-bookmark-icon-container"]}>
+              <img src={bookmarkIcon} alt="add more icon" />
+              <p>
+                {totalItemsInCart() === 0
+                  ? "Add items from wishlist"
+                  : "Add more from wishlist"}
+              </p>
+            </div>
+            <div className={styles["right-chevron-container"]}>
+              <FontAwesomeIcon icon={faChevronRight} />
+            </div>
           </div>
-          <div className={styles["right-chevron-container"]}>
-            <FontAwesomeIcon icon={faChevronRight} />
-          </div>
-        </div>
+        </Link>
       </div>
       <div className={styles["bill-description"]}>
         <BillingComponent />

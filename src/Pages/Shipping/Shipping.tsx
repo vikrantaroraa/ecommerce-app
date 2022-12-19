@@ -3,7 +3,10 @@ import AddressCard from "src/components/AddressCard/AddressCard";
 import BillingComponent from "src/components/BillingComponent/BillingComponent";
 import styles from "src/pages/Shipping/Shipping.module.css";
 import addCardIcon from "src/assets/svg/addCardIcon.svg";
-import { sortByPrefferedFromLocalStorage } from "src/utils/sortByPrefferedHelper";
+import {
+  setItemInLocalStorage,
+  sortByPrefferedFromLocalStorage,
+} from "src/utils/sortByPrefferedHelper";
 import { UserAddress } from "src/components/AddressCard/AddressCard.interface";
 import { savedAddressCardsFromDB } from "src/api/savedAddressCardsDB";
 
@@ -11,9 +14,10 @@ function Shipping() {
   const [shippingDetails, setShippingDetails] = useState<UserAddress[] | null>(
     null
   );
+  const [showForm, setShowForm] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState<number>();
   const [savedAddresses, setSavedAddresses] = useState<UserAddress[]>([]);
-  const [shippingAddress, setShippingAddress] = useState({
+  const [shippingAddress, setShippingAddress] = useState<UserAddress>({
     name: "",
     mobileNumber: "",
     pinCode: "",
@@ -34,7 +38,7 @@ function Shipping() {
       localStorage.getItem("prefferedShippingAddress") as string
     );
 
-    if (savedUserAddresses && prefferedShippingAddress) {
+    if (prefferedShippingAddress) {
       sortedShippingMethods = sortByPrefferedFromLocalStorage(
         savedUserAddresses,
         prefferedShippingAddress
@@ -59,8 +63,8 @@ function Shipping() {
     // We do not need to check if any condition because this runs when a new address is added so both the
     // variables savedUserAddresses and prefferedShippingAddress will be present in localStorage
 
-    // NOTE -> We are still checking if savedUserAddresses because it was giving error in console that it can
-    // read map of null
+    // NOTE -> We are still checking if(savedUserAddresses) because it was giving error in console that it can
+    // not read map of null
     if (savedUserAddresses && prefferedShippingAddress) {
       sortedShippingMethods = sortByPrefferedFromLocalStorage(
         savedUserAddresses,
@@ -73,38 +77,24 @@ function Shipping() {
     setShippingDetails(sortedShippingMethods);
   };
 
-  const { name, mobileNumber, pinCode, address, apartment, city, state } =
-    shippingAddress;
-
-  const handleChange = (event: any) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setShippingAddress({
       ...shippingAddress,
       [event.target.name]: event.target.value,
     });
   };
 
-  const addToSavedAddresses = (event: any) => {
+  const addToSavedAddresses = (event: React.FormEvent<HTMLFormElement>) => {
     // If we don't add event.preventDefault() here then on submitting the form it updates the page and sends
     // the form data in the URL
     event.preventDefault();
     setSavedAddresses([...savedAddresses, shippingAddress]);
-    localStorage.setItem("savedAddresses", JSON.stringify(savedAddresses));
-    localStorage.setItem(
-      "prefferedShippingAddress",
-      JSON.stringify(shippingAddress)
-    );
-    hideAddNewAddressForm(event);
+    setItemInLocalStorage("savedAddresses", savedAddresses);
+    setItemInLocalStorage("prefferedShippingAddress", shippingAddress);
+    toggleAddressForm();
   };
 
-  const hideAddNewAddressForm = (event: any) => {
-    const addressForm = document.getElementById("add-new-address-form");
-    addressForm!.style.display = "none";
-  };
-
-  const showAddNewAddressForm = () => {
-    const addressForm = document.getElementById("add-new-address-form");
-    addressForm!.style.display = "block";
-  };
+  const toggleAddressForm = () => setShowForm(!showForm);
 
   const updatePrefferedShippingAddress = (
     i: number,
@@ -126,6 +116,9 @@ function Shipping() {
     showSavedUserAddressesOnNewAddressAddition();
     setSelectedIndex(0);
   }, [savedAddresses]);
+
+  const { name, mobileNumber, pinCode, address, apartment, city, state } =
+    shippingAddress;
 
   return (
     <div className={styles["shipping"]}>
@@ -157,7 +150,7 @@ function Shipping() {
 
         <div
           className={styles["add-new-shipping-card-button"]}
-          onClick={() => showAddNewAddressForm()}
+          onClick={toggleAddressForm}
         >
           <div className={styles["add-card-icon-container"]}>
             <img src={addCardIcon} alt="add card icon" />
@@ -167,92 +160,90 @@ function Shipping() {
           </div>
         </div>
 
-        <div className={styles["form-container"]} id="add-new-address-form">
-          <div className={styles["add-new-address-form-heading"]}>
-            Add New Address
-          </div>
-          <form onSubmit={(event) => addToSavedAddresses(event)}>
-            <span className={styles["form-section-heading"]}>
-              Contact Details
-            </span>
-            <input
-              type="text"
-              name="name"
-              value={name}
-              placeholder="Full Name"
-              required
-              onChange={(event) => handleChange(event)}
-            />
-            <input
-              type="text"
-              name="mobileNumber"
-              value={mobileNumber}
-              placeholder="Mobile Number"
-              inputMode="numeric"
-              required
-              onChange={(event) => handleChange(event)}
-              maxLength={10}
-              minLength={10}
-            />
-            <span className={styles["form-section-heading"]}>Address</span>
-            <input
-              type="text"
-              name="address"
-              value={address}
-              placeholder="Address"
-              required
-              onChange={(event) => handleChange(event)}
-            />
-            <input
-              type="text"
-              name="apartment"
-              value={apartment}
-              placeholder="Apartment (House No, Building, Street, Area) optional "
-              onChange={(event) => handleChange(event)}
-            />
-            <input
-              type="text"
-              name="pinCode"
-              value={pinCode}
-              placeholder="PIN Code"
-              inputMode="numeric"
-              required
-              onChange={(event) => handleChange(event)}
-            />
-
-            <input
-              type="text"
-              name="city"
-              value={city}
-              placeholder="City"
-              required
-              onChange={(event) => handleChange(event)}
-            />
-            <input
-              type="text"
-              name="state"
-              value={state}
-              placeholder="State"
-              required
-              onChange={(event) => handleChange(event)}
-            />
-            <div className={styles["form-button-container"]}>
-              <button
-                className={styles["cancel-button"]}
-                onClick={(event) => hideAddNewAddressForm(event)}
-              >
-                Cancel
-              </button>
-              <button
-                type="submit"
-                className={styles["save-button"]}
-                // onClick={(event) => addToSavedAddresses(event)}
-              >
-                Save
-              </button>
+        {showForm && (
+          <div className={styles["form-container"]} id="add-new-address-form">
+            <div className={styles["add-new-address-form-heading"]}>
+              Add New Address
             </div>
-          </form>
-        </div>
+            <form onSubmit={(event) => addToSavedAddresses(event)}>
+              <span className={styles["form-section-heading"]}>
+                Contact Details
+              </span>
+              <input
+                type="text"
+                name="name"
+                value={name}
+                placeholder="Full Name"
+                required
+                onChange={(event) => handleChange(event)}
+              />
+              <input
+                type="text"
+                name="mobileNumber"
+                value={mobileNumber}
+                placeholder="Mobile Number"
+                inputMode="numeric"
+                required
+                onChange={(event) => handleChange(event)}
+                maxLength={10}
+                minLength={10}
+              />
+              <span className={styles["form-section-heading"]}>Address</span>
+              <input
+                type="text"
+                name="address"
+                value={address}
+                placeholder="Address"
+                required
+                onChange={(event) => handleChange(event)}
+              />
+              <input
+                type="text"
+                name="apartment"
+                value={apartment}
+                placeholder="Apartment (House No, Building, Street, Area) optional "
+                onChange={(event) => handleChange(event)}
+              />
+              <input
+                type="text"
+                name="pinCode"
+                value={pinCode}
+                placeholder="PIN Code"
+                inputMode="numeric"
+                required
+                onChange={(event) => handleChange(event)}
+              />
+
+              <input
+                type="text"
+                name="city"
+                value={city}
+                placeholder="City"
+                required
+                onChange={(event) => handleChange(event)}
+              />
+              <input
+                type="text"
+                name="state"
+                value={state}
+                placeholder="State"
+                required
+                onChange={(event) => handleChange(event)}
+              />
+              <div className={styles["form-button-container"]}>
+                <button
+                  className={styles["cancel-button"]}
+                  onClick={toggleAddressForm}
+                >
+                  Cancel
+                </button>
+                <button type="submit" className={styles["save-button"]}>
+                  Save
+                </button>
+              </div>
+            </form>
+          </div>
+        )}
       </div>
       <div className={styles["bill-description"]}>
         <BillingComponent />

@@ -13,7 +13,7 @@ export const sortByPrefferedFromLocalStorage = (
   prefferedShippingAddress: UserAddress
 ) => {
   let prefferedShippingAddressIsPresentInItems = false;
-  items.map((savedAddress) => {
+  items.forEach((savedAddress) => {
     if (
       JSON.stringify(savedAddress) === JSON.stringify(prefferedShippingAddress)
     ) {
@@ -41,3 +41,11 @@ export const sortByPrefferedFromLocalStorage = (
 //   items: any[],
 //   prefferedShippingAddress: UserAddress
 // ) => [prefferedShippingAddress, ...items];
+
+export const setItemInLocalStorage = (key: string, value: any) => {
+  localStorage.setItem(key, JSON.stringify(value));
+};
+
+export const getItemInLocalStorage = (key: string) => {
+  return JSON.parse(localStorage.getItem(key) as string);
+};

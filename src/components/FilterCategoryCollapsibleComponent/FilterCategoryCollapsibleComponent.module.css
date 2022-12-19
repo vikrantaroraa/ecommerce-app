@@ -1,0 +1,34 @@
+.filter-collapsible-component-details {
+  /* padding: 25px 20px; */
+  background-color: white;
+}
+
+.filter-collapsible-component-summary {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  /* background-color: red; */
+  /* margin-bottom: 15px; */
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.filter-collapsible-component-title {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.filter-collapsible-component-details
+  .filter-collapsible-component-summary::after {
+  content: url("src/assets/svg/chevronDown.svg");
+}
+
+.filter-collapsible-component-details[open]
+  .filter-collapsible-component-summary::after {
+  content: url("src/assets/svg/chevronUp.svg");
+}
+
+.filter-collapsible-component-details
+  .filter-collapsible-component-summary::-webkit-details-marker {
+  display: none;
+}

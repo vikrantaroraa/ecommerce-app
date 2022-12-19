@@ -1,32 +1,32 @@
-details {
+.collapsible-component-details {
   padding: 10px 0px;
   /* box-shadow: inset 0 0 0 4px;
   border-radius: 4px; */
 }
 
-details p {
+.collapsible-component-details p {
   display: flex;
   text-align: left;
 }
 
-details summary {
+.collapsible-component-summary {
   font-size: 25px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   justify-content: space-between;
   list-style: none;
+  cursor: pointer;
 }
 
-details summary::after {
+.collapsible-component-details .collapsible-component-summary::after {
   content: "+";
 }
 
-details[open] summary::after {
+.collapsible-component-details[open] .collapsible-component-summary::after {
   content: "-";
 }
 
-details summary::-webkit-details-marker {
+.collapsible-component-details
+  .collapsible-component-summary::-webkit-details-marker {
   display: none;
 }
 
@@ -48,7 +48,7 @@ details summary::-webkit-details-marker {
   margin-top: 25px;
 }
 
-.component-title {
+.collapsible-component-title {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 10px;
@@ -58,7 +58,7 @@ details summary::-webkit-details-marker {
   .collapsible-component {
     font-size: 14px;
   }
-  .component-title {
+  .collapsible-component-title {
     font-size: 20px;
     font-weight: 500;
   }

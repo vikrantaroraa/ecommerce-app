@@ -4,10 +4,9 @@ import styles from "src/components/CollapsibleComponent/CollapsibleComponent.mod
 function CollapsibleComponent({ title, children }: CollapsibleComponentProps) {
   return (
     <div className={styles["collapsible-component"]}>
-      <details>
-        <summary>
-          {/* The styles for title div below are written in the ProductInfo.module.css */}
-          <div className={styles["component-title"]}>{title}</div>
+      <details className={styles["collapsible-component-details"]}>
+        <summary className={styles["collapsible-component-summary"]}>
+          <div className={styles["collapsible-component-title"]}>{title}</div>
         </summary>
         {children}
       </details>
