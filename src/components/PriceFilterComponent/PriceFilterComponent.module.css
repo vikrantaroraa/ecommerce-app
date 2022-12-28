@@ -1,0 +1,49 @@
+.price-filter-container {
+  display: flex;
+  flex-direction: column;
+  /* background-color: lightgray; */
+  margin-bottom: 15px;
+}
+
+.price-values-and-apply-button {
+  display: flex;
+  /* background-color: lightcoral; */
+  margin-bottom: 40px;
+}
+
+.price-values-container {
+  display: flex;
+  align-items: center;
+  width: 75%;
+  display: flex;
+  /* background-color: lightgreen; */
+  gap: 15px;
+}
+
+.price-values-container input[type="text"] {
+  width: 70px;
+  font-size: 16px;
+  font-weight: 550;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #000000;
+  outline: none;
+  text-align: center;
+}
+
+.apply-price-filter-button {
+  /* display: flex; */
+  width: 25%;
+  font-weight: 550;
+  /* padding: 0px 20px; */
+  border-radius: 8px;
+  border: 1px solid #000000;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.price-filter-container input[type="range"] {
+  width: 100%;
+  accent-color: rgb(107, 106, 106);
+  cursor: pointer;
+}

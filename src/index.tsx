@@ -8,6 +8,7 @@ import { WishListProvider } from "src/context/wishlist-context";
 import { CartProvider } from "src/context/cart-and-wishlist-context";
 import { BrowserRouter as Router } from "react-router-dom";
 import { AuthProvider } from "src/context/auth-context";
+import { SortAndFilterProvider } from "src/context/sort-and-filter-store/sort-and-filter-context";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,7 +16,9 @@ ReactDOM.render(
       <AuthProvider>
         <WishListProvider>
           <CartProvider>
-            <App />
+            <SortAndFilterProvider>
+              <App />
+            </SortAndFilterProvider>
           </CartProvider>
         </WishListProvider>
       </AuthProvider>

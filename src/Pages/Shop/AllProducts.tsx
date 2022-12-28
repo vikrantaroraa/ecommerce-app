@@ -2,14 +2,21 @@ import ProductsList from "src/api/ProductsList";
 import ProductCard from "src/components/ProductCard/ProductCard";
 import { useCart } from "src/context/cart-and-wishlist-context";
 import styles from "src/pages/Shop/AllProducts.module.css";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import FilterCategoryCollapsibleComponent from "src/components/FilterCategoryCollapsibleComponent/FilterCategoryCollapsibleComponent";
 import FilterRow from "src/components/FilterRow/FilterRow";
 import SimilarProductsCard from "src/components/SimilarProductsCard/SimilarProductsCard";
-import handm from "src/assets/images/handm.jpg";
-import sortBy from "src/assets/svg/sortBy.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { allProducts } from "src/api/all-products";
+import sortBy from "src/assets/svg/sortBy.jpg";
+import {
+  checkboxFilterNames,
+  checkboxFiltersList,
+  FilterObject,
+} from "src/context/sort-and-filter-store/checkboxFiltersList";
+import { useSortAndFilter } from "src/context/sort-and-filter-store/sort-and-filter-context";
+import PriceFilterComponent from "src/components/PriceFilterComponent/PriceFilterComponent";
 // import sortBy from "src/assets/svg/sortBy.svg";
 
 const sortByOptions = [
@@ -22,7 +29,229 @@ const sortByOptions = [
 ];
 
 const AllProducts = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const { dispatch: productDispatch } = useCart();
+  const { state, dispatch: sortAndFilterDispatch } = useSortAndFilter();
+  const {
+    originalDataList,
+    showMenProducts,
+    showWomenProducts,
+    showExtraSmallSize,
+    showSmallSize,
+    showMediumSize,
+    showLargeSize,
+    showExtraLargeSize,
+    show2ExtraLargeSize,
+    show3ExtraLargeSize,
+    showBewakoofProducts,
+    showRoadsterProducts,
+    showLevisProducts,
+    showTommyHilfigerProducts,
+    showUnderArmourProducts,
+    showSweatShirts,
+    showHoodies,
+    showTshirts,
+    showJoggers,
+    showPyjamas,
+    showShorts,
+    showBoxers,
+    show10PercentDiscountProducts,
+    show20PercentDiscountProducts,
+    show30PercentDiscountProducts,
+    show40PercentDiscountProducts,
+    show50PercentDiscountProducts,
+    show1DayDeliveryProducts,
+    show7DaysDeliveryProducts,
+    show15DaysDeliveryProducts,
+    priceRange,
+  } = state;
+
+  const getFilteredData = (
+    productsUnderPriceRange: typeof allProducts,
+    {
+      showMenProducts,
+      showWomenProducts,
+      showExtraSmallSize,
+      showSmallSize,
+      showMediumSize,
+      showLargeSize,
+      showExtraLargeSize,
+      show2ExtraLargeSize,
+      show3ExtraLargeSize,
+      showBewakoofProducts,
+      showRoadsterProducts,
+      showLevisProducts,
+      showTommyHilfigerProducts,
+      showUnderArmourProducts,
+      showSweatShirts,
+      showHoodies,
+      showTshirts,
+      showJoggers,
+      showPyjamas,
+      showShorts,
+      showBoxers,
+      show10PercentDiscountProducts,
+      show20PercentDiscountProducts,
+      show30PercentDiscountProducts,
+      show40PercentDiscountProducts,
+      show50PercentDiscountProducts,
+      show1DayDeliveryProducts,
+      show7DaysDeliveryProducts,
+      show15DaysDeliveryProducts,
+    }: any
+  ) => {
+    return productsUnderPriceRange
+      .filter(({ gender }: any) => (showMenProducts ? gender === "Men" : true))
+      .filter(({ gender }) => (showWomenProducts ? gender === "Women" : true))
+      .filter(({ sizesAvailable }) =>
+        showExtraSmallSize ? sizesAvailable.includes("XS") : true
+      )
+      .filter(({ sizesAvailable }) =>
+        showSmallSize ? sizesAvailable.includes("S") : true
+      )
+      .filter(({ sizesAvailable }) =>
+        showMediumSize ? sizesAvailable.includes("M") : true
+      )
+      .filter(({ sizesAvailable }) =>
+        showLargeSize ? sizesAvailable.includes("L") : true
+      )
+      .filter(({ sizesAvailable }) =>
+        showExtraLargeSize ? sizesAvailable.includes("XL") : true
+      )
+      .filter(({ sizesAvailable }) =>
+        show2ExtraLargeSize ? sizesAvailable.includes("2XL") : true
+      )
+      .filter(({ sizesAvailable }) =>
+        show3ExtraLargeSize ? sizesAvailable.includes("3XL") : true
+      )
+      .filter(({ brand }) =>
+        showBewakoofProducts ? brand === "Bewakoof" : true
+      )
+      .filter(({ brand }) =>
+        showRoadsterProducts ? brand === "Roadster" : true
+      )
+      .filter(({ brand }) => (showLevisProducts ? brand === "Levi's" : true))
+      .filter(({ brand }) =>
+        showTommyHilfigerProducts ? brand === "Tommy Hilfiger" : true
+      )
+      .filter(({ brand }) =>
+        showUnderArmourProducts ? brand === "Under Armour" : true
+      )
+      .filter(({ category }) =>
+        showSweatShirts ? category === "Sweatshirt" : true
+      )
+      .filter(({ category }) => (showHoodies ? category === "Hoodie" : true))
+      .filter(({ category }) => (showTshirts ? category === "Tshirt" : true))
+      .filter(({ category }) => (showJoggers ? category === "Joggers" : true))
+      .filter(({ category }) => (showPyjamas ? category === "Pyjama" : true))
+      .filter(({ category }) => (showShorts ? category === "Shorts" : true))
+      .filter(({ category }) => (showBoxers ? category === "Boxers" : true))
+      .filter(({ discount }) =>
+        show10PercentDiscountProducts ? Number(discount) >= 10 : true
+      )
+      .filter(({ discount }) =>
+        show20PercentDiscountProducts ? Number(discount) >= 20 : true
+      )
+      .filter(({ discount }) =>
+        show30PercentDiscountProducts ? Number(discount) >= 30 : true
+      )
+      .filter(({ discount }) =>
+        show40PercentDiscountProducts ? Number(discount) >= 40 : true
+      )
+      .filter(({ discount }) =>
+        show50PercentDiscountProducts ? Number(discount) >= 50 : true
+      )
+      .filter(({ deliveryTime }: any) =>
+        show1DayDeliveryProducts ? Number(deliveryTime) <= 1 : true
+      )
+      .filter(({ deliveryTime }: any) =>
+        show7DaysDeliveryProducts ? Number(deliveryTime) <= 7 : true
+      )
+      .filter(({ deliveryTime }: any) =>
+        show15DaysDeliveryProducts ? Number(deliveryTime) <= 15 : true
+      );
+  };
+
+  const getProductsUnderPriceRange = (
+    originalDataList: typeof allProducts,
+    priceRange: number
+  ) => {
+    if (priceRange) {
+      return originalDataList.filter(
+        ({ price }: any) => Number(price) <= priceRange
+      );
+    }
+
+    return originalDataList;
+  };
+
+  const productsUnderPriceRange = getProductsUnderPriceRange(
+    originalDataList,
+    priceRange
+  );
+
+  const filteredData = getFilteredData(productsUnderPriceRange, {
+    showMenProducts,
+    showWomenProducts,
+    showExtraSmallSize,
+    showSmallSize,
+    showMediumSize,
+    showLargeSize,
+    showExtraLargeSize,
+    show2ExtraLargeSize,
+    show3ExtraLargeSize,
+    showBewakoofProducts,
+    showRoadsterProducts,
+    showLevisProducts,
+    showTommyHilfigerProducts,
+    showUnderArmourProducts,
+    showSweatShirts,
+    showHoodies,
+    showTshirts,
+    showJoggers,
+    showPyjamas,
+    showShorts,
+    showBoxers,
+    show10PercentDiscountProducts,
+    show20PercentDiscountProducts,
+    show30PercentDiscountProducts,
+    show40PercentDiscountProducts,
+    show50PercentDiscountProducts,
+    show1DayDeliveryProducts,
+    show7DaysDeliveryProducts,
+    show15DaysDeliveryProducts,
+  });
+
+  const handleCheckboxFilterClick = (event: any) => {
+    const { name, value } = event.currentTarget;
+    // console.log({ name }, { value });
+    const currentSearchParams = new URLSearchParams(searchParams);
+    // console.log(
+    //   "currentSearchParams to string:",
+    //   currentSearchParams.toString()
+    // );
+    const allAppliedFilters = currentSearchParams.getAll(name);
+    // console.log({ allAppliedFilters });
+
+    if (allAppliedFilters.includes(value)) {
+      const newFiltersArray = allAppliedFilters.filter(
+        (filterValue) => filterValue !== value
+      );
+      const newFiltersArrayLength = newFiltersArray.length;
+      // console.log({ newFiltersArray });
+      // console.log({ newFiltersArrayLength });
+      currentSearchParams.delete(name);
+      for (let i = 0; i < newFiltersArrayLength; i++) {
+        currentSearchParams.append(name, newFiltersArray[i]);
+      }
+      setSearchParams(currentSearchParams);
+    } else {
+      // console.log("from else");
+      currentSearchParams.append(name, value);
+      setSearchParams(currentSearchParams);
+    }
+  };
+
   return (
     <div className={styles["all-products"]}>
       <div className={styles["product-category-info-and-sortby-container"]}>
@@ -65,13 +294,6 @@ const AllProducts = () => {
               <FontAwesomeIcon icon={faChevronDown} />
             </div>
           </div>
-
-          {/* {sortByOptions.map((option) => (
-            <div>
-              <input type="radio" name="sort" />
-              <label>{option}</label>
-            </div>
-          ))} */}
         </div>
       </div>
       <div className={styles["product-filters-and-all-products-container"]}>
@@ -80,70 +302,66 @@ const AllProducts = () => {
             <span className={styles["filters-heading"]}>Filters</span>
             <button className={styles["reset-button"]}>Reset</button>
           </div>
-          <div className={styles["filter-container"]}>
-            <FilterCategoryCollapsibleComponent title="Gender">
-              <FilterRow filterName="Women" />
-              <FilterRow filterName="Men" />
-              <FilterRow filterName="Kids" />
-              <FilterRow filterName="Unisex" />
-            </FilterCategoryCollapsibleComponent>
-          </div>
-          <hr />
-          <div className={styles["filter-container"]}>
-            <FilterCategoryCollapsibleComponent title="Size">
-              <FilterRow filterName="XS" />
-              <FilterRow filterName="S" />
-              <FilterRow filterName="M" />
-              <FilterRow filterName="L" />
-              <FilterRow filterName="XL" />
-              <FilterRow filterName="XXL" />
-            </FilterCategoryCollapsibleComponent>
-          </div>
-          <hr />
-          <div className={styles["filter-container"]}>
-            <FilterCategoryCollapsibleComponent title="Brand">
-              <FilterRow filterName="Bewakoof" />
-              <FilterRow filterName="Roadster" />
-              <FilterRow filterName="Levi's" />
-              <FilterRow filterName="Tommy Hilfiger" />
-              <FilterRow filterName="Under Armour" />
-              <FilterRow filterName="Bewakoof" />
-            </FilterCategoryCollapsibleComponent>
-          </div>
-          <hr />
-          <div className={styles["filter-container"]}>
-            <FilterCategoryCollapsibleComponent title="Style">
-              <FilterRow filterName="Sweatshirt" />
-              <FilterRow filterName="Hoodies" />
-              <FilterRow filterName="Tshirts" />
-              <FilterRow filterName="Joggers" />
-              <FilterRow filterName="Pyjama" />
-              <FilterRow filterName="Shorts" />
-            </FilterCategoryCollapsibleComponent>
-          </div>
-          <hr />
-          <div className={styles["filter-container"]}>
-            <FilterCategoryCollapsibleComponent title="Discount">
-              <FilterRow filterName="10% or More" />
-              <FilterRow filterName="20% or More" />
-              <FilterRow filterName="30% or More" />
-              <FilterRow filterName="40% or More" />
-              <FilterRow filterName="50% or More" />
-              <FilterRow filterName="60% or More" />
-            </FilterCategoryCollapsibleComponent>
-          </div>
-          <hr />
-          <div className={styles["filter-container"]}>
-            <FilterCategoryCollapsibleComponent title="Delivery Time">
-              <FilterRow filterName="1 Day" />
-              <FilterRow filterName="7 Days" />
-              <FilterRow filterName="15 Days" />
-            </FilterCategoryCollapsibleComponent>
-          </div>
+          <>
+            <div className={styles["filter-container"]}>
+              <FilterCategoryCollapsibleComponent title="Price">
+                <PriceFilterComponent
+                  filterName="max-price"
+                  filterValue={priceRange}
+                  onPriceFilterChange={(event) => {
+                    console.log("Price value: ", event.target.value);
+                    sortAndFilterDispatch({
+                      type: "CHANGE_PRICE_RANGE",
+                      payload: event.target.value,
+                    });
+                  }}
+                />
+              </FilterCategoryCollapsibleComponent>
+            </div>
+            <hr />
+            {checkboxFilterNames.map((filterName) => {
+              return (
+                <>
+                  <div className={styles["filter-container"]}>
+                    <FilterCategoryCollapsibleComponent title={filterName}>
+                      {checkboxFiltersList[
+                        filterName as keyof typeof checkboxFiltersList
+                      ].map(
+                        ({
+                          filterLabel,
+                          urlParameter,
+                          statVariableName,
+                          dispatchAction,
+                        }: FilterObject) => {
+                          const isChecked = state[statVariableName];
+                          // const filterNameNew = "filter";
+                          return (
+                            <FilterRow
+                              filterLabel={filterLabel}
+                              filterName={filterName}
+                              filterUrlParameter={urlParameter}
+                              onFilterRowClick={(event) => {
+                                sortAndFilterDispatch({
+                                  type: `${dispatchAction}`,
+                                });
+                                handleCheckboxFilterClick(event);
+                              }}
+                              isChecked={isChecked}
+                            />
+                          );
+                        }
+                      )}
+                    </FilterCategoryCollapsibleComponent>
+                  </div>
+                  <hr />
+                </>
+              );
+            })}
+          </>
         </div>
         <div className={styles["products-container"]}>
-          {ProductsList.map((product) => {
-            const { id, name, price, description } = product;
+          {filteredData.map((product: any) => {
+            const { id, name, price, description, images } = product;
             return (
               // <Link
               //   to={`/product/${product.id}`}
@@ -169,17 +387,25 @@ const AllProducts = () => {
               // />
               // </Link>
 
-              <div
-                // style={{ margin: "30px 30px" }}
-                style={{ margin: "30px 0px" }}
+              <Link
+                to={`/product/${product.id}`}
+                style={{
+                  textDecoration: "none",
+                  color: "#000",
+                }}
               >
-                <SimilarProductsCard
-                  brandName="Campus Sutra"
-                  productName="Solid Olive Green Hoodie"
-                  price={1499}
-                  imageSrc={handm}
-                />
-              </div>
+                <div
+                  // style={{ margin: "30px 30px" }}
+                  style={{ margin: "30px 0px", cursor: "pointer" }}
+                >
+                  <SimilarProductsCard
+                    brandName="Campus Sutra"
+                    productName="Solid Olive Green Hoodie"
+                    price={price}
+                    imageSrc={images[1]}
+                  />
+                </div>
+              </Link>
             );
           })}
         </div>

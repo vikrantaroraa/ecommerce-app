@@ -6,25 +6,20 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CollapsibleComponent from "src/components/CollapsibleComponent/CollapsibleComponent";
-import bewakoof from "src/assets/images/bewakoof.jpg";
-import roadster from "src/assets/images/roadster.jpg";
-import handm from "src/assets/images/handm.jpg";
-import campusSutra from "src/assets/images/campusSutra.jpg";
 import { useState } from "react";
-
-const colorArray = [
-  "salmon",
-  "skyblue",
-  "#3B6DAC",
-  "yellow",
-  "pink",
-  "lightgreen",
-];
-const sizeArray = ["XS", "S", "M", "L", "XL", "2XL", "3XL"];
-const imagesArray = [bewakoof, roadster, handm, campusSutra, bewakoof];
+import { allProducts } from "src/api/all-products";
+import { useParams } from "react-router-dom";
 
 function ProductInfo() {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  const { productId } = useParams();
+
+  function getProductDetails(allProducts: any, productId: any) {
+    return allProducts.find((product: any) => product.id === Number(productId));
+  }
+
+  const product = getProductDetails(allProducts, productId);
 
   const showSelectedColorTile = (color: string) => {
     const allColorTileBorderDivs = document.querySelectorAll(
@@ -54,11 +49,28 @@ function ProductInfo() {
     selectedSizeTile?.classList.add(`${styles["size-tile-selected"]}`);
   };
 
+  const {
+    brand,
+    category,
+    name,
+    description,
+    rating,
+    price,
+    actualPrice,
+    images,
+    discount,
+    color,
+    colorsAvailable,
+    sizesAvailable,
+    deliveryTime,
+    gender,
+  } = product;
+
   return (
     <div className={styles["product-info"]}>
       <div className={styles["product-images-container"]}>
         <div className={styles["vertical-image-grid-container"]}>
-          {imagesArray.map((image, index) => {
+          {images.map((image: string, index: number) => {
             return (
               <div
                 className={styles["product-image"]}
@@ -71,7 +83,7 @@ function ProductInfo() {
         </div>
         <div className={styles["active-product-image-container"]}>
           <div className={styles["active-product-image"]}>
-            <img src={imagesArray[activeImageIndex]} alt="main product" />
+            <img src={images[activeImageIndex]} alt="main product" />
           </div>
         </div>
       </div>
@@ -80,19 +92,17 @@ function ProductInfo() {
         <div className={styles["basic-product-info"]}>
           <div className={styles["name-price-rating-offer"]}>
             <div className={styles["product-category-and-type"]}>
-              Nike Winterwears
+              {brand} {category.charAt(0).toUpperCase() + category.slice(1)}
             </div>
-            <div className={styles["product-name"]}>
-              Men’s Solid Black Slim-fit Hoodie
-            </div>
+            <div className={styles["product-name"]}>{name}</div>
             <div className={styles["rating-box"]}>
-              4.5
+              {rating}
               <FontAwesomeIcon color={"#FCBF22"} icon={faStar} />
             </div>
             <div className={styles["price-and-discount"]}>
-              <span className={styles["price"]}>₹ 4500</span>
-              <s className={styles["actual-price"]}>₹ 5500</s>
-              <span className={styles["discount"]}>45 % off</span>
+              <span className={styles["price"]}>₹ {price}</span>
+              <s className={styles["actual-price"]}>₹ {actualPrice}</s>
+              <span className={styles["discount"]}>{discount} % off</span>
             </div>
             <span className={styles["inclusive-of-all-taxes-line"]}>
               inclusive of all taxes
@@ -105,10 +115,10 @@ function ProductInfo() {
           <div className={styles["color-grid"]}>
             <div className={styles["color-heading"]}>
               <span>Color: </span>
-              <span className={styles["color-name"]}>Balck</span>
+              <span className={styles["color-name"]}>{color}</span>
             </div>
             <div className={styles["color-options"]}>
-              {colorArray.map((color, index) => {
+              {colorsAvailable.map((color: string, index: number) => {
                 return (
                   <div
                     id={color}
@@ -130,7 +140,7 @@ function ProductInfo() {
               <span className={styles["size-name"]}>XL</span>
             </div>
             <div className={styles["size-options"]}>
-              {sizeArray.map((size, index) => {
+              {sizesAvailable.map((size: string, index: number) => {
                 return (
                   <div
                     id={size}
@@ -229,18 +239,15 @@ function ProductInfo() {
         <div className={styles["product-decription-and-exchange"]}>
           <CollapsibleComponent title="Product Description">
             <div className={styles["content"]}>
-              <p>
-                And this is the text that will be displayed when we expand the
-                details
-              </p>
+              <p>{description}</p>
             </div>
           </CollapsibleComponent>
           <hr />
           <CollapsibleComponent title="Return & Exchange">
             <div className={styles["content"]}>
               <p>
-                And this is the text that will be displayed when we expand the
-                details
+                The estimated delivery time is {deliveryTime} days. Once
+                received, the product can be returned within 30 days.
               </p>
             </div>
           </CollapsibleComponent>

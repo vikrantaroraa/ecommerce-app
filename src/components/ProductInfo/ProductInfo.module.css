@@ -9,7 +9,7 @@
 
 .product-images-container {
   width: 50%;
-  height: 600px;
+  height: 700px;
   display: flex;
   /* flex: 1; */
   /* background-color: lightblue; */
@@ -20,8 +20,10 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 600px;
+  height: 100%;
+  height: auto;
   width: 30%;
+  gap: 10px;
   /* background-color: lightgreen; */
 }
 
@@ -30,6 +32,7 @@
   width: 70px;
   cursor: pointer;
   /* background-color: red; */
+  border: 1px solid #ebebeb;
 }
 
 .product-image img {
@@ -51,6 +54,7 @@
   width: 420px;
   cursor: pointer;
   /* background-color: lightgrey; */
+  border: 1px solid #ebebeb;
 }
 
 .active-product-image img {
@@ -185,6 +189,7 @@
   width: 32px;
   height: 32px;
   border-radius: 9px;
+  border: 1px solid #ebebeb;
   /* border-radius: 5px; */
   /* margin-right: 25px; */
   /* margin: 5px; */
