@@ -175,19 +175,19 @@ export const checkboxFiltersList = {
   Delivery: [
     {
       filterLabel: "1 Day",
-      urlParameter: "1-day",
+      urlParameter: "1",
       dispatchAction: "TOGGLE_SHOW_1_DAY_DELIVERY_PRODUCTS",
       statVariableName: "show1DayDeliveryProducts",
     },
     {
       filterLabel: "7 Days",
-      urlParameter: "7-days",
+      urlParameter: "7",
       dispatchAction: "TOGGLE_SHOW_7_DAYS_DELIVERY_PRODUCTS",
       statVariableName: "show7DaysDeliveryProducts",
     },
     {
       filterLabel: "15 Days",
-      urlParameter: "15-days",
+      urlParameter: "15",
       dispatchAction: "TOGGLE_SHOW_15_DAYS_DELIVERY_PRODUCTS",
       statVariableName: "show15DaysDeliveryProducts",
     },
@@ -195,3 +195,36 @@ export const checkboxFiltersList = {
 };
 
 export const checkboxFilterNames = Object.keys(checkboxFiltersList);
+
+export const sortByOptions = [
+  {
+    filterLabel: "Best Seller",
+    urlParameter: "best-seller",
+    dispatchPayload: "BEST_SELLER",
+    stateVariableName: "sortBy",
+  },
+  {
+    filterLabel: "Price: Low to High",
+    urlParameter: "low-to-high",
+    dispatchPayload: "PRICE_LOW_TO_HIGH",
+    stateVariableName: "sortBy",
+  },
+  {
+    filterLabel: "Price: High to Low",
+    urlParameter: "high-to-low",
+    dispatchPayload: "PRICE_HIGH_TO_LOW",
+    stateVariableName: "sortBy",
+  },
+  {
+    filterLabel: "New Arrival",
+    urlParameter: "new-arrival",
+    dispatchPayload: "NEW_ARRIVAL",
+    stateVariableName: "sortBy",
+  },
+  {
+    filterLabel: "Popularity",
+    urlParameter: "popularity",
+    dispatchPayload: "POPULARITY",
+    stateVariableName: "sortBy",
+  },
+];
