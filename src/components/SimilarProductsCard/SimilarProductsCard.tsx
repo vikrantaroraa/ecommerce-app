@@ -8,6 +8,7 @@ function SimilarProductsCard({
   price,
   actualPrice,
   discount,
+  introduced_on,
 }: SimilarProductsCardProps) {
   return (
     <div className={styles["similar-product-card"]}>
@@ -18,8 +19,9 @@ function SimilarProductsCard({
       <div className={styles["product-name"]}>{productName}</div>
       <div className={styles["price-and-discount"]}>
         <span className={styles["price"]}>₹ {price}</span>
-        <s className={styles["actual-price"]}>₹ 5500</s>
-        <span className={styles["discount"]}>45 % off</span>
+        {/* <s className={styles["actual-price"]}>₹ 5500</s>
+        <span className={styles["discount"]}>45 % off</span> */}
+        <span>Reviews: {introduced_on}</span>
       </div>
     </div>
   );

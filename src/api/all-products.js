@@ -126,6 +126,9 @@ export const allProducts = [
     sizesAvailable: ["XS", "S", "M", "L", "XL"],
     deliveryTime: "2",
     gender: "Men",
+    introduced_on: "10/12/2022",
+    units_sold: "1200",
+    product_reviews: "656",
   },
   {
     id: 2,
@@ -150,6 +153,9 @@ export const allProducts = [
     sizesAvailable: ["S", "M", "L", "XL", "2XL"],
     deliveryTime: "8",
     gender: "Women",
+    introduced_on: "10/10/2022",
+    units_sold: "649",
+    product_reviews: "700",
   },
   {
     id: 3,
@@ -174,6 +180,9 @@ export const allProducts = [
     sizesAvailable: ["M", "L", "XL", "2XL", "3XL"],
     deliveryTime: "20",
     gender: "Men",
+    introduced_on: "10/18/2022",
+    units_sold: "8956",
+    product_reviews: "856",
   },
   {
     id: 4,
@@ -198,6 +207,9 @@ export const allProducts = [
     sizesAvailable: ["XS", "S", "M", "L", "XL"],
     deliveryTime: "5",
     gender: "Women",
+    introduced_on: "10/16/2022",
+    units_sold: "67",
+    product_reviews: "342",
   },
   {
     id: 5,
@@ -222,6 +234,9 @@ export const allProducts = [
     sizesAvailable: ["S", "M", "L", "XL", "2XL"],
     deliveryTime: "12",
     gender: "Men",
+    introduced_on: "10/14/2022",
+    units_sold: "1490",
+    product_reviews: "964",
   },
   // {
   //   id: 6,

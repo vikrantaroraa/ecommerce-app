@@ -5,4 +5,5 @@ export interface SimilarProductsCardProps {
   price: number;
   actualPrice?: number;
   discount?: number;
+  introduced_on?: string;
 }

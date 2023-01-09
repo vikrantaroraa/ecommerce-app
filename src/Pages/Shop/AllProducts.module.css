@@ -132,7 +132,7 @@
 }
 
 .reset-button {
-  color: #35932a;
+  color: #4c4c4c;
   padding: 10px 25px;
   border-radius: 9px;
   font-size: 16px;
@@ -140,6 +140,21 @@
   background-color: transparent;
   cursor: pointer;
   border: 1px solid #202020;
+}
+
+.reset-button:hover {
+  /* border-color: #143fcd;
+  background-color: #eaebff;
+  color: #143fcd; */
+
+  border-color: #cd1414;
+  background-color: #ffeaea;
+  color: #cd1414;
+
+  /* border-color: #4fcd14; */
+  /* border-color: #24cd14;
+  background-color: #f0ffea;
+  color: #58cd14; */
 }
 
 .filter-container {
