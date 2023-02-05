@@ -12,14 +12,16 @@ import Address from "src/pages/protectedPages/Address/Address";
 // import ProductInfo from "src/components/ProductInfo/ProductInfo";
 import ProductDetails from "src/pages/ProductDetails/ProductDetails";
 import Shipping from "src/pages/Shipping/Shipping";
+import LandingPage from "src/pages/LandingPage/LandingPage";
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/" element={<AllProducts />} />
+        <Route path="/all-products" element={<AllProducts />} />
         {/* <Route path="/product" element={<ProductDetails />} /> */}
+        <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/wishlist" element={<Wishlist />} />

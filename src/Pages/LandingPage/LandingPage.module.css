@@ -1,0 +1,185 @@
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; */
+  height: auto;
+  /* width: 100vw; */
+  width: auto;
+  /* background-color: lightblue; */
+}
+
+.main-heading-and-hero-image {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  /* background-color: #f6fdff; */
+  background-color: #ede8e2;
+  /* padding: 50px; */
+}
+.main-heading-and-info-container {
+  height: 100%;
+  width: 60%;
+  /* background-color: lightgreen; */
+  display: flex;
+  flex-direction: column;
+  padding-left: 80px;
+  padding-top: 40px;
+}
+
+.main-heading {
+  color: #5a5a5a;
+  font-size: 50px;
+  font-weight: 650;
+  /* background-color: #ede8e2; */
+  /* background-color: red; */
+  height: 25%;
+  /* width: 25%; */
+  margin-bottom: 20px;
+}
+
+.horizontal-line-and-message {
+  display: flex;
+  height: 18%;
+  /* background-color: lightcoral; */
+  gap: 50px;
+}
+
+.horizontal-line-and-message .hr-container {
+  padding-top: 20px;
+  /* background-color: lightskyblue; */
+  flex: 1;
+}
+
+.message {
+  font-size: 18px;
+  flex: 2;
+  /* background-color: lightskyblue; */
+}
+
+.start-shopping-button-container {
+  padding-right: 240px;
+  height: 15%;
+  /* background-color: lightpink; */
+  padding-left: 280px;
+}
+
+.start-shopping-button-container button {
+  color: white;
+  font-size: 12px;
+  padding: 8px 15px;
+  background-color: lightcoral;
+  cursor: pointer;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.user-icons-and-number-of-reviews-container {
+  display: flex;
+  gap: 23px;
+  height: 20%;
+  padding-left: 280px;
+  /* background-color: lightsalmon; */
+}
+
+.number-of-reviews {
+  font-weight: 600;
+}
+
+.hero-icon-container {
+  height: 100%;
+  width: 40%;
+  /* background-color: lightyellow; */
+}
+
+.hero-image-container {
+  height: 100%;
+  width: 100%;
+}
+
+.hero-image-container img {
+  height: 100%;
+  width: 100%;
+}
+
+/* the padding for trending products is coming from the component itself */
+.trending-products-container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  /* background-color: lightcoral; */
+}
+
+.collections-card-container {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: lightpink; */
+  height: 100vh;
+  padding: 40px;
+  gap: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-heading-and-hero-image {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .main-heading-and-info-container {
+    padding: 30px;
+    width: 100%;
+  }
+
+  .main-heading {
+    font-size: 34px;
+    font-weight: 750;
+    width: 100%;
+    height: auto;
+  }
+
+  .horizontal-line-and-message {
+    padding-bottom: 30px;
+  }
+
+  .horizontal-line-and-message .hr-container {
+    display: none;
+  }
+
+  .start-shopping-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+  }
+
+  .user-icons-and-number-of-reviews-container {
+    display: none;
+  }
+
+  .hero-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero-image-container {
+    height: 300px;
+    width: 300px;
+  }
+
+  .hero-image-container img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .trending-products-container {
+    height: auto;
+  }
+
+  .collections-card-container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+}

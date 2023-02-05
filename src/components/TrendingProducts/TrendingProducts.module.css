@@ -1,0 +1,45 @@
+.trending-products {
+  display: flex;
+  flex-direction: column;
+  /* background-color: grey; */
+  height: auto;
+}
+
+.trending-products-heading {
+  font-size: 24px;
+  font-weight: 600;
+  padding-left: 40px;
+  /* background-color: red; */
+  padding-top: 40px;
+}
+
+.trending-products-grid {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-bottom: 50px;
+  height: 400px;
+  height: auto;
+  /* background-color: lightgreen; */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera
+.trending-products-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.trending-products-grid {
+  -ms-overflow-style: none; IE and Edge
+  scrollbar-width: none; Firefox
+} */
+
+@media only screen and (max-width: 600px) {
+  .trending-products-grid {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+    /* overflow: scroll; */
+  }
+}
