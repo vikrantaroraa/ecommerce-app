@@ -16,11 +16,9 @@
 .trending-products-grid {
   display: flex;
   justify-content: space-between;
-  padding-top: 40px;
-  padding-right: 40px;
-  padding-left: 40px;
-  padding-bottom: 50px;
-  height: 400px;
+  flex-wrap: wrap;
+  padding: 40px 40px 50px 40px;
+  min-height: 400px;
   height: auto;
   /* background-color: lightgreen; */
 }
@@ -35,11 +33,39 @@
   scrollbar-width: none; Firefox
 } */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 660px) {
+  .trending-products-heading {
+    padding: 40px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .trending-products-grid {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .trending-products-heading {
+    padding: 40px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .trending-products-grid {
+    /* align-items: center;
+    justify-content: center; */
     flex-direction: column;
     height: auto;
-    gap: 20px;
+    gap: 40px;
     /* overflow: scroll; */
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .trending-products-grid {
+    padding: 40px 0 0 0;
   }
 }

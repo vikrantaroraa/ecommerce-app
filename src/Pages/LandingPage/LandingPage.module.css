@@ -103,8 +103,6 @@
 
 /* the padding for trending products is coming from the component itself */
 .trending-products-container {
-  display: flex;
-  flex-direction: column;
   height: auto;
   /* background-color: lightcoral; */
 }
@@ -117,6 +115,107 @@
   padding: 40px;
   gap: 20px;
 }
+
+.shop-by-category-container {
+  height: auto;
+  /* background-color: lightgray; */
+}
+
+.email-subscription-container {
+  height: auto;
+  min-height: 60vh;
+  /* background-color: lightgreen; */
+  padding: 40px;
+}
+
+/* SUBSCRIPTIONS CSS CODE STARTS*/
+
+.email-subscription {
+  display: flex;
+  height: 350px;
+  width: 100%;
+  background-color: #fff9f1;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.text-and-email-input-container {
+  display: flex;
+  flex-direction: column;
+  padding: 45px 75px;
+  height: 100%;
+  width: 60%;
+  /* background-color: lightblue; */
+}
+
+.primary-subscription-text {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  /* background-color: lightcoral; */
+  width: 70%;
+}
+
+.secondary-subscription-text {
+  font-weight: 500;
+  /* background-color: lightgreen; */
+  margin-bottom: 30px;
+  width: 70%;
+}
+
+.subscribe-input-and-submit-button-container {
+  width: 75%;
+  display: flex;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.subscribe-input-container {
+  display: flex;
+  flex: 1;
+}
+
+.subscribe-input-container input {
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  /* background-color: red; */
+}
+
+.submit-button-container button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #f3f2f1;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.subscription-hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 40%;
+  /* background-color: lightgray; */
+}
+
+.subscription-hero-image {
+  height: 100%;
+  width: 450px;
+  /* background-color: red; */
+  padding-bottom: 0;
+}
+
+.subscription-hero-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* SUBSCRIPTIONS CSS CODE ENDS*/
 
 @media only screen and (max-width: 600px) {
   .main-heading-and-hero-image {
@@ -182,4 +281,43 @@
     flex-direction: column;
     padding: 20px;
   }
+
+  .email-subscription-container {
+    padding: 20px;
+  }
+
+  /* SUBSCRIPTIONS CSS CODE STARTS*/
+
+  .email-subscription {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+
+  .text-and-email-input-container {
+    height: auto;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .primary-subscription-text {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .secondary-subscription-text {
+    width: 100%;
+  }
+
+  .subscribe-input-and-submit-button-container {
+    width: 100%;
+  }
+
+  .subscription-hero-container {
+    height: auto;
+    width: 100%;
+  }
+
+  /* SUBSCRIPTIONS CSS CODE ENDS*/
 }

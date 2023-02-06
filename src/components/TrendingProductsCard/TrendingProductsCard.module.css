@@ -1,8 +1,11 @@
 .trending-product-card {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  background-color: white;
-  height: auto;
+  /* background-color: red; */
+  height: 385px;
+  width: 270px;
+  margin: 20px 10px 20px 10px;
+  cursor: pointer;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 7px 25px -10px rgba(150, 170, 180, 0.5);
@@ -21,6 +24,7 @@
 
 .product-details {
   padding: 20px;
+  background-color: white;
 }
 
 .product-category {
@@ -55,8 +59,8 @@
 
 @media only screen and (max-width: 600px) {
   .product-image {
-    height: 260px;
-    width: 250px;
+    height: 280px;
+    width: 270px;
   }
 
   .product-image img {

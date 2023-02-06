@@ -4,6 +4,8 @@ import styles from "src/pages/LandingPage/LandingPage.module.css";
 import CollectionsCard from "src/components/CollectionsCard/CollectionsCard";
 import greyCollection from "src/assets/images/grey-collection.svg";
 import tshirtCollection from "src/assets/images/tshirt-collection.jpg";
+import subscriptionHero from "src/assets/images/subscriptions-hero.svg";
+import ShopByCategory from "src/components/ShopByCategory/ShopByCategory";
 
 function LandingPage() {
   return (
@@ -67,6 +69,37 @@ function LandingPage() {
           textAlignment="right"
           imageAlignment="left"
         />
+      </div>
+      <div className={styles["shop-by-category-container"]}>
+        <ShopByCategory />
+      </div>
+      <div className={styles["email-subscription-container"]}>
+        <div className={styles["email-subscription"]}>
+          <div className={styles["text-and-email-input-container"]}>
+            <div className={styles["primary-subscription-text"]}>
+              Stay tune with us for latest collection update
+            </div>
+            <div className={styles["secondary-subscription-text"]}>
+              We collect and process your personal data to better response to
+              your requests.
+            </div>
+            <div
+              className={styles["subscribe-input-and-submit-button-container"]}
+            >
+              <div className={styles["subscribe-input-container"]}>
+                <input type="text" placeholder="Enter email here" />
+              </div>
+              <div className={styles["submit-button-container"]}>
+                <button>Submit</button>
+              </div>
+            </div>
+          </div>
+          <div className={styles["subscription-hero-container"]}>
+            <div className={styles["subscription-hero-image"]}>
+              <img src={subscriptionHero} />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
