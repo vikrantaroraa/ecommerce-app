@@ -605,7 +605,7 @@ const AllProducts = () => {
               >
                 <div
                   // style={{ margin: "30px 30px" }}
-                  style={{ margin: "30px 0px", cursor: "pointer" }}
+                  style={{ margin: "30px 30px", cursor: "pointer" }}
                 >
                   <SimilarProductsCard
                     brandName="Campus Sutra"

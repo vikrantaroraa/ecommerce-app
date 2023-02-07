@@ -57,10 +57,13 @@
 }
 
 .start-shopping-button-container {
-  padding-right: 240px;
-  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 70px;
+  height: auto;
   /* background-color: lightpink; */
-  padding-left: 280px;
+  margin-bottom: 50px;
 }
 
 .start-shopping-button-container button {
@@ -75,9 +78,11 @@
 
 .user-icons-and-number-of-reviews-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 23px;
-  height: 20%;
-  padding-left: 280px;
+  height: auto;
+  padding-left: 70px;
   /* background-color: lightsalmon; */
 }
 
@@ -99,6 +104,7 @@
 .hero-image-container img {
   height: 100%;
   width: 100%;
+  /* object-fit: cover; */
 }
 
 /* the padding for trending products is coming from the component itself */
@@ -124,7 +130,7 @@
 .email-subscription-container {
   height: auto;
   min-height: 60vh;
-  /* background-color: lightgreen; */
+  /* background-color: lightsalmon; */
   padding: 40px;
 }
 
@@ -134,7 +140,7 @@
   display: flex;
   height: 350px;
   width: 100%;
-  background-color: #fff9f1;
+  background-color: #fff6f1;
   border-radius: 16px;
   overflow: hidden;
 }
@@ -218,13 +224,23 @@
 .instagram-wall-container {
   height: auto;
   /* background-color: lightgreen; */
+  padding: 20px 0;
 }
 
 /* SUBSCRIPTIONS CSS CODE ENDS*/
 
+/* FOOTER CODE STARTS HERE */
+
+/* .footer-container {
+  height: 60vh;
+  background-color: lightgray;
+} */
+
+/* FOOTER CODE ENDS HERE */
+
 @media only screen and (max-width: 600px) {
   .main-heading-and-hero-image {
-    flex-direction: column;
+    flex-direction: column-reverse;
     height: auto;
   }
 
@@ -264,16 +280,18 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    /* background-color: red; */
   }
 
   .hero-image-container {
-    height: 300px;
-    width: 300px;
+    height: 100%;
+    width: 100%;
   }
 
   .hero-image-container img {
     height: 100%;
     width: 100%;
+    object-fit: contain;
   }
 
   .trending-products-container {
@@ -294,6 +312,7 @@
   /* SUBSCRIPTIONS CSS CODE STARTS*/
 
   .email-subscription {
+    background-color: #fff0f1;
     flex-direction: column-reverse;
     height: auto;
   }

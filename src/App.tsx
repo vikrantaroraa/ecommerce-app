@@ -13,6 +13,7 @@ import Address from "src/pages/protectedPages/Address/Address";
 import ProductDetails from "src/pages/ProductDetails/ProductDetails";
 import Shipping from "src/pages/Shipping/Shipping";
 import LandingPage from "src/pages/LandingPage/LandingPage";
+import Footer from "src/components/Footer/Footer";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/address" element={<Address />} />
         </Route>
       </Routes>
+      <Footer />
       {/* <MobileFilter /> */}
     </div>
   );

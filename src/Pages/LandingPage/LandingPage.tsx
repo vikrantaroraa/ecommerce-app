@@ -1,5 +1,6 @@
 import TrendingProducts from "src/components/TrendingProducts/TrendingProducts";
-import gingerrootSweatshirt from "src/assets/images/Women/Sweatshirts/gingerroot-sweatshirt/gingerroot-sweatshirt-2.svg";
+import blackShorts from "src/assets/images/Women/Shorts/black-shorts/black-shorts-1.svg";
+import userReviewsHero from "src/assets/images/user-reviews-hero.svg";
 import styles from "src/pages/LandingPage/LandingPage.module.css";
 import CollectionsCard from "src/components/CollectionsCard/CollectionsCard";
 import greyCollection from "src/assets/images/grey-collection.svg";
@@ -7,6 +8,32 @@ import tshirtCollection from "src/assets/images/tshirt-collection.jpg";
 import subscriptionHero from "src/assets/images/subscriptions-hero.svg";
 import ShopByCategory from "src/components/ShopByCategory/ShopByCategory";
 import InstagramWall from "src/components/InstagramWall/InstagramWall";
+import Footer from "src/components/Footer/Footer";
+
+const collectionsCardDataList = [
+  {
+    imageSrc: greyCollection,
+    redirectUrl: "kuch bhi",
+    collectionInfo: (
+      <>
+        All gray collection <br /> to meet your gray <br /> personality
+      </>
+    ),
+    textAlignment: "left",
+    imageAlignment: "center",
+  },
+  {
+    imageSrc: tshirtCollection,
+    redirectUrl: "kuch bhi",
+    collectionInfo: (
+      <>
+        Wide range of <br /> regular t-shirts is <br /> on 50% off
+      </>
+    ),
+    textAlignment: "right",
+    imageAlignment: "left",
+  },
+];
 
 function LandingPage() {
   return (
@@ -29,7 +56,9 @@ function LandingPage() {
             <button>Start Shopping</button>
           </div>
           <div className={styles["user-icons-and-number-of-reviews-container"]}>
-            <div>User icons</div>
+            <div>
+              <img src={userReviewsHero} alt="User Reviews Hero" />
+            </div>
             <div>
               <p className={styles["number-of-reviews"]}>
                 25k+ Positive <br />
@@ -40,7 +69,7 @@ function LandingPage() {
         </div>
         <div className={styles["hero-icon-container"]}>
           <div className={styles["hero-image-container"]}>
-            <img src={gingerrootSweatshirt} />
+            <img src={blackShorts} />
           </div>
         </div>
       </div>
@@ -48,6 +77,25 @@ function LandingPage() {
         <TrendingProducts />
       </div>
       <div className={styles["collections-card-container"]}>
+        {/* {collectionsCardDataList.map(
+          ({
+            imageSrc,
+            redirectUrl,
+            collectionInfo,
+            textAlignment,
+            imageAlignment,
+          }) => {
+            return (
+              <CollectionsCard
+                imageSrc={imageSrc}
+                redirectUrl={redirectUrl}
+                collectionInfo={collectionInfo}
+                textAlignment={textAlignment}
+                imageAlignment={imageAlignment}
+              />
+            );
+          }
+        )} */}
         <CollectionsCard
           imageSrc={greyCollection}
           redirectUrl={"kuch bhi"}
@@ -105,6 +153,9 @@ function LandingPage() {
       <div className={styles["instagram-wall-container"]}>
         <InstagramWall />
       </div>
+      {/* <div className={styles["footer-container"]}>
+        <Footer />
+      </div> */}
     </div>
   );
 }
