@@ -1,0 +1,14 @@
+.instagram-post-card {
+  height: 255px;
+  width: 275px;
+  /* background-color: lightpink; */
+  margin: 10px 10px 10px 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.instagram-post-card img {
+  height: 100%;
+  width: 100%;
+}

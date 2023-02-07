@@ -35,7 +35,6 @@
     height: auto;
     gap: 20px;
     justify-content: flex-start;
-    /* padding: 15px 0; */
     padding: 5px;
     overflow: scroll;
   }

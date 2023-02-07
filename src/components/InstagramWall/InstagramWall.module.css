@@ -1,0 +1,40 @@
+.instagram-wall {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-and-instagram-handle {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: red; */
+  font-size: 24px;
+  font-weight: 600;
+  padding: 10px 40px;
+}
+
+.instagram-posts-grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 40px;
+  justify-content: space-between;
+  /* background-color: aqua; */
+}
+
+@media only screen and (max-width: 670px) {
+  .instagram-posts-grid-container {
+    justify-content: center;
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .message-and-instagram-handle {
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  .instagram-posts-grid-container {
+    justify-content: center;
+    padding: 20px;
+  }
+}

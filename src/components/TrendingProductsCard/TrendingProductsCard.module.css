@@ -1,10 +1,11 @@
 .trending-product-card {
   display: flex;
   flex-direction: column;
-  /* background-color: red; */
-  height: 385px;
+  background-color: white;
+  /* height: 395px; */
+  height: auto;
   width: 270px;
-  margin: 20px 10px 20px 10px;
+  margin: 20px 10px;
   cursor: pointer;
   border-radius: 8px;
   overflow: hidden;
@@ -24,7 +25,7 @@
 
 .product-details {
   padding: 20px;
-  background-color: white;
+  /* background-color: lightgreen; */
 }
 
 .product-category {
