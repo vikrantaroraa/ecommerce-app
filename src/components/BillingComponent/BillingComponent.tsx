@@ -2,6 +2,7 @@ import styles from "src/components/BillingComponent/BillingComponent.module.css"
 import orderSavingsCheckmark from "src/assets/svg/orderSavingsCheckmark.svg";
 import proceedToBuyArrow from "src/assets/svg/proceedToBuyArrow.svg";
 import { useCart } from "src/context/cart-and-wishlist-context";
+import { Link } from "react-router-dom";
 
 function BillingComponent() {
   const {
@@ -23,6 +24,28 @@ function BillingComponent() {
     });
     return totalItems;
   };
+
+  const calculateCartDiscount = () => {
+    let cartDiscount = 0;
+    const cartTotal = calculateCartTotal();
+    cartDiscount = 0.2 * cartTotal;
+    return cartDiscount;
+  };
+
+  const calculateCouponDiscount = () => {
+    let couponDiscount = 0;
+    const cartTotal = calculateCartTotal();
+    couponDiscount = 0.1 * cartTotal;
+    return couponDiscount;
+  };
+
+  const CalculateSubTotalAfterDiscount = () => {
+    let subTotalAfterDiscount =
+      calculateCartTotal() -
+      calculateCartDiscount() -
+      calculateCouponDiscount();
+    return subTotalAfterDiscount;
+  };
   return (
     <div className={styles["billing-component"]}>
       <span className={styles["price-summary-heading"]}>Price Summary</span>
@@ -30,23 +53,27 @@ function BillingComponent() {
         <span>
           Bag Total <span>({totalItemsInCart()} Items)</span>
         </span>
-        <span>{calculateCartTotal()}</span>
+        <span>Rs. {calculateCartTotal()}</span>
       </div>
       <hr className={styles["hr-separator"]} />
       <div className={styles["coupon-code-applied-messsage-container"]}>
-        <p>Hurray! Coupon code WELCOME50 applied </p>
+        <p>Hurray! Coupon code WELCOME10 applied </p>
       </div>
       <div className={styles["summary-data-row"]}>
         <span>Bag Discount</span>
-        <span className={styles["discount-value"]}>- Rs. 6000</span>
+        <span className={styles["discount-value"]}>
+          - Rs. {calculateCartDiscount()}
+        </span>
       </div>
       <div className={styles["summary-data-row"]}>
         <span>Coupon Discount</span>
-        <span className={styles["discount-value"]}>- Rs. 1000</span>
+        <span className={styles["discount-value"]}>
+          - Rs. {calculateCouponDiscount()}
+        </span>
       </div>
       <div className={styles["summary-data-row"]}>
         <span>Sub Total</span>
-        <span>Rs. 5000</span>
+        <span>Rs. {CalculateSubTotalAfterDiscount()}</span>
       </div>
       <div className={styles["summary-data-row"]}>
         <span>Shipping Charge</span>
@@ -57,14 +84,26 @@ function BillingComponent() {
         <span>
           <img src={orderSavingsCheckmark} alt="Order Savings Checkmark" />
         </span>
-        <p>Yayy! You are saving ₹7000 on this order </p>
+        <p>
+          Yayy! You are saving Rs.{" "}
+          {calculateCartDiscount() + calculateCouponDiscount()} on this order{" "}
+        </p>
       </div>
       <div className={`${styles["summary-data-row"]} ${styles["you-pay-row"]}`}>
         <span>You Pay</span>
-        <span>Rs. 1000</span>
+        <span>Rs. {CalculateSubTotalAfterDiscount()}</span>
       </div>
       <button className={styles["proceed-to-buy-button"]}>
-        Proceed to Buy
+        <Link
+          to="/shipping"
+          style={{
+            textDecoration: "none",
+            color: "#FFF",
+          }}
+        >
+          {" "}
+          Proceed to Buy
+        </Link>
         <span>
           <img src={proceedToBuyArrow} />
         </span>

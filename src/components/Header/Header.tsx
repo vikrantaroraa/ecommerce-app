@@ -20,32 +20,36 @@ const Header = () => {
 
   return (
     <div className={styles["header"]}>
-      <div className={styles["navigation-bar"]}>
-        <div className={styles["logo"]}>BlackHole</div>
-        <div className={styles["navigation-link-men"]}>
-          <Link to="/">All Products</Link>
+      <div className={styles["app-name-and-main-navigation-menu"]}>
+        <div className={styles["app-name"]}>
+          <Link to="/">BlackHole</Link>
         </div>
-        <div className={styles["navigation-link-women"]}>
+        <div className={styles["navigation-link"]}>
+          <Link to="/all-products">All Products</Link>
+        </div>
+        <div className={styles["navigation-link"]}>
           <Link to="/address">Address</Link>
         </div>
-        <div className={styles["navigation-kids"]}>
+        <div className={styles["navigation-link"]}>
           <Link to="/shipping">Shipping</Link>
         </div>
-        <div className={styles["navigation-beauty"]}>BEAUTY</div>
-        <div className={styles["navigation-decor"]}>DECOR</div>
+        <div className={styles["navigation-link"]}>Beauty</div>
+        <div className={styles["navigation-link"]}>Decor</div>
       </div>
-      <div className={styles["search-input"]}>
+      <div className={styles["search-input-container"]}>
         <input placeholder="Search for products, brands and more" />
       </div>
-      <div className={styles["header-actions"]}>
+      <div className={styles["wishlist-cart-signin-button-container"]}>
         {/* <span>Profile</span> */}
-        <span>
+        <span className={styles["wishlist-button"]}>
           <Link to="/wishlist">Wishlist({wishlist.length})</Link>
         </span>
-        <span>
+        <span className={styles["cart-button"]}>
           <Link to="/cart">Bag({totalItemsInCart()})</Link>
         </span>
-        <button onClick={logoutUser}>Logout</button>
+        <button className={styles["signin-button"]} onClick={logoutUser}>
+          Logout
+        </button>
       </div>
     </div>
   );

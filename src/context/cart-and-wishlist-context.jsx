@@ -21,16 +21,30 @@ export const useCart = () => {
 const cartAndWishlistReducer = (state, action) => {
   switch (action.type) {
     case "ADD_TO_CART":
+      const selectedColor = localStorage.getItem("selectedColor");
+      const selectedSize = localStorage.getItem("selectedSize");
       const itemIndexInCart = state.cart.findIndex(
-        (item) => item.id === action.payload.id
+        (item) =>
+          item.id === action.payload.id && item.selectedSize === selectedSize
       );
       if (itemIndexInCart === -1) {
-        return {
+        const updatedState = {
           ...state,
-          cart: [...state.cart, { ...action.payload, quantity: 1 }],
+          cart: [
+            ...state.cart,
+            {
+              ...action.payload,
+              quantity: 1,
+              selectedColor: selectedColor,
+              selectedSize: selectedSize,
+            },
+          ],
         };
+        localStorage.removeItem("selectedColor");
+        localStorage.removeItem("selectedSize");
+        return updatedState;
       }
-      return {
+      const updatedState = {
         ...state,
         cart: state.cart.map((item) =>
           item.id === action.payload.id
@@ -38,6 +52,9 @@ const cartAndWishlistReducer = (state, action) => {
             : item
         ),
       };
+      localStorage.removeItem("selectedColor");
+      localStorage.removeItem("selectedSize");
+      return updatedState;
 
     case "INCREASE_QUANTITY":
       return {

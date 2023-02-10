@@ -13,7 +13,12 @@ const CartProduct = ({
   name,
   price,
   quantity,
-  imageSrc = "https://images.bewakoof.com/t1080/men-s-blue-t-shirt-1092-1655748102-1.jpg",
+  color,
+  brand,
+  category,
+  imageSrc,
+  sizesAvailable,
+  selectedSize,
   onRemoveFromCartClick,
   onMoveToWishlistClick,
   onIncreaseQuantityClick,
@@ -26,12 +31,9 @@ const CartProduct = ({
         <div className={styles["product-data"]}>
           <div className={styles["product-name-and-delivery-date"]}>
             <div className={styles["product-category-and-type"]}>
-              Nike Winterwears
+              {brand} {category}
             </div>
-            <div className={styles["product-name"]}>
-              {/* {name} */}
-              Men’s Solid Black Slim-fit Hoodie
-            </div>
+            <div className={styles["product-name"]}>{name}</div>
             <div className={styles["delivery-info"]}>
               <img src={deliveryCar} alt="delivery car icon" />
               Delivery by <b>21st Sept</b>
@@ -44,8 +46,10 @@ const CartProduct = ({
                 Size:{" "}
               </label>
               <select name="size" id="size" className={styles["size-value"]}>
-                {sizeOptions.map((size) => (
-                  <option value={size}>{size}</option>
+                {sizesAvailable.map((size) => (
+                  <option value={size} selected={size === selectedSize}>
+                    {size}
+                  </option>
                 ))}
               </select>
             </div>
@@ -72,7 +76,7 @@ const CartProduct = ({
           </div>
           <span className={styles["hurry-text"]}>Hurry! Only 2 Left!</span>
           <div className={styles["price-and-discount"]}>
-            <span className={styles["price"]}>₹ 4500</span>
+            <span className={styles["price"]}>₹ {price}</span>
             <s className={styles["actual-price"]}>₹ 5500</s>
             <span className={styles["discount"]}>45 % off</span>
           </div>

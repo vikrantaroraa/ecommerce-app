@@ -38,6 +38,12 @@ const Cart = () => {
               name={item.name}
               price={item.price}
               quantity={item.quantity}
+              color={item.color}
+              brand={item.brand}
+              category={item.category}
+              imageSrc={item.images[1]}
+              sizesAvailable={item.sizesAvailable}
+              selectedSize={item.selectedSize}
               onIncreaseQuantityClick={() =>
                 cartDispatch({ type: "INCREASE_QUANTITY", payload: item.id })
               }

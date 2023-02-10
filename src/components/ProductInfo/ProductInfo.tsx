@@ -8,11 +8,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CollapsibleComponent from "src/components/CollapsibleComponent/CollapsibleComponent";
 import { useState } from "react";
 import { allProducts } from "src/api/all-products";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { useCart } from "src/context/cart-and-wishlist-context";
 
 function ProductInfo() {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
-
+  const { dispatch: productDispatch } = useCart();
   const { productId } = useParams();
 
   function getProductDetails(allProducts: any, productId: any) {
@@ -118,18 +119,23 @@ function ProductInfo() {
               <span className={styles["color-name"]}>{color}</span>
             </div>
             <div className={styles["color-options"]}>
-              {colorsAvailable.map((color: string, index: number) => {
+              {colorsAvailable.map(({ color, productId }: any) => {
                 return (
-                  <div
-                    id={color}
-                    className={styles["color-tile-border"]}
-                    onClick={() => showSelectedColorTile(color)}
-                  >
+                  <Link to={`/product/${productId}`}>
                     <div
-                      style={{ backgroundColor: color }}
-                      className={styles["color-tile"]}
-                    ></div>
-                  </div>
+                      id={color}
+                      className={styles["color-tile-border"]}
+                      onClick={() => {
+                        showSelectedColorTile(color);
+                        localStorage.setItem("selectedColor", color);
+                      }}
+                    >
+                      <div
+                        style={{ backgroundColor: color }}
+                        className={styles["color-tile"]}
+                      ></div>
+                    </div>
+                  </Link>
                 );
               })}
             </div>
@@ -140,12 +146,15 @@ function ProductInfo() {
               <span className={styles["size-name"]}>XL</span>
             </div>
             <div className={styles["size-options"]}>
-              {sizesAvailable.map((size: string, index: number) => {
+              {sizesAvailable.map((size: string) => {
                 return (
                   <div
                     id={size}
                     className={styles["size-tile"]}
-                    onClick={() => showSelectedSizeTile(size)}
+                    onClick={() => {
+                      showSelectedSizeTile(size);
+                      localStorage.setItem("selectedSize", size);
+                    }}
                   >
                     {size}
                   </div>
@@ -157,7 +166,24 @@ function ProductInfo() {
         <hr />
         {/* This is Add to cart and Wishlist button section */}
         <div className={styles["add-to-bag-and-wishlist-button"]}>
-          <button className={styles["add-to-bag-button"]}>
+          <button
+            className={styles["add-to-bag-button"]}
+            onClick={() => {
+              const selectedSize = localStorage.getItem("selectedSize");
+              const selectedColor = localStorage.getItem("selectedColor");
+              if (!selectedColor) {
+                alert("Please Select a color");
+              }
+              if (!selectedSize) {
+                alert("Please Select a size");
+              }
+              if (!selectedColor || !selectedSize) {
+                return;
+              } else {
+                productDispatch({ type: "ADD_TO_CART", payload: product });
+              }
+            }}
+          >
             <span>
               <svg
                 width="19"

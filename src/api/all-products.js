@@ -33,12 +33,12 @@ import redJoggers4 from "src/assets/images/Men/Joggers/red-joggers/red-joggers-4
 import redJoggers5 from "src/assets/images/Men/Joggers/red-joggers/red-joggers-5.svg";
 import redJoggers6 from "src/assets/images/Men/Joggers/red-joggers/red-joggers-6.svg";
 
-// import darkgreyJoggers1 from "src/assets/images/Men/Joggers/darkgrey-joggers/darkgrey-joggers-1.svg";
-// import darkgreyJoggers2 from "src/assets/images/Men/Joggers/darkgrey-joggers/darkgrey-joggers-2.svg";
-// import darkgreyJoggers3 from "src/assets/images/Men/Joggers/darkgrey-joggers/darkgrey-joggers-3.svg";
-// import darkgreyJoggers4 from "src/assets/images/Men/Joggers/darkgrey-joggers/darkgrey-joggers-4.svg";
-// import darkgreyJoggers5 from "src/assets/images/Men/Joggers/darkgrey-joggers/darkgrey-joggers-5.svg";
-// import darkgreyJoggers6 from "src/assets/images/Men/Joggers/darkgrey-joggers/darkgrey-joggers-6.svg";
+import darkgreyJoggers1 from "src/assets/images/Men/Joggers/darkgrey-joggers/darkgrey-joggers-1.svg";
+import darkgreyJoggers2 from "src/assets/images/Men/Joggers/darkgrey-joggers/darkgrey-joggers-2.svg";
+import darkgreyJoggers3 from "src/assets/images/Men/Joggers/darkgrey-joggers/darkgrey-joggers-3.svg";
+import darkgreyJoggers4 from "src/assets/images/Men/Joggers/darkgrey-joggers/darkgrey-joggers-4.svg";
+import darkgreyJoggers5 from "src/assets/images/Men/Joggers/darkgrey-joggers/darkgrey-joggers-5.svg";
+import darkgreyJoggers6 from "src/assets/images/Men/Joggers/darkgrey-joggers/darkgrey-joggers-6.svg";
 
 // import brownShirt1 from "src/assets/images/Men/Shirts/brown-shirt/brown-shirt-1.svg";
 // import brownShirt2 from "src/assets/images/Men/Shirts/brown-shirt/brown-shirt-2.svg";
@@ -122,7 +122,20 @@ export const allProducts = [
     ],
     discount: "10",
     color: "black",
-    colorsAvailable: ["black", "green", "olive"],
+    colorsAvailable: [
+      {
+        color: "black",
+        productId: 1,
+      },
+      {
+        color: "green",
+        productId: 2,
+      },
+      {
+        color: "olive",
+        productId: 3,
+      },
+    ],
     sizesAvailable: ["XS", "S", "M", "L", "XL"],
     deliveryTime: "2",
     gender: "Men",
@@ -149,7 +162,20 @@ export const allProducts = [
     ],
     discount: "20",
     color: "green",
-    colorsAvailable: ["black", "green", "olive"],
+    colorsAvailable: [
+      {
+        color: "black",
+        productId: 1,
+      },
+      {
+        color: "green",
+        productId: 2,
+      },
+      {
+        color: "olive",
+        productId: 3,
+      },
+    ],
     sizesAvailable: ["S", "M", "L", "XL", "2XL"],
     deliveryTime: "8",
     gender: "Women",
@@ -176,7 +202,20 @@ export const allProducts = [
     ],
     discount: "30",
     color: "olive",
-    colorsAvailable: ["black", "green", "olive"],
+    colorsAvailable: [
+      {
+        color: "black",
+        productId: 1,
+      },
+      {
+        color: "green",
+        productId: 2,
+      },
+      {
+        color: "olive",
+        productId: 3,
+      },
+    ],
     sizesAvailable: ["M", "L", "XL", "2XL", "3XL"],
     deliveryTime: "20",
     gender: "Men",
@@ -203,7 +242,20 @@ export const allProducts = [
     ],
     discount: "40",
     color: "grey",
-    colorsAvailable: ["grey", "red", "darkgrey"],
+    colorsAvailable: [
+      {
+        color: "grey",
+        productId: 4,
+      },
+      {
+        color: "red",
+        productId: 5,
+      },
+      {
+        color: "darkgrey",
+        productId: 6,
+      },
+    ],
     sizesAvailable: ["XS", "S", "M", "L", "XL"],
     deliveryTime: "5",
     gender: "Women",
@@ -230,7 +282,20 @@ export const allProducts = [
     ],
     discount: "50",
     color: "red",
-    colorsAvailable: ["grey", "red", "darkgrey"],
+    colorsAvailable: [
+      {
+        color: "grey",
+        productId: 4,
+      },
+      {
+        color: "red",
+        productId: 5,
+      },
+      {
+        color: "darkgrey",
+        productId: 6,
+      },
+    ],
     sizesAvailable: ["S", "M", "L", "XL", "2XL"],
     deliveryTime: "12",
     gender: "Men",
@@ -238,30 +303,46 @@ export const allProducts = [
     units_sold: "1490",
     product_reviews: "964",
   },
-  // {
-  //   id: 6,
-  //   brand: "Bewakoof",
-  //   category: "Joggers",
-  //   name: "Men's darkgrey Joggers",
-  //   description: "A very nice pair of darkgrey joggers for men",
-  //   rating: "4.5",
-  //   price: "799",
-  //   actualPrice: "1299",
-  //   images: [
-  //     darkgreyJoggers1,
-  //     darkgreyJoggers2,
-  //     darkgreyJoggers3,
-  //     darkgreyJoggers4,
-  //     darkgreyJoggers5,
-  //     darkgreyJoggers6,
-  //   ],
-  //   discount: "10",
-  //   color: "darkgrey",
-  //   colorsAvailable: ["grey", "red", "darkgrey"],
-  //   sizesAvailable: ["M", "L", "XL", "2XL", "3XL"],
-  //   deliveryTime: "18",
-  //   gender: "Men",
-  // },
+  {
+    id: 6,
+    brand: "Bewakoof",
+    category: "Joggers",
+    name: "Men's darkgrey Joggers",
+    description: "A very nice pair of darkgrey joggers for men",
+    rating: "4.5",
+    price: "799",
+    actualPrice: "1299",
+    images: [
+      darkgreyJoggers1,
+      darkgreyJoggers2,
+      darkgreyJoggers3,
+      darkgreyJoggers4,
+      darkgreyJoggers5,
+      darkgreyJoggers6,
+    ],
+    discount: "10",
+    color: "darkgrey",
+    colorsAvailable: [
+      {
+        color: "grey",
+        productId: 4,
+      },
+      {
+        color: "red",
+        productId: 5,
+      },
+      {
+        color: "darkgrey",
+        productId: 6,
+      },
+    ],
+    sizesAvailable: ["M", "L", "XL", "2XL", "3XL"],
+    deliveryTime: "18",
+    gender: "Men",
+    introduced_on: "12/14/2022",
+    units_sold: "1480",
+    product_reviews: "950",
+  },
   // {
   //   id: 7,
   //   brand: "Roadster",

@@ -4,6 +4,7 @@
   /* background-color: lightgreen; */
   padding: 40px;
   justify-content: space-between;
+  border-top: 1px solid #cec7c7;
 }
 
 .footer-section {

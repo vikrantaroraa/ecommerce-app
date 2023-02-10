@@ -125,7 +125,6 @@
   border-radius: 8px;
   border: none;
   outline: none;
-  cursor: pointer;
 }
 
 .decrease-qty {
@@ -134,12 +133,14 @@
   justify-content: center;
   /* background-color: #ededed; */
   background-color: rgba(158, 0, 255, 0.12);
+  cursor: pointer;
 }
 
 .increase-qty {
   /* background-color: #dbf3d8; */
   background-color: rgba(0, 219, 88, 0.12);
   color: #35932a;
+  cursor: pointer;
 }
 
 .hurry-text {
