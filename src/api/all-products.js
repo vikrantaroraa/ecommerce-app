@@ -310,7 +310,7 @@ export const allProducts = [
     name: "Men's darkgrey Joggers",
     description: "A very nice pair of darkgrey joggers for men",
     rating: "4.5",
-    price: "799",
+    price: "800",
     actualPrice: "1299",
     images: [
       darkgreyJoggers1,

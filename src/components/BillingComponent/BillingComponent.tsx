@@ -2,9 +2,11 @@ import styles from "src/components/BillingComponent/BillingComponent.module.css"
 import orderSavingsCheckmark from "src/assets/svg/orderSavingsCheckmark.svg";
 import proceedToBuyArrow from "src/assets/svg/proceedToBuyArrow.svg";
 import { useCart } from "src/context/cart-and-wishlist-context";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function BillingComponent() {
+  const location = useLocation();
+  const currentPage = location.pathname;
   const {
     state: { cart },
   } = useCart();
@@ -94,16 +96,30 @@ function BillingComponent() {
         <span>Rs. {CalculateSubTotalAfterDiscount()}</span>
       </div>
       <button className={styles["proceed-to-buy-button"]}>
-        <Link
-          to="/shipping"
-          style={{
-            textDecoration: "none",
-            color: "#FFF",
-          }}
-        >
-          {" "}
-          Proceed to Buy
-        </Link>
+        {currentPage === "/cart" && (
+          <Link
+            to="/shipping"
+            style={{
+              textDecoration: "none",
+              color: "#FFF",
+            }}
+          >
+            {" "}
+            Continue to Shipping
+          </Link>
+        )}
+        {currentPage === "/shipping" && (
+          <Link
+            to="/shipping"
+            style={{
+              textDecoration: "none",
+              color: "#FFF",
+            }}
+          >
+            {" "}
+            Continue to Checkout
+          </Link>
+        )}
         <span>
           <img src={proceedToBuyArrow} />
         </span>

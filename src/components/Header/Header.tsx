@@ -1,9 +1,14 @@
 import { useCart } from "src/context/cart-and-wishlist-context";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "src/context/auth-context";
 import styles from "src/components/Header/Header.module.css";
+import React, { useState } from "react";
+import { checkboxFiltersList } from "src/context/sort-and-filter-store/checkboxFiltersList";
 
 const Header = () => {
+  const [searchString, setSearchString] = useState("");
+  const navigate = useNavigate();
+
   const {
     state: { cart, wishlist },
   } = useCart();
@@ -16,6 +21,28 @@ const Header = () => {
       totalItems += item.quantity;
     });
     return totalItems;
+  };
+
+  const searchProducts = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = e.currentTarget;
+    setSearchString(value);
+    if (value !== "") {
+      const brandObject = checkboxFiltersList.Brand.find(
+        ({ filterLabel }) => filterLabel === value
+      );
+      if (!brandObject) {
+        const categoryObject = checkboxFiltersList.Category.find(
+          ({ filterLabel }) => filterLabel === value
+        );
+        const urlParameter = categoryObject?.urlParameter;
+        navigate(`/all-products?category=${urlParameter}`);
+        navigate(0);
+      } else {
+        const urlParameter = brandObject?.urlParameter;
+        navigate(`/all-products?brand=${urlParameter}`);
+        navigate(0);
+      }
+    }
   };
 
   return (
@@ -37,7 +64,22 @@ const Header = () => {
         <div className={styles["navigation-link"]}>Decor</div>
       </div>
       <div className={styles["search-input-container"]}>
-        <input placeholder="Search for products, brands and more" />
+        <input
+          autoComplete="off"
+          type="search"
+          placeholder="Search for products, brands and more"
+          value={searchString}
+          onChange={(e) => searchProducts(e)}
+          list="products"
+        />
+        <datalist id="products">
+          {checkboxFiltersList.Brand.map(({ filterLabel }) => (
+            <option>{filterLabel}</option>
+          ))}
+          {checkboxFiltersList.Category.map(({ filterLabel }) => (
+            <option>{filterLabel}</option>
+          ))}
+        </datalist>
       </div>
       <div className={styles["wishlist-cart-signin-button-container"]}>
         {/* <span>Profile</span> */}

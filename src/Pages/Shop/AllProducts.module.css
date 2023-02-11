@@ -165,14 +165,9 @@
 
 .products-container {
   /* background-color: lightpink; */
-  height: auto;
   width: 65%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-right: 80px;
 }
 
 @media only screen and (max-width: 425px) {

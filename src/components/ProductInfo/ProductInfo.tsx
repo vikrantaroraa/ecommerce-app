@@ -6,7 +6,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CollapsibleComponent from "src/components/CollapsibleComponent/CollapsibleComponent";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { allProducts } from "src/api/all-products";
 import { Link, useParams } from "react-router-dom";
 import { useCart } from "src/context/cart-and-wishlist-context";
@@ -15,6 +15,11 @@ function ProductInfo() {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const { dispatch: productDispatch } = useCart();
   const { productId } = useParams();
+
+  useEffect(() => {
+    localStorage.removeItem("selectedSize");
+    localStorage.removeItem("selectedColor");
+  }, []);
 
   function getProductDetails(allProducts: any, productId: any) {
     return allProducts.find((product: any) => product.id === Number(productId));
@@ -204,7 +209,7 @@ function ProductInfo() {
           </button>
           <button className={styles["wishlist-button"]}>
             {/* This is a black un-filled heart to show non-wishlisted item */}
-            {/* <svg
+            <svg
               width="21"
               height="17"
               viewBox="0 0 21 17"
@@ -217,7 +222,7 @@ function ProductInfo() {
                 d="M14.7099 0.387695C16.2164 0.387695 17.6615 0.985503 18.7277 2.04988C19.794 3.11426 20.3943 4.55824 20.3969 6.06481C20.3969 9.12168 19.2754 10.5807 14.2633 14.5407L11.689 16.5389C10.9728 17.0948 9.97102 17.0948 9.25481 16.5389L6.68054 14.5407C1.6684 10.5807 0.546875 9.12168 0.546875 6.06481C0.549503 4.55824 1.14983 3.11426 2.21608 2.04988C3.28232 0.985503 4.72733 0.387695 6.23392 0.387695C7.77074 0.394993 9.24441 1.00012 10.3429 2.07495L10.4719 2.19668L10.6009 2.07495C11.6994 1.00012 13.173 0.394993 14.7099 0.387695ZM9.92877 3.70398L9.95722 3.73116C10.245 4.00661 10.6987 4.00661 10.9865 3.73116L11.0151 3.70381C11.7623 2.98868 12.5372 2.24696 13.5326 1.97002C13.9139 1.86392 14.3107 1.80777 14.7132 1.80556C15.8429 1.80645 16.9264 2.25511 17.726 3.05334C18.526 3.85199 18.9767 4.93535 18.9791 6.06577C18.979 7.35843 18.759 8.17701 18.0645 9.12792C17.2885 10.1907 15.9075 11.4344 13.3891 13.4245L10.8197 15.4188C10.615 15.5777 10.3288 15.5777 10.1241 15.4188L7.55482 13.4245C5.03628 11.4345 3.6553 10.1907 2.8792 9.12792C2.18484 8.1771 1.96488 7.35862 1.96474 6.06611C1.96702 4.93557 2.41765 3.85208 3.21778 3.05334C4.0174 2.25511 5.1008 1.80645 6.23056 1.80556C6.6328 1.80777 7.02933 1.86384 7.41045 1.9698C8.4062 2.24665 9.18137 2.98864 9.92877 3.70398Z"
                 fill="#2C2C2C"
               />
-            </svg> */}
+            </svg>
             {/* This is a black filled heart for wishlisted item */}
             {/* <svg
               width="22"
@@ -232,12 +237,13 @@ function ProductInfo() {
               />
             </svg> */}
             {/* This is a red filled heart for wishlisted item */}
-            <FontAwesomeIcon
+            {/* <FontAwesomeIcon
               style={{ fontSize: "20px" }}
               color={"red"}
               icon={faHeart}
-            />
-            Wishlisted
+            /> */}
+            {/* Wishlisted */}
+            Wishlist
           </button>
         </div>
         {/* <hr /> */}

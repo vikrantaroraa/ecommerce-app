@@ -564,8 +564,8 @@ const AllProducts = () => {
             console.log({ filteredData });
             const {
               id,
-              // brand,
-              // category,
+              brand,
+              category,
               name,
               price,
               description,
@@ -582,42 +582,40 @@ const AllProducts = () => {
               //     color: "#000",
               //   }}
               // >
-              <ProductCard
-                id={id}
-                name={name}
-                price={price}
-                description={description}
-                onAddToCartClick={() =>
-                  productDispatch({ type: "ADD_TO_CART", payload: product })
-                }
-                onAddToWishListClick={() =>
-                  productDispatch({
-                    type: "ADD_TO_WISHLIST",
-                    payload: product,
-                  })
-                }
-              />
+              // <ProductCard
+              //   id={id}
+              //   name={name}
+              //   price={price}
+              //   description={description}
+              //   onAddToCartClick={() =>
+              //     productDispatch({ type: "ADD_TO_CART", payload: product })
+              //   }
+              //   onAddToWishListClick={() =>
+              //     productDispatch({
+              //       type: "ADD_TO_WISHLIST",
+              //       payload: product,
+              //     })
+              //   }
+              // />
               // </Link>
 
-              // <Link
-              //   to={`/product/${product.id}`}
-              //   style={{
-              //     textDecoration: "none",
-              //     color: "#000",
-              //   }}
-              // >
-              //   <div
-              //     style={{ margin: "30px 30px", cursor: "pointer" }}
-              //   >
-              //     <SimilarProductsCard
-              //       brandName="Campus Sutra"
-              //       productName="Solid Olive Green Hoodie"
-              //       price={price}
-              //       imageSrc={images[1]}
-              //       introduced_on={product_reviews}
-              //     />
-              //   </div>
-              // </Link>
+              <Link
+                to={`/product/${product.id}`}
+                style={{
+                  textDecoration: "none",
+                  color: "#000",
+                }}
+              >
+                <div style={{ margin: "30px 30px", cursor: "pointer" }}>
+                  <SimilarProductsCard
+                    brandName={brand}
+                    productName={name}
+                    price={price}
+                    imageSrc={images[1]}
+                    // introduced_on={product_reviews}
+                  />
+                </div>
+              </Link>
             );
           })}
         </div>
