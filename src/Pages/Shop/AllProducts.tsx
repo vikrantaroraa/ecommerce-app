@@ -562,43 +562,9 @@ const AllProducts = () => {
         <div className={styles["products-container"]}>
           {filteredData.map((product: any) => {
             console.log({ filteredData });
-            const {
-              id,
-              brand,
-              category,
-              name,
-              price,
-              description,
-              images,
-              introduced_on,
-              units_sold,
-              product_reviews,
-            } = product;
+            const { id, brand, name, price, actualPrice, images, discount } =
+              product;
             return (
-              // <Link
-              //   to={`/product/${product.id}`}
-              //   style={{
-              //     textDecoration: "none",
-              //     color: "#000",
-              //   }}
-              // >
-              // <ProductCard
-              //   id={id}
-              //   name={name}
-              //   price={price}
-              //   description={description}
-              //   onAddToCartClick={() =>
-              //     productDispatch({ type: "ADD_TO_CART", payload: product })
-              //   }
-              //   onAddToWishListClick={() =>
-              //     productDispatch({
-              //       type: "ADD_TO_WISHLIST",
-              //       payload: product,
-              //     })
-              //   }
-              // />
-              // </Link>
-
               <Link
                 to={`/product/${product.id}`}
                 style={{
@@ -612,7 +578,8 @@ const AllProducts = () => {
                     productName={name}
                     price={price}
                     imageSrc={images[1]}
-                    // introduced_on={product_reviews}
+                    actualPrice={actualPrice}
+                    discount={discount}
                   />
                 </div>
               </Link>

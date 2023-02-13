@@ -1,5 +1,5 @@
 export interface SimilarProductsCardProps {
-  imageSrc?: string;
+  imageSrc: string;
   brandName: string;
   productName: string;
   price: number;

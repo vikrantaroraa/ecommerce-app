@@ -1,13 +1,25 @@
 import { useCart } from "src/context/cart-and-wishlist-context";
-import { Link, useNavigate } from "react-router-dom";
+import {
+  Link,
+  useLocation,
+  useNavigate,
+  useSearchParams,
+} from "react-router-dom";
 import { useAuth } from "src/context/auth-context";
 import styles from "src/components/Header/Header.module.css";
 import React, { useState } from "react";
 import { checkboxFiltersList } from "src/context/sort-and-filter-store/checkboxFiltersList";
+import { useSortAndFilter } from "src/context/sort-and-filter-store/sort-and-filter-context";
 
 const Header = () => {
   const [searchString, setSearchString] = useState("");
+  const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
+  const location = useLocation();
+  const { dispatch: sortAndFilterDispatch } = useSortAndFilter();
+  const [actionDispatched, setActionDispatched] = useState("");
+  const [urlParameterSearched, setUrlParameterSearched] = useState("");
+  const [filterTypeSearched, setFilterTypeSearched] = useState("");
 
   const {
     state: { cart, wishlist },
@@ -24,6 +36,9 @@ const Header = () => {
   };
 
   const searchProducts = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const currentSearchParams = new URLSearchParams(searchParams);
+    const userLocationBeforeRedirect = location.pathname;
+    console.log({ userLocationBeforeRedirect });
     const { value } = e.currentTarget;
     setSearchString(value);
     if (value !== "") {
@@ -34,13 +49,49 @@ const Header = () => {
         const categoryObject = checkboxFiltersList.Category.find(
           ({ filterLabel }) => filterLabel === value
         );
+        console.log("Hello categoryObject:", categoryObject);
         const urlParameter = categoryObject?.urlParameter;
-        navigate(`/all-products?category=${urlParameter}`);
-        navigate(0);
+        const dispatchAction = categoryObject?.dispatchAction;
+        setUrlParameterSearched(urlParameter!);
+        setActionDispatched(dispatchAction!);
+        setFilterTypeSearched("category");
+        if (userLocationBeforeRedirect !== "/all-products") {
+          navigate(`/all-products?category=${urlParameter}`);
+        } else {
+          sortAndFilterDispatch({ type: `${dispatchAction}` });
+          const currentSearchParams = new URLSearchParams(searchParams);
+          currentSearchParams.append("category", urlParameter as string);
+          setSearchParams(currentSearchParams);
+        }
       } else {
         const urlParameter = brandObject?.urlParameter;
-        navigate(`/all-products?brand=${urlParameter}`);
-        navigate(0);
+        const dispatchAction = brandObject?.dispatchAction;
+        setUrlParameterSearched(urlParameter!);
+        setActionDispatched(dispatchAction!);
+        setFilterTypeSearched("brand");
+        console.log("Hello brandObject:", brandObject);
+        if (userLocationBeforeRedirect !== "/all-products") {
+          navigate(`/all-products?brand=${urlParameter}`);
+        } else {
+          sortAndFilterDispatch({ type: `${dispatchAction}` });
+          const currentSearchParams = new URLSearchParams(searchParams);
+          currentSearchParams.append("brand", urlParameter as string);
+          setSearchParams(currentSearchParams);
+        }
+      }
+    } else if (value === "") {
+      const allAppliedFilters = currentSearchParams.getAll(filterTypeSearched);
+      if (allAppliedFilters.includes(urlParameterSearched)) {
+        sortAndFilterDispatch({ type: `${actionDispatched}` });
+        const newFiltersArray = allAppliedFilters.filter(
+          (filterValue) => filterValue !== urlParameterSearched
+        );
+        const newFiltersArrayLength = newFiltersArray.length;
+        currentSearchParams.delete(filterTypeSearched);
+        for (let i = 0; i < newFiltersArrayLength; i++) {
+          currentSearchParams.append(filterTypeSearched, newFiltersArray[i]);
+        }
+        setSearchParams(currentSearchParams);
       }
     }
   };
