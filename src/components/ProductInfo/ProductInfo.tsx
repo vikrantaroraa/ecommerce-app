@@ -91,6 +91,16 @@ function ProductInfo() {
           <div className={styles["active-product-image"]}>
             <img src={images[activeImageIndex]} alt="main product" />
           </div>
+          <div className={styles["horizontal-image-grid-container"]}>
+            {images.map((image: string, index: number) => (
+              <div
+                className={styles["horizontal-grid-image"]}
+                onClick={() => setActiveImageIndex(index)}
+              >
+                <img src={image} alt="product" />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <div className={styles["product-data-container"]}>
