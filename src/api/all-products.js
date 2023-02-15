@@ -40,12 +40,12 @@ import darkgreyJoggers4 from "src/assets/images/Men/Joggers/darkgrey-joggers/dar
 import darkgreyJoggers5 from "src/assets/images/Men/Joggers/darkgrey-joggers/darkgrey-joggers-5.svg";
 import darkgreyJoggers6 from "src/assets/images/Men/Joggers/darkgrey-joggers/darkgrey-joggers-6.svg";
 
-import brownShirt1 from "src/assets/images/Men/Shirts/brown-shirt/brown-shirt-1.svg";
-import brownShirt2 from "src/assets/images/Men/Shirts/brown-shirt/brown-shirt-2.svg";
-import brownShirt3 from "src/assets/images/Men/Shirts/brown-shirt/brown-shirt-3.svg";
-import brownShirt4 from "src/assets/images/Men/Shirts/brown-shirt/brown-shirt-4.svg";
-import brownShirt5 from "src/assets/images/Men/Shirts/brown-shirt/brown-shirt-5.svg";
-import brownShirt6 from "src/assets/images/Men/Shirts/brown-shirt/brown-shirt-6.svg";
+// import brownShirt1 from "src/assets/images/Men/Shirts/brown-shirt/brown-shirt-1.svg";
+// import brownShirt2 from "src/assets/images/Men/Shirts/brown-shirt/brown-shirt-2.svg";
+// import brownShirt3 from "src/assets/images/Men/Shirts/brown-shirt/brown-shirt-3.svg";
+// import brownShirt4 from "src/assets/images/Men/Shirts/brown-shirt/brown-shirt-4.svg";
+// import brownShirt5 from "src/assets/images/Men/Shirts/brown-shirt/brown-shirt-5.svg";
+// import brownShirt6 from "src/assets/images/Men/Shirts/brown-shirt/brown-shirt-6.svg";
 
 // import greenShirt1 from "src/assets/images/Men/Shirts/green-shirt/green-shirt-1.svg";
 // import greenShirt2 from "src/assets/images/Men/Shirts/green-shirt/green-shirt-2.svg";
@@ -60,26 +60,26 @@ import brownShirt6 from "src/assets/images/Men/Shirts/brown-shirt/brown-shirt-6.
 // import pinkShirt5 from "src/assets/images/Men/Shirts/pink-shirt/pink-shirt-5.svg";
 // import pinkShirt6 from "src/assets/images/Men/Shirts/pink-shirt/pink-shirt-6.svg";
 
-import blackSweatshirt1 from "src/assets/images/Men/Sweatshirts/black-sweatshirt/black-sweatshirt-1.svg";
-import blackSweatshirt2 from "src/assets/images/Men/Sweatshirts/black-sweatshirt/black-sweatshirt-2.svg";
-import blackSweatshirt3 from "src/assets/images/Men/Sweatshirts/black-sweatshirt/black-sweatshirt-3.svg";
-import blackSweatshirt4 from "src/assets/images/Men/Sweatshirts/black-sweatshirt/black-sweatshirt-4.svg";
-import blackSweatshirt5 from "src/assets/images/Men/Sweatshirts/black-sweatshirt/black-sweatshirt-5.svg";
-import blackSweatshirt6 from "src/assets/images/Men/Sweatshirts/black-sweatshirt/black-sweatshirt-6.svg";
+// import blackSweatshirt1 from "src/assets/images/Men/Sweatshirts/black-sweatshirt/black-sweatshirt-1.svg";
+// import blackSweatshirt2 from "src/assets/images/Men/Sweatshirts/black-sweatshirt/black-sweatshirt-2.svg";
+// import blackSweatshirt3 from "src/assets/images/Men/Sweatshirts/black-sweatshirt/black-sweatshirt-3.svg";
+// import blackSweatshirt4 from "src/assets/images/Men/Sweatshirts/black-sweatshirt/black-sweatshirt-4.svg";
+// import blackSweatshirt5 from "src/assets/images/Men/Sweatshirts/black-sweatshirt/black-sweatshirt-5.svg";
+// import blackSweatshirt6 from "src/assets/images/Men/Sweatshirts/black-sweatshirt/black-sweatshirt-6.svg";
 
-import bridalroseSweatshirt1 from "src/assets/images/Men/Sweatshirts/bridalrose-sweatshirt/bridalrose-sweatshirt-1.svg";
-import bridalroseSweatshirt2 from "src/assets/images/Men/Sweatshirts/bridalrose-sweatshirt/bridalrose-sweatshirt-2.svg";
-import bridalroseSweatshirt3 from "src/assets/images/Men/Sweatshirts/bridalrose-sweatshirt/bridalrose-sweatshirt-3.svg";
-import bridalroseSweatshirt4 from "src/assets/images/Men/Sweatshirts/bridalrose-sweatshirt/bridalrose-sweatshirt-4.svg";
-import bridalroseSweatshirt5 from "src/assets/images/Men/Sweatshirts/bridalrose-sweatshirt/bridalrose-sweatshirt-5.svg";
-import bridalroseSweatshirt6 from "src/assets/images/Men/Sweatshirts/bridalrose-sweatshirt/bridalrose-sweatshirt-6.svg";
+// import bridalroseSweatshirt1 from "src/assets/images/Men/Sweatshirts/bridalrose-sweatshirt/bridalrose-sweatshirt-1.svg";
+// import bridalroseSweatshirt2 from "src/assets/images/Men/Sweatshirts/bridalrose-sweatshirt/bridalrose-sweatshirt-2.svg";
+// import bridalroseSweatshirt3 from "src/assets/images/Men/Sweatshirts/bridalrose-sweatshirt/bridalrose-sweatshirt-3.svg";
+// import bridalroseSweatshirt4 from "src/assets/images/Men/Sweatshirts/bridalrose-sweatshirt/bridalrose-sweatshirt-4.svg";
+// import bridalroseSweatshirt5 from "src/assets/images/Men/Sweatshirts/bridalrose-sweatshirt/bridalrose-sweatshirt-5.svg";
+// import bridalroseSweatshirt6 from "src/assets/images/Men/Sweatshirts/bridalrose-sweatshirt/bridalrose-sweatshirt-6.svg";
 
-import sageSweatshirt1 from "src/assets/images/Men/Sweatshirts/sage-sweatshirt/sage-sweatshirt-1.svg";
-import sageSweatshirt2 from "src/assets/images/Men/Sweatshirts/sage-sweatshirt/sage-sweatshirt-2.svg";
-import sageSweatshirt3 from "src/assets/images/Men/Sweatshirts/sage-sweatshirt/sage-sweatshirt-3.svg";
-import sageSweatshirt4 from "src/assets/images/Men/Sweatshirts/sage-sweatshirt/sage-sweatshirt-4.svg";
-import sageSweatshirt5 from "src/assets/images/Men/Sweatshirts/sage-sweatshirt/sage-sweatshirt-5.svg";
-import sageSweatshirt6 from "src/assets/images/Men/Sweatshirts/sage-sweatshirt/sage-sweatshirt-6.svg";
+// import sageSweatshirt1 from "src/assets/images/Men/Sweatshirts/sage-sweatshirt/sage-sweatshirt-1.svg";
+// import sageSweatshirt2 from "src/assets/images/Men/Sweatshirts/sage-sweatshirt/sage-sweatshirt-2.svg";
+// import sageSweatshirt3 from "src/assets/images/Men/Sweatshirts/sage-sweatshirt/sage-sweatshirt-3.svg";
+// import sageSweatshirt4 from "src/assets/images/Men/Sweatshirts/sage-sweatshirt/sage-sweatshirt-4.svg";
+// import sageSweatshirt5 from "src/assets/images/Men/Sweatshirts/sage-sweatshirt/sage-sweatshirt-5.svg";
+// import sageSweatshirt6 from "src/assets/images/Men/Sweatshirts/sage-sweatshirt/sage-sweatshirt-6.svg";
 
 // import lilacTshirt1 from "src/assets/images/Men/Tshirts/lilac-tshirt/lilac-tshirt-1.svg";
 // import lilacTshirt2 from "src/assets/images/Men/Tshirts/lilac-tshirt/lilac-tshirt-2.svg";
@@ -102,25 +102,25 @@ import sageSweatshirt6 from "src/assets/images/Men/Sweatshirts/sage-sweatshirt/s
 // import blackTshirt5 from "src/assets/images/Men/Tshirts/black-tshirt/black-tshirt-5.svg";
 // import blackTshirt6 from "src/assets/images/Men/Tshirts/black-tshirt/black-tshirt-6.svg";
 
-import blackShorts1 from "src/assets/images/Women/Shorts/black-shorts/black-shorts-1.svg";
-import blackShorts2 from "src/assets/images/Women/Shorts/black-shorts/black-shorts-2.svg";
-import blackShorts3 from "src/assets/images/Women/Shorts/black-shorts/black-shorts-3.svg";
-import blackShorts4 from "src/assets/images/Women/Shorts/black-shorts/black-shorts-4.svg";
-import blackShorts5 from "src/assets/images/Women/Shorts/black-shorts/black-shorts-5.svg";
-import blackShorts6 from "src/assets/images/Women/Shorts/black-shorts/black-shorts-6.svg";
+// import blackShorts1 from "src/assets/images/Women/Shorts/black-shorts/black-shorts-1.svg";
+// import blackShorts2 from "src/assets/images/Women/Shorts/black-shorts/black-shorts-2.svg";
+// import blackShorts3 from "src/assets/images/Women/Shorts/black-shorts/black-shorts-3.svg";
+// import blackShorts4 from "src/assets/images/Women/Shorts/black-shorts/black-shorts-4.svg";
+// import blackShorts5 from "src/assets/images/Women/Shorts/black-shorts/black-shorts-5.svg";
+// import blackShorts6 from "src/assets/images/Women/Shorts/black-shorts/black-shorts-6.svg";
 
-import smokegreenShorts1 from "src/assets/images/Women/Shorts/smokegreen-shorts/smokegreen-shorts-1.svg";
-import smokegreenShorts2 from "src/assets/images/Women/Shorts/smokegreen-shorts/smokegreen-shorts-2.svg";
-import smokegreenShorts3 from "src/assets/images/Women/Shorts/smokegreen-shorts/smokegreen-shorts-3.svg";
-import smokegreenShorts4 from "src/assets/images/Women/Shorts/smokegreen-shorts/smokegreen-shorts-4.svg";
-import smokegreenShorts5 from "src/assets/images/Women/Shorts/smokegreen-shorts/smokegreen-shorts-5.svg";
+// import smokegreenShorts1 from "src/assets/images/Women/Shorts/smokegreen-shorts/smokegreen-shorts-1.svg";
+// import smokegreenShorts2 from "src/assets/images/Women/Shorts/smokegreen-shorts/smokegreen-shorts-2.svg";
+// import smokegreenShorts3 from "src/assets/images/Women/Shorts/smokegreen-shorts/smokegreen-shorts-3.svg";
+// import smokegreenShorts4 from "src/assets/images/Women/Shorts/smokegreen-shorts/smokegreen-shorts-4.svg";
+// import smokegreenShorts5 from "src/assets/images/Women/Shorts/smokegreen-shorts/smokegreen-shorts-5.svg";
 
-import peachShorts1 from "src/assets/images/Women/Shorts/peach-shorts/peach-shorts-1.svg";
-import peachShorts2 from "src/assets/images/Women/Shorts/peach-shorts/peach-shorts-2.svg";
-import peachShorts3 from "src/assets/images/Women/Shorts/peach-shorts/peach-shorts-3.svg";
-import peachShorts4 from "src/assets/images/Women/Shorts/peach-shorts/peach-shorts-4.svg";
-import peachShorts5 from "src/assets/images/Women/Shorts/peach-shorts/peach-shorts-5.svg";
-import peachShorts6 from "src/assets/images/Women/Shorts/peach-shorts/peach-shorts-6.svg";
+// import peachShorts1 from "src/assets/images/Women/Shorts/peach-shorts/peach-shorts-1.svg";
+// import peachShorts2 from "src/assets/images/Women/Shorts/peach-shorts/peach-shorts-2.svg";
+// import peachShorts3 from "src/assets/images/Women/Shorts/peach-shorts/peach-shorts-3.svg";
+// import peachShorts4 from "src/assets/images/Women/Shorts/peach-shorts/peach-shorts-4.svg";
+// import peachShorts5 from "src/assets/images/Women/Shorts/peach-shorts/peach-shorts-5.svg";
+// import peachShorts6 from "src/assets/images/Women/Shorts/peach-shorts/peach-shorts-6.svg";
 
 export const allProducts = [
   {
@@ -444,128 +444,128 @@ export const allProducts = [
   //   deliveryTime: "12",
   //   gender: "Men",
   // },
-  {
-    id: 10,
-    brand: "Under Armour",
-    category: "Sweatshirt",
-    name: "Men's Black Sweatshirt",
-    description: "A very nice pair of black sweatshirt for men",
-    rating: "4.5",
-    price: "799",
-    actualPrice: "1299",
-    images: [
-      blackSweatshirt1,
-      blackSweatshirt2,
-      blackSweatshirt3,
-      blackSweatshirt4,
-      blackSweatshirt5,
-      blackSweatshirt6,
-    ],
-    discount: "50",
-    color: "Black",
-    colorsAvailable: [
-      {
-        color: "black",
-        productId: 10,
-      },
-      {
-        color: "#D7A2A4",
-        productId: 11,
-      },
-      {
-        color: "#CEDFDF",
-        productId: 12,
-      },
-    ],
-    sizesAvailable: ["XS", "S", "M", "L", "XL"],
-    deliveryTime: "18",
-    gender: "Men",
-    introduced_on: "16/09/2021",
-    units_sold: "140",
-    product_reviews: "50",
-  },
-  {
-    id: 11,
-    brand: "Bewakoof",
-    category: "Sweatshirt",
-    name: "Men's Bridalrose Sweatshirt",
-    description: "A very nice pair of bridalrose sweatshirt for men",
-    rating: "4.5",
-    price: "799",
-    actualPrice: "1299",
-    images: [
-      bridalroseSweatshirt1,
-      bridalroseSweatshirt2,
-      bridalroseSweatshirt3,
-      bridalroseSweatshirt4,
-      bridalroseSweatshirt5,
-      bridalroseSweatshirt6,
-    ],
-    discount: "10",
-    color: "bridalrose",
-    colorsAvailable: [
-      {
-        color: "black",
-        productId: 10,
-      },
-      {
-        color: "#D7A2A4",
-        productId: 11,
-      },
-      {
-        color: "#CEDFDF",
-        productId: 12,
-      },
-    ],
-    // colorsAvailable: ["black", "bridalrose", "sage"],
-    sizesAvailable: ["S", "M", "L", "XL", "2XL"],
-    deliveryTime: "3",
-    gender: "Men",
-    introduced_on: "22/04/2022",
-    units_sold: "148",
-    product_reviews: "560",
-  },
-  {
-    id: 12,
-    brand: "Roadster",
-    category: "Sweatshirt",
-    name: "Men's Sage Sweatshirt",
-    description: "A very nice pair of sage blue sweatshirt for men",
-    rating: "4.5",
-    price: "799",
-    actualPrice: "1299",
-    images: [
-      sageSweatshirt1,
-      sageSweatshirt2,
-      sageSweatshirt3,
-      sageSweatshirt4,
-      sageSweatshirt5,
-      sageSweatshirt6,
-    ],
-    discount: "20",
-    color: "sage",
-    colorsAvailable: [
-      {
-        color: "black",
-        productId: 10,
-      },
-      {
-        color: "#D7A2A4",
-        productId: 11,
-      },
-      {
-        color: "#CEDFDF",
-        productId: 12,
-      },
-    ],
-    // colorsAvailable: ["black", "bridalrose", "sage"],
-    sizesAvailable: ["M", "L", "XL", "2XL", "3XL"],
-    deliveryTime: "10",
-    gender: "Men",
-    introduced_on: "19/01/2021",
-    units_sold: "48",
-    product_reviews: "60",
-  },
+  // {
+  //   id: 10,
+  //   brand: "Under Armour",
+  //   category: "Sweatshirt",
+  //   name: "Men's Black Sweatshirt",
+  //   description: "A very nice pair of black sweatshirt for men",
+  //   rating: "4.5",
+  //   price: "799",
+  //   actualPrice: "1299",
+  //   images: [
+  //     blackSweatshirt1,
+  //     blackSweatshirt2,
+  //     blackSweatshirt3,
+  //     blackSweatshirt4,
+  //     blackSweatshirt5,
+  //     blackSweatshirt6,
+  //   ],
+  //   discount: "50",
+  //   color: "Black",
+  //   colorsAvailable: [
+  //     {
+  //       color: "black",
+  //       productId: 10,
+  //     },
+  //     {
+  //       color: "#D7A2A4",
+  //       productId: 11,
+  //     },
+  //     {
+  //       color: "#CEDFDF",
+  //       productId: 12,
+  //     },
+  //   ],
+  //   sizesAvailable: ["XS", "S", "M", "L", "XL"],
+  //   deliveryTime: "18",
+  //   gender: "Men",
+  //   introduced_on: "16/09/2021",
+  //   units_sold: "140",
+  //   product_reviews: "50",
+  // },
+  // {
+  //   id: 11,
+  //   brand: "Bewakoof",
+  //   category: "Sweatshirt",
+  //   name: "Men's Bridalrose Sweatshirt",
+  //   description: "A very nice pair of bridalrose sweatshirt for men",
+  //   rating: "4.5",
+  //   price: "799",
+  //   actualPrice: "1299",
+  //   images: [
+  //     bridalroseSweatshirt1,
+  //     bridalroseSweatshirt2,
+  //     bridalroseSweatshirt3,
+  //     bridalroseSweatshirt4,
+  //     bridalroseSweatshirt5,
+  //     bridalroseSweatshirt6,
+  //   ],
+  //   discount: "10",
+  //   color: "bridalrose",
+  //   colorsAvailable: [
+  //     {
+  //       color: "black",
+  //       productId: 10,
+  //     },
+  //     {
+  //       color: "#D7A2A4",
+  //       productId: 11,
+  //     },
+  //     {
+  //       color: "#CEDFDF",
+  //       productId: 12,
+  //     },
+  //   ],
+  //   // colorsAvailable: ["black", "bridalrose", "sage"],
+  //   sizesAvailable: ["S", "M", "L", "XL", "2XL"],
+  //   deliveryTime: "3",
+  //   gender: "Men",
+  //   introduced_on: "22/04/2022",
+  //   units_sold: "148",
+  //   product_reviews: "560",
+  // },
+  // {
+  //   id: 12,
+  //   brand: "Roadster",
+  //   category: "Sweatshirt",
+  //   name: "Men's Sage Sweatshirt",
+  //   description: "A very nice pair of sage blue sweatshirt for men",
+  //   rating: "4.5",
+  //   price: "799",
+  //   actualPrice: "1299",
+  //   images: [
+  //     sageSweatshirt1,
+  //     sageSweatshirt2,
+  //     sageSweatshirt3,
+  //     sageSweatshirt4,
+  //     sageSweatshirt5,
+  //     sageSweatshirt6,
+  //   ],
+  //   discount: "20",
+  //   color: "sage",
+  //   colorsAvailable: [
+  //     {
+  //       color: "black",
+  //       productId: 10,
+  //     },
+  //     {
+  //       color: "#D7A2A4",
+  //       productId: 11,
+  //     },
+  //     {
+  //       color: "#CEDFDF",
+  //       productId: 12,
+  //     },
+  //   ],
+  //   // colorsAvailable: ["black", "bridalrose", "sage"],
+  //   sizesAvailable: ["M", "L", "XL", "2XL", "3XL"],
+  //   deliveryTime: "10",
+  //   gender: "Men",
+  //   introduced_on: "19/01/2021",
+  //   units_sold: "48",
+  //   product_reviews: "60",
+  // },
   // {
   //   id: 13,
   //   brand: "Levi's",
@@ -641,123 +641,123 @@ export const allProducts = [
 
   // WOMEN PRODUCTS START FROM HERE
 
-  {
-    id: 22,
-    brand: "Bewakoof",
-    category: "Shorts",
-    name: "Women's black Shorts",
-    description: "A very nice pair of black shorts for women",
-    rating: "4.5",
-    price: "1000",
-    actualPrice: "1499",
-    images: [
-      blackShorts1,
-      blackShorts2,
-      blackShorts3,
-      blackShorts4,
-      blackShorts5,
-      blackShorts6,
-    ],
-    discount: "20",
-    color: "black",
-    colorsAvailable: [
-      {
-        color: "black",
-        productId: 22,
-      },
-      {
-        color: "smokegreen",
-        productId: 23,
-      },
-      {
-        color: "peach",
-        productId: 24,
-      },
-    ],
-    sizesAvailable: ["XS", "S", "M", "L", "XL"],
-    deliveryTime: "25",
-    gender: "Women",
-    introduced_on: "11/12/2021",
-    units_sold: "1400",
-    product_reviews: "60",
-  },
-  {
-    id: 23,
-    brand: "Bewakoof",
-    category: "Shorts",
-    name: "Women's smokegreen Shorts",
-    description: "A very nice pair of smokegreen shorts for women",
-    rating: "4.5",
-    price: "800",
-    actualPrice: "1699",
-    images: [
-      smokegreenShorts1,
-      smokegreenShorts2,
-      smokegreenShorts3,
-      smokegreenShorts4,
-      smokegreenShorts5,
-    ],
-    discount: "20",
-    color: "smokegreen",
-    colorsAvailable: [
-      {
-        color: "black",
-        productId: 22,
-      },
-      {
-        color: "smokegreen",
-        productId: 23,
-      },
-      {
-        color: "peach",
-        productId: 24,
-      },
-    ],
-    sizesAvailable: ["XS", "S", "M", "L", "XL"],
-    deliveryTime: "25",
-    gender: "Women",
-    introduced_on: "08/12/2021",
-    units_sold: "1300",
-    product_reviews: "460",
-  },
-  {
-    id: 24,
-    brand: "Bewakoof",
-    category: "Shorts",
-    name: "Women's peach Shorts",
-    description: "A very nice pair of peach shorts for women",
-    rating: "4.5",
-    price: "900",
-    actualPrice: "1899",
-    images: [
-      peachShorts1,
-      peachShorts2,
-      peachShorts3,
-      peachShorts4,
-      peachShorts5,
-      peachShorts6,
-    ],
-    discount: "20",
-    color: "peach",
-    colorsAvailable: [
-      {
-        color: "black",
-        productId: 22,
-      },
-      {
-        color: "smokegreen",
-        productId: 23,
-      },
-      {
-        color: "peach",
-        productId: 24,
-      },
-    ],
-    sizesAvailable: ["XS", "S", "M", "L", "XL"],
-    deliveryTime: "25",
-    gender: "Women",
-    introduced_on: "09/12/2021",
-    units_sold: "1100",
-    product_reviews: "220",
-  },
+  // {
+  //   id: 22,
+  //   brand: "Bewakoof",
+  //   category: "Shorts",
+  //   name: "Women's black Shorts",
+  //   description: "A very nice pair of black shorts for women",
+  //   rating: "4.5",
+  //   price: "1000",
+  //   actualPrice: "1499",
+  //   images: [
+  //     blackShorts1,
+  //     blackShorts2,
+  //     blackShorts3,
+  //     blackShorts4,
+  //     blackShorts5,
+  //     blackShorts6,
+  //   ],
+  //   discount: "20",
+  //   color: "black",
+  //   colorsAvailable: [
+  //     {
+  //       color: "black",
+  //       productId: 22,
+  //     },
+  //     {
+  //       color: "smokegreen",
+  //       productId: 23,
+  //     },
+  //     {
+  //       color: "peach",
+  //       productId: 24,
+  //     },
+  //   ],
+  //   sizesAvailable: ["XS", "S", "M", "L", "XL"],
+  //   deliveryTime: "25",
+  //   gender: "Women",
+  //   introduced_on: "11/12/2021",
+  //   units_sold: "1400",
+  //   product_reviews: "60",
+  // },
+  // {
+  //   id: 23,
+  //   brand: "Bewakoof",
+  //   category: "Shorts",
+  //   name: "Women's smokegreen Shorts",
+  //   description: "A very nice pair of smokegreen shorts for women",
+  //   rating: "4.5",
+  //   price: "800",
+  //   actualPrice: "1699",
+  //   images: [
+  //     smokegreenShorts1,
+  //     smokegreenShorts2,
+  //     smokegreenShorts3,
+  //     smokegreenShorts4,
+  //     smokegreenShorts5,
+  //   ],
+  //   discount: "20",
+  //   color: "smokegreen",
+  //   colorsAvailable: [
+  //     {
+  //       color: "black",
+  //       productId: 22,
+  //     },
+  //     {
+  //       color: "smokegreen",
+  //       productId: 23,
+  //     },
+  //     {
+  //       color: "peach",
+  //       productId: 24,
+  //     },
+  //   ],
+  //   sizesAvailable: ["XS", "S", "M", "L", "XL"],
+  //   deliveryTime: "25",
+  //   gender: "Women",
+  //   introduced_on: "08/12/2021",
+  //   units_sold: "1300",
+  //   product_reviews: "460",
+  // },
+  // {
+  //   id: 24,
+  //   brand: "Bewakoof",
+  //   category: "Shorts",
+  //   name: "Women's peach Shorts",
+  //   description: "A very nice pair of peach shorts for women",
+  //   rating: "4.5",
+  //   price: "900",
+  //   actualPrice: "1899",
+  //   images: [
+  //     peachShorts1,
+  //     peachShorts2,
+  //     peachShorts3,
+  //     peachShorts4,
+  //     peachShorts5,
+  //     peachShorts6,
+  //   ],
+  //   discount: "20",
+  //   color: "peach",
+  //   colorsAvailable: [
+  //     {
+  //       color: "black",
+  //       productId: 22,
+  //     },
+  //     {
+  //       color: "smokegreen",
+  //       productId: 23,
+  //     },
+  //     {
+  //       color: "peach",
+  //       productId: 24,
+  //     },
+  //   ],
+  //   sizesAvailable: ["XS", "S", "M", "L", "XL"],
+  //   deliveryTime: "25",
+  //   gender: "Women",
+  //   introduced_on: "09/12/2021",
+  //   units_sold: "1100",
+  //   product_reviews: "220",
+  // },
 ];
