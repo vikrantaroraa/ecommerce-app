@@ -44,3 +44,15 @@
     overflow: hidden;
   }
 }
+
+@media only screen and (max-width: 383px) {
+  .shop-by-category-card {
+    width: 132px;
+  }
+  .hero-category-image-container {
+    height: 132px;
+    width: 132px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+}

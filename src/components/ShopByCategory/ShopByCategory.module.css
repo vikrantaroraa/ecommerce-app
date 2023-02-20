@@ -31,7 +31,7 @@
   }
 }
 
-@media only screen and (max-width: 383px) {
+@media only screen and (max-width: 350px) {
   .category-grid-container {
     display: flex;
     flex-direction: column;

@@ -9,19 +9,22 @@ import { CartProvider } from "src/context/cart-and-wishlist-context";
 import { BrowserRouter as Router } from "react-router-dom";
 import { AuthProvider } from "src/context/auth-context";
 import { SortAndFilterProvider } from "src/context/sort-and-filter-store/sort-and-filter-context";
+import { SidebarFilterProvider } from "src/context/sidebar-filter-context";
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <AuthProvider>
-        <WishListProvider>
-          <CartProvider>
-            <SortAndFilterProvider>
-              <App />
-            </SortAndFilterProvider>
-          </CartProvider>
-        </WishListProvider>
-      </AuthProvider>
+      <SidebarFilterProvider>
+        <AuthProvider>
+          <WishListProvider>
+            <CartProvider>
+              <SortAndFilterProvider>
+                <App />
+              </SortAndFilterProvider>
+            </CartProvider>
+          </WishListProvider>
+        </AuthProvider>
+      </SidebarFilterProvider>
     </Router>
   </React.StrictMode>,
   document.getElementById("root")

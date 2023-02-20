@@ -19,6 +19,7 @@ import {
 import { useSortAndFilter } from "src/context/sort-and-filter-store/sort-and-filter-context";
 import PriceFilterComponent from "src/components/PriceFilterComponent/PriceFilterComponent";
 import React, { useEffect } from "react";
+import MobileSortAndFilter from "src/components/MobileSortAndFilter/MobileSortAndFilter";
 // import sortBy from "src/assets/svg/sortBy.svg";
 
 const AllProducts = () => {
@@ -489,6 +490,9 @@ const AllProducts = () => {
           </div>
         </div>
       </div>
+      <div className={styles["mobile-sort-and-filter-container"]}>
+        <MobileSortAndFilter />
+      </div>
       <div className={styles["product-filters-and-all-products-container"]}>
         <div className={styles["product-filters"]}>
           <div className={styles["filters-heading-and-reset-button"]}>
@@ -572,7 +576,7 @@ const AllProducts = () => {
                   color: "#000",
                 }}
               >
-                <div style={{ margin: "30px 30px", cursor: "pointer" }}>
+                <div style={{ cursor: "pointer" }}>
                   <SimilarProductsCard
                     brandName={brand}
                     productName={name}

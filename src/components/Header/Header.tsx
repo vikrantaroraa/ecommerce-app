@@ -10,6 +10,8 @@ import styles from "src/components/Header/Header.module.css";
 import React, { useState } from "react";
 import { checkboxFiltersList } from "src/context/sort-and-filter-store/checkboxFiltersList";
 import { useSortAndFilter } from "src/context/sort-and-filter-store/sort-and-filter-context";
+import wishlistIcon from "src/assets/images/wishlist-icon2.svg";
+import cartIcon from "src/assets/images/cart-icon2.svg";
 
 const Header = () => {
   const [searchString, setSearchString] = useState("");
@@ -100,19 +102,25 @@ const Header = () => {
     <div className={styles["header"]}>
       <div className={styles["app-name-and-main-navigation-menu"]}>
         <div className={styles["app-name"]}>
-          <Link to="/">BlackHole</Link>
+          <Link to="/">BLACK HOLE</Link>
         </div>
         <div className={styles["navigation-link"]}>
-          <Link to="/all-products">All Products</Link>
+          <Link to="/all-products">ALL PRODUCTS</Link>
+        </div>
+        {/* <div className={styles["navigation-link"]}>
+          <Link to={"/all-products?gender=women"}>WOMEN</Link>
         </div>
         <div className={styles["navigation-link"]}>
-          <Link to="/address">Address</Link>
+          <Link to={"/all-products?gender=women"}>MEN</Link>
+        </div> */}
+        <div className={styles["navigation-link"]}>
+          <Link to="/address">ADDRESS</Link>
         </div>
         <div className={styles["navigation-link"]}>
-          <Link to="/shipping">Shipping</Link>
+          <Link to={"/shipping"}>SHIPPING</Link>
         </div>
-        <div className={styles["navigation-link"]}>Beauty</div>
-        <div className={styles["navigation-link"]}>Decor</div>
+        {/* <div className={styles["navigation-link"]}>Beauty</div>
+        <div className={styles["navigation-link"]}>Decor</div> */}
       </div>
       <div className={styles["search-input-container"]}>
         <input
@@ -135,10 +143,24 @@ const Header = () => {
       <div className={styles["wishlist-cart-signin-button-container"]}>
         {/* <span>Profile</span> */}
         <span className={styles["wishlist-button"]}>
-          <Link to="/wishlist">Wishlist({wishlist.length})</Link>
+          <Link to="/wishlist">
+            <span className={styles["wishlist-icon-container"]}>
+              <img src={wishlistIcon} alt="Wishlist" />
+            </span>
+            <span className={styles["wishlist-length"]}>
+              ({wishlist.length})
+            </span>
+          </Link>
         </span>
         <span className={styles["cart-button"]}>
-          <Link to="/cart">Bag({totalItemsInCart()})</Link>
+          <Link to="/cart">
+            <span className={styles["cart-icon-container"]}>
+              <img src={cartIcon} alt="Cart" />
+            </span>
+            <span className={styles["cart-length"]}>
+              ({totalItemsInCart()})
+            </span>
+          </Link>
         </span>
         <button className={styles["signin-button"]} onClick={logoutUser}>
           Logout

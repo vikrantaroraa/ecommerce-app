@@ -247,7 +247,7 @@ export const allProducts = [
     id: 4,
     brand: "Tommy Hilfiger",
     category: "Joggers",
-    name: "Men's charcoalgrey Joggers",
+    name: "Men's grey Joggers",
     description: "A very nice pair of charcoalgrey joggers for men",
     rating: "4.5",
     price: "800",

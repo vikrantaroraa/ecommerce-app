@@ -13,7 +13,8 @@
   height: 100vh;
   width: 100%;
   /* background-color: #f6fdff; */
-  background-color: #ede8e2;
+  /* background-color: #ede8e2; */
+  background-color: #ebcdc5;
   /* padding: 50px; */
 }
 .main-heading-and-info-container {
@@ -228,15 +229,6 @@
 }
 
 /* SUBSCRIPTIONS CSS CODE ENDS*/
-
-/* FOOTER CODE STARTS HERE */
-
-/* .footer-container {
-  height: 60vh;
-  background-color: lightgray;
-} */
-
-/* FOOTER CODE ENDS HERE */
 
 @media only screen and (max-width: 600px) {
   .main-heading-and-hero-image {

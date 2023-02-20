@@ -1,5 +1,4 @@
 import Header from "src/components/Header/Header";
-import MobileFilter from "src/components/MobileFilter/MobileFilter";
 import AllProducts from "src/pages/Shop/AllProducts";
 import Cart from "src/pages/Cart/Cart";
 import Wishlist from "src/pages/Wishlist/Wishlist";
@@ -33,7 +32,6 @@ function App() {
         </Route>
       </Routes>
       <Footer />
-      {/* <MobileFilter /> */}
     </div>
   );
 }

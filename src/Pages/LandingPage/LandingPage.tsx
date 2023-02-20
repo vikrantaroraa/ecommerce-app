@@ -8,28 +8,19 @@ import tshirtCollection from "src/assets/images/tshirt-collection.jpg";
 import subscriptionHero from "src/assets/images/subscriptions-hero.svg";
 import ShopByCategory from "src/components/ShopByCategory/ShopByCategory";
 import InstagramWall from "src/components/InstagramWall/InstagramWall";
-import Footer from "src/components/Footer/Footer";
 
 const collectionsCardDataList = [
   {
     imageSrc: greyCollection,
-    redirectUrl: "kuch bhi",
-    collectionInfo: (
-      <>
-        All gray collection <br /> to meet your gray <br /> personality
-      </>
-    ),
+    redirectUrl: "/",
+    collectionInfo: "All gray collection to meet your gray personality",
     textAlignment: "left",
     imageAlignment: "center",
   },
   {
     imageSrc: tshirtCollection,
-    redirectUrl: "kuch bhi",
-    collectionInfo: (
-      <>
-        Wide range of <br /> regular t-shirts is <br /> on 50% off
-      </>
-    ),
+    redirectUrl: "/",
+    collectionInfo: "Wide range of regular t-shirts is on 50% off",
     textAlignment: "right",
     imageAlignment: "left",
   },
@@ -77,7 +68,7 @@ function LandingPage() {
         <TrendingProducts />
       </div>
       <div className={styles["collections-card-container"]}>
-        {/* {collectionsCardDataList.map(
+        {collectionsCardDataList.map(
           ({
             imageSrc,
             redirectUrl,
@@ -95,29 +86,7 @@ function LandingPage() {
               />
             );
           }
-        )} */}
-        <CollectionsCard
-          imageSrc={greyCollection}
-          redirectUrl={"kuch bhi"}
-          collectionInfo={
-            <>
-              All gray collection <br /> to meet your gray <br /> personality
-            </>
-          }
-          textAlignment="left"
-          imageAlignment="center"
-        />
-        <CollectionsCard
-          imageSrc={tshirtCollection}
-          redirectUrl={"kuch bhi"}
-          collectionInfo={
-            <>
-              Wide range of <br /> regular t-shirts is <br /> on 50% off
-            </>
-          }
-          textAlignment="right"
-          imageAlignment="left"
-        />
+        )}
       </div>
       <div className={styles["shop-by-category-container"]}>
         <ShopByCategory />
@@ -153,9 +122,6 @@ function LandingPage() {
       <div className={styles["instagram-wall-container"]}>
         <InstagramWall />
       </div>
-      {/* <div className={styles["footer-container"]}>
-        <Footer />
-      </div> */}
     </div>
   );
 }

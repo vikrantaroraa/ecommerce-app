@@ -3,6 +3,8 @@
   flex-direction: column;
   background-color: white;
   height: auto;
+  /* background-color: lightgreen; */
+  margin: 30px 30px;
 }
 
 .product-image {
@@ -62,9 +64,12 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .similar-product-card {
+    margin: 5px 5px;
+  }
   .product-image {
     height: 230px;
-    width: 160px;
+    width: 170px;
   }
 
   .brand-name {

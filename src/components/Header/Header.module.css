@@ -22,6 +22,20 @@
   /* background-color: lightyellow; */
 }
 
+.app-name a {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #2c2c2c;
+}
+
+.navigation-link a {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #636363;
+}
+
 .search-input-container {
   display: flex;
   flex: 1.2;
@@ -55,10 +69,45 @@
   /* background-color: lightcoral; */
 }
 
+.wishlist-button a,
+.cart-button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: lightgreen; */
+}
+
+.wishlist-button a .wishlist-icon-container,
+.cart-button a .cart-icon-container {
+  height: 25px;
+  width: 22px;
+  /* background-color: red; */
+}
+
+.wishlist-button a img,
+.cart-button a img {
+  height: 100%;
+  width: 100%;
+}
+
+.wishlist-button a .wishlist-length,
+.cart-button a .cart-length {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-decoration: none;
+  color: #2c2c2c;
+  font-size: 20px;
+  font-weight: 500;
+  /* background-color: lightblue; */
+}
+
 .signin-button {
-  padding: 10px 18px;
+  /* padding: 10px 18px; */
+  height: 40px;
+  width: 108px;
   background-color: #202020;
-  border-radius: 7px;
+  border-radius: 8px;
   color: #ffffff;
   cursor: pointer;
 }
