@@ -1,6 +1,6 @@
-import WishListProduct from "src/components/WishListProduct/WishListProduct";
+import WishListProductCard from "src/components/WishListProductCard/WishListProductCard";
 import { useCart } from "src/context/cart-and-wishlist-context";
-// import styles from "src/pages/Wishlist/Wishlist.module.css";
+import styles from "src/pages/Wishlist/Wishlist.module.css";
 
 const Wishlist = () => {
   const {
@@ -9,17 +9,17 @@ const Wishlist = () => {
   } = useCart();
 
   return (
-    <div
-      style={{ width: "50vw", backgroundColor: "transparent", padding: "40px" }}
-    >
-      <h1>Wishlist</h1>
+    <div className={styles["wishlist"]}>
+      {/* <h1 className={styles["wishlist-heading"]}>Wishlist</h1> */}
       {wishlist.map((item: any) => {
         return (
-          <WishListProduct
+          <WishListProductCard
             id={item.id}
-            name={item.name}
+            productName={item.name}
             price={item.price}
-            quantity={item.quantity}
+            brandName={item.brand}
+            actualPrice={item.actualPrice}
+            imageSrc={item.images[1]}
             onRemoveFromWishListClick={() =>
               wishlistDispatch({
                 type: "REMOVE_FROM_WISHLIST",

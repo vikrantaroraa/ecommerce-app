@@ -6,8 +6,8 @@ function SimilarProductsCard({
   brandName,
   productName,
   price,
-  actualPrice,
-  discount,
+  actualPrice = 799,
+  discount = 30,
 }: SimilarProductsCardProps) {
   return (
     <div className={styles["similar-product-card"]}>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import { MobileSortAndFilterProps } from "src/components/MobileSortAndFilter/MobileSortAndFilter.interface";
+// import { MobileSortAndFilterProps } from "src/components/MobileSortAndFilter/MobileSortAndFilter.interface";
 import styles from "src/components/MobileSortAndFilter/MobileSortAndFilter.module.css";
 import SidebarFilter from "src/components/SidebarFilter/SidebarFilter";
 import { sortByOptions } from "src/context/sort-and-filter-store/checkboxFiltersList";

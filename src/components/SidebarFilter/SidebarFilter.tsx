@@ -1,5 +1,4 @@
 import styles from "src/components/SidebarFilter/SidebarFilter.module.css";
-import { useState } from "react";
 import { SidebarFilterProps } from "src/components/SidebarFilter/SidebarFilter.interface";
 import FilterCategoryCollapsibleComponent from "src/components/FilterCategoryCollapsibleComponent/FilterCategoryCollapsibleComponent";
 import PriceFilterComponent from "src/components/PriceFilterComponent/PriceFilterComponent";
@@ -12,7 +11,7 @@ import {
 } from "src/context/sort-and-filter-store/checkboxFiltersList";
 import FilterRow from "src/components/FilterRow/FilterRow";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRectangleXmark, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 function SidebarFilter({
   showSidebarFilter,
@@ -145,6 +144,7 @@ function SidebarFilter({
           onClick={() => {
             sortAndFilterDispatch({ type: "REMOVE_ALL_FILTERS" });
             setSearchParams({});
+            toggleShowSidebarFilter();
           }}
         >
           Clear

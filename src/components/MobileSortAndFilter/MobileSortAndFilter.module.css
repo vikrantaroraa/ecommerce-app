@@ -3,7 +3,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* align-items: center; */
   padding: 20px 15px;
   border: 1px solid #cecdcd;
   border-radius: 8px;
@@ -29,5 +28,4 @@
   font-weight: 550;
   padding: 5px 8px;
   /* background-color: lightblue; */
-  /* appearance: none; */
 }
