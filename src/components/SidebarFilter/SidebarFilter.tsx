@@ -12,6 +12,7 @@ import {
 import FilterRow from "src/components/FilterRow/FilterRow";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import MobileAndTabletSidebar from "src/components/MobileAndTabletSidebar/MobileAndTabletSidebar";
 
 function SidebarFilter({
   showSidebarFilter,
@@ -53,110 +54,98 @@ function SidebarFilter({
   };
 
   return (
-    <div
-      className={
-        showSidebarFilter
-          ? `${styles["sidebar-filter"]} ${styles["active"]}`
-          : styles["sidebar-filter"]
-      }
-      style={{
-        width: showSidebarFilter
-          ? window.innerWidth > 500
-            ? 500
-            : window.innerWidth
-          : 0,
-      }}
-    >
-      <div className={styles["filter-products-heading-and-close-icon"]}>
-        <span className={styles["filter-products-heading"]}>
-          Filter Products
-        </span>
-        <span
-          className={styles["filter-close-icon"]}
-          onClick={toggleShowSidebarFilter}
-        >
-          <FontAwesomeIcon icon={faXmark} style={{ fontSize: "26px" }} />
-          {/* <FontAwesomeIcon
-            icon={["fas", "rectangle-xmark"]}
-            color={"#FCBF22"}
-          /> */}
-          {/* <FontAwesomeIcon color={"#FCBF22"} icon={faStar} /> */}
-        </span>
-      </div>
-      <div className={styles["all-filters-container"]}>
-        <div className={styles["filter-container"]}>
-          <FilterCategoryCollapsibleComponent title="Price">
-            <PriceFilterComponent
-              filterName="max-price"
-              filterValue={priceRange}
-              onPriceFilterChange={(event) => {
-                sortAndFilterDispatch({
-                  type: "CHANGE_PRICE_RANGE",
-                  payload: event.target.value,
-                });
-                handlePriceFilterClick(event);
-              }}
-            />
-          </FilterCategoryCollapsibleComponent>
+    <MobileAndTabletSidebar showSidebarFilter={showSidebarFilter}>
+      <div className={styles["sidebar-filter-data-container"]}>
+        <div className={styles["filter-products-heading-and-close-icon"]}>
+          <span className={styles["filter-products-heading"]}>
+            Filter Products
+          </span>
+          <span
+            className={styles["filter-close-icon"]}
+            onClick={toggleShowSidebarFilter}
+          >
+            <FontAwesomeIcon icon={faXmark} style={{ fontSize: "26px" }} />
+            {/* <FontAwesomeIcon
+              icon={["fas", "rectangle-xmark"]}
+              color={"#FCBF22"}
+            /> */}
+          </span>
         </div>
-        <hr />
-        {checkboxFilterNames.map((filterName) => {
-          return (
-            <>
-              <div className={styles["filter-container"]}>
-                <FilterCategoryCollapsibleComponent title={filterName}>
-                  {checkboxFiltersList[
-                    filterName as keyof typeof checkboxFiltersList
-                  ].map(
-                    ({
-                      filterLabel,
-                      urlParameter,
-                      statVariableName,
-                      dispatchAction,
-                    }: FilterObject) => {
-                      const isChecked = state[statVariableName];
-                      return (
-                        <FilterRow
-                          filterLabel={filterLabel}
-                          filterName={filterName}
-                          filterUrlParameter={urlParameter}
-                          onFilterRowClick={(event) => {
-                            sortAndFilterDispatch({
-                              type: `${dispatchAction}`,
-                            });
-                            handleCheckboxFilterClick(event);
-                          }}
-                          isChecked={isChecked}
-                        />
-                      );
-                    }
-                  )}
-                </FilterCategoryCollapsibleComponent>
-              </div>
-              <hr />
-            </>
-          );
-        })}
+        <div className={styles["all-filters-container"]}>
+          <div className={styles["filter-container"]}>
+            <FilterCategoryCollapsibleComponent title="Price">
+              <PriceFilterComponent
+                filterName="max-price"
+                filterValue={priceRange}
+                onPriceFilterChange={(event) => {
+                  sortAndFilterDispatch({
+                    type: "CHANGE_PRICE_RANGE",
+                    payload: event.target.value,
+                  });
+                  handlePriceFilterClick(event);
+                }}
+              />
+            </FilterCategoryCollapsibleComponent>
+          </div>
+          <hr />
+          {checkboxFilterNames.map((filterName) => {
+            return (
+              <>
+                <div className={styles["filter-container"]}>
+                  <FilterCategoryCollapsibleComponent title={filterName}>
+                    {checkboxFiltersList[
+                      filterName as keyof typeof checkboxFiltersList
+                    ].map(
+                      ({
+                        filterLabel,
+                        urlParameter,
+                        statVariableName,
+                        dispatchAction,
+                      }: FilterObject) => {
+                        const isChecked = state[statVariableName];
+                        return (
+                          <FilterRow
+                            filterLabel={filterLabel}
+                            filterName={filterName}
+                            filterUrlParameter={urlParameter}
+                            onFilterRowClick={(event) => {
+                              sortAndFilterDispatch({
+                                type: `${dispatchAction}`,
+                              });
+                              handleCheckboxFilterClick(event);
+                            }}
+                            isChecked={isChecked}
+                          />
+                        );
+                      }
+                    )}
+                  </FilterCategoryCollapsibleComponent>
+                </div>
+                <hr />
+              </>
+            );
+          })}
+        </div>
+        <div className={styles["apply-filters-and-reset-filters-button"]}>
+          <button
+            className={styles["reset-filters-button"]}
+            onClick={() => {
+              sortAndFilterDispatch({ type: "REMOVE_ALL_FILTERS" });
+              setSearchParams({});
+              toggleShowSidebarFilter();
+            }}
+          >
+            Clear
+          </button>
+          <button
+            className={styles["apply-filters-button"]}
+            onClick={toggleShowSidebarFilter}
+          >
+            Apply
+          </button>
+        </div>
       </div>
-      <div className={styles["apply-filters-and-reset-filters-button"]}>
-        <button
-          className={styles["reset-filters-button"]}
-          onClick={() => {
-            sortAndFilterDispatch({ type: "REMOVE_ALL_FILTERS" });
-            setSearchParams({});
-            toggleShowSidebarFilter();
-          }}
-        >
-          Clear
-        </button>
-        <button
-          className={styles["apply-filters-button"]}
-          onClick={toggleShowSidebarFilter}
-        >
-          Apply
-        </button>
-      </div>
-    </div>
+    </MobileAndTabletSidebar>
   );
 }
 

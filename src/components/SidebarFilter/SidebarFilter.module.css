@@ -1,18 +1,7 @@
-.sidebar-filter {
+.sidebar-filter-data-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  overflow-y: scroll;
   background-color: #efefee;
-  position: fixed;
-  top: 0;
-  left: -100%;
-  transition: 850ms;
-}
-
-.sidebar-filter.active {
-  left: 0;
-  transition: 350ms;
 }
 
 .filter-products-heading-and-close-icon {

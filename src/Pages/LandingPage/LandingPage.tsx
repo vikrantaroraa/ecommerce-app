@@ -5,7 +5,8 @@ import styles from "src/pages/LandingPage/LandingPage.module.css";
 import CollectionsCard from "src/components/CollectionsCard/CollectionsCard";
 import greyCollection from "src/assets/images/grey-collection.svg";
 import tshirtCollection from "src/assets/images/tshirt-collection.jpg";
-import subscriptionHero from "src/assets/images/subscriptions-hero.svg";
+import subscriptionHero1 from "src/assets/images/subscriptions-hero.svg";
+import subscriptionHero2 from "src/assets/images/subscriptions-hero-updated.svg";
 import ShopByCategory from "src/components/ShopByCategory/ShopByCategory";
 import InstagramWall from "src/components/InstagramWall/InstagramWall";
 
@@ -114,7 +115,7 @@ function LandingPage() {
           </div>
           <div className={styles["subscription-hero-container"]}>
             <div className={styles["subscription-hero-image"]}>
-              <img src={subscriptionHero} />
+              <img src={subscriptionHero2} />
             </div>
           </div>
         </div>
