@@ -1,4 +1,3 @@
-import styles from "src/components/ShopByCategory/ShopByCategory.module.css";
 import categoryBottomsHero from "src/assets/images/category-hero-images/category-bottoms-hero.svg";
 import categoryHoodiesHero from "src/assets/images/category-hero-images/category-hoodies-hero.svg";
 import categoryJacketsHero from "src/assets/images/category-hero-images/category-jackets-hero.svg";
@@ -6,6 +5,7 @@ import categoryKidsHero from "src/assets/images/category-hero-images/category-ki
 import categorySweatshirtsHero from "src/assets/images/category-hero-images/category-sweatshirts-hero.svg";
 import categoryTshirtsHero from "src/assets/images/category-hero-images/category-tshirts-hero.svg";
 import ShopByCategoryCard from "src/components/ShopByCategoryCard/ShopByCategoryCard";
+import styles from "src/components/ShopByCategory/ShopByCategory.module.css";
 
 const shopByCategoryList = [
   {

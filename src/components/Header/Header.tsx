@@ -12,6 +12,7 @@ import { checkboxFiltersList } from "src/context/sort-and-filter-store/checkboxF
 import { useSortAndFilter } from "src/context/sort-and-filter-store/sort-and-filter-context";
 import wishlistIcon from "src/assets/images/wishlist-icon2.svg";
 import cartIcon from "src/assets/images/cart-icon2.svg";
+import mountainLogo from "src/assets/images/app-logo/mountain.png";
 
 const Header = () => {
   const [searchString, setSearchString] = useState("");
@@ -102,7 +103,9 @@ const Header = () => {
     <div className={styles["header"]}>
       <div className={styles["app-name-and-main-navigation-menu"]}>
         <div className={styles["app-name"]}>
-          <Link to="/">BLACK HOLE</Link>
+          <Link to="/">
+            <img src={mountainLogo} />
+          </Link>
         </div>
         <div className={styles["navigation-link"]}>
           <Link to="/all-products">ALL PRODUCTS</Link>
@@ -147,9 +150,9 @@ const Header = () => {
             <span className={styles["wishlist-icon-container"]}>
               <img src={wishlistIcon} alt="Wishlist" />
             </span>
-            <span className={styles["wishlist-length"]}>
+            {/* <span className={styles["wishlist-length"]}>
               ({wishlist.length})
-            </span>
+            </span> */}
           </Link>
         </span>
         <span className={styles["cart-button"]}>
@@ -157,9 +160,9 @@ const Header = () => {
             <span className={styles["cart-icon-container"]}>
               <img src={cartIcon} alt="Cart" />
             </span>
-            <span className={styles["cart-length"]}>
+            {/* <span className={styles["cart-length"]}>
               ({totalItemsInCart()})
-            </span>
+            </span> */}
           </Link>
         </span>
         <button className={styles["signin-button"]} onClick={logoutUser}>

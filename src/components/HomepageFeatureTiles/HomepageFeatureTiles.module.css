@@ -1,0 +1,32 @@
+.homepage-feature-tile {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+  background-color: #fff;
+  padding: 22px;
+  border-radius: 16px;
+  cursor: pointer;
+  /* background-color: #ffefd3;s */
+}
+
+.homepage-feature-tile:hover {
+  color: #fff;
+  background-color: #2c2c2c;
+  transition: 600ms ease;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  /* background-color: lightblue; */
+  gap: 10px;
+}
+.text-container .primary-text {
+  font-weight: 500;
+}
+
+.homepage-feature-tile span {
+  /* background-color: lightblue; */
+}

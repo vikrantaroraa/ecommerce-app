@@ -7,8 +7,48 @@ import greyCollection from "src/assets/images/grey-collection.svg";
 import tshirtCollection from "src/assets/images/tshirt-collection.jpg";
 import subscriptionHero1 from "src/assets/images/subscriptions-hero.svg";
 import subscriptionHero2 from "src/assets/images/subscriptions-hero-updated.svg";
+import landingHeroYellow from "src/assets/images/landing-page-hero/hero-yellow.png";
+import landingHeroYellowOriginal from "src/assets/images/landing-page-hero/hero-yellow-original.png";
+import landingHeroYellowOriginalNew from "src/assets/images/landing-page-hero/hero-yellow-original-new.png";
+import landingHeroGreenOriginal from "src/assets/images/landing-page-hero/hero-green-original.png";
+import landingHeroGreen from "src/assets/images/landing-page-hero/hero-green.png";
 import ShopByCategory from "src/components/ShopByCategory/ShopByCategory";
 import InstagramWall from "src/components/InstagramWall/InstagramWall";
+import HomepageFeatureTiles from "src/components/HomepageFeatureTiles/HomepageFeatureTiles";
+import { useState } from "react";
+
+const landingHeroImagesArray = [
+  {
+    icon: landingHeroYellow,
+    text: "No prints is the new cool. Choose from the wide range of solid clothes.",
+  },
+  {
+    icon: landingHeroGreen,
+    text: "Choose from a wide variety of ambient colors.",
+  },
+  {
+    icon: landingHeroYellow,
+    text: "Get your product made from the fabric of your choice.",
+  },
+];
+
+const homePageFeatureTilesPropsData = [
+  {
+    primaryText: "Shop Products",
+    secondaryText: "Delivered right to your door",
+    navigationUrl: "/",
+  },
+  {
+    primaryText: "Get Any Color",
+    secondaryText: "Choose the color you want",
+    navigationUrl: "/",
+  },
+  {
+    primaryText: "Fabric Of Choice",
+    secondaryText: "Choose the fabric you want",
+    navigationUrl: "/",
+  },
+];
 
 const collectionsCardDataList = [
   {
@@ -28,41 +68,50 @@ const collectionsCardDataList = [
 ];
 
 function LandingPage() {
+  const [activeHeroImageAndTextIndex, setActiveHeroImageAndTextIndex] =
+    useState(0);
   return (
     <div className={styles["landing-page"]}>
-      <div className={styles["main-heading-and-hero-image"]}>
-        <div className={styles["main-heading-and-info-container"]}>
-          <div className={styles["main-heading"]}>
-            Discover Solid <br /> Collection
-          </div>
-          <div className={styles["horizontal-line-and-message"]}>
-            <div className={styles["hr-container"]}>
-              <hr />
+      <div className={styles["app-introduction-and-feature-tiles-container"]}>
+        <div className={styles["main-heading-and-hero-image"]}>
+          <div className={styles["main-heading-and-info-container"]}>
+            <div className={styles["main-heading"]}>
+              {/* No prints is new cool. Choose from the wide range of solid
+              clothes. */}
+              {landingHeroImagesArray[activeHeroImageAndTextIndex].text}
             </div>
-            <p className={styles["message"]}>
-              No prints is new cool! Choose from <br /> the wide range of solid
-              clothes for <br /> sophisticated you.
-            </p>
-          </div>
-          <div className={styles["start-shopping-button-container"]}>
-            <button>Start Shopping</button>
-          </div>
-          <div className={styles["user-icons-and-number-of-reviews-container"]}>
-            <div>
-              <img src={userReviewsHero} alt="User Reviews Hero" />
-            </div>
-            <div>
-              <p className={styles["number-of-reviews"]}>
-                25k+ Positive <br />
-                Reviews
+            {/* <div className={styles["horizontal-line-and-message"]}>
+              <div className={styles["hr-container"]}>
+                <hr />
+              </div>
+              <p className={styles["message"]}>
+                No prints is new cool! Choose from <br /> the wide range of
+                solid clothes for <br /> sophisticated you.
               </p>
+            </div> */}
+          </div>
+          <div className={styles["hero-icon-container"]}>
+            <div className={styles["hero-image-container"]}>
+              <img
+                src={landingHeroImagesArray[activeHeroImageAndTextIndex].icon}
+                alt="hero-icon"
+              />
             </div>
           </div>
         </div>
-        <div className={styles["hero-icon-container"]}>
-          <div className={styles["hero-image-container"]}>
-            <img src={blackShorts} />
-          </div>
+        <div className={styles["feature-tiles-container"]}>
+          {homePageFeatureTilesPropsData.map(
+            ({ primaryText, secondaryText, navigationUrl }, index) => {
+              return (
+                <HomepageFeatureTiles
+                  primaryText={primaryText}
+                  secondaryText={secondaryText}
+                  navigationUrl={navigationUrl}
+                  onMouseOver={() => setActiveHeroImageAndTextIndex(index)}
+                />
+              );
+            }
+          )}
         </div>
       </div>
       <div className={styles["trending-products-container"]}>
@@ -99,7 +148,7 @@ function LandingPage() {
               Stay tune with us for latest collection update
             </div>
             <div className={styles["secondary-subscription-text"]}>
-              We collect and process your personal data to better response to
+              We collect and process your personal data to better responsd to
               your requests.
             </div>
             <div
