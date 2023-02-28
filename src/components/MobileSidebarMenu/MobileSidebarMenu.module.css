@@ -1,0 +1,72 @@
+.mobile-sidebar-menu-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #efefee;
+}
+
+.app-logo-and-close-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightgray;
+  padding: 20px 30px;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 700;
+  color: #5a5a5a;
+  border-bottom: 1px solid #ddd;
+}
+
+.app-logo {
+  height: 45px;
+  width: 45px;
+  /* background-color: lightgreen; */
+}
+
+/* .app-logo a {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #2c2c2c;
+} */
+
+.app-logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.mobile-sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  /* background-color: lightpink; */
+}
+
+.sidebar-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 0;
+  cursor: pointer;
+  /* background-color: lightblue; */
+}
+
+.icon-container {
+  height: 25px;
+  width: 25px;
+  /* background-color: red; */
+}
+
+.icon-container img {
+  height: 100%;
+  width: 100%;
+}
+
+/* .image-container {
+  background-color: red;
+  height: 50px;
+  width: 50px;
+} */

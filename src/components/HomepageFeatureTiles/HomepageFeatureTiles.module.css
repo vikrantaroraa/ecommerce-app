@@ -24,8 +24,13 @@
   gap: 10px;
 }
 .text-container .primary-text {
+  font-size: 18px;
   font-weight: 500;
 }
+
+/* .text-container .secondary-text {
+  font-weight: 500;
+} */
 
 .homepage-feature-tile span {
   /* background-color: lightblue; */

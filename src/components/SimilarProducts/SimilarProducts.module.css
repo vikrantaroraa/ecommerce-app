@@ -31,6 +31,9 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .similar-products {
+    padding: 10px;
+  }
   .similar-products-horizontal-grid {
     height: auto;
     gap: 20px;

@@ -10,10 +10,9 @@ function MobileSortAndFilter() {
   const { state, dispatch: sortAndFilterDispatch } = useSortAndFilter();
   const { sortBy } = state;
   const [searchParams, setSearchParams] = useSearchParams();
-  const [showSidebarFilter, setShowSidebarFilter] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(false);
 
-  const toggleShowSidebarFilter = () =>
-    setShowSidebarFilter(!showSidebarFilter);
+  const toggleShowSidebar = () => setShowSidebar(!showSidebar);
 
   const triggerSortDispatch = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const { value } = event.target;
@@ -37,14 +36,14 @@ function MobileSortAndFilter() {
     <div className={styles["mobile-sort-and-filter"]}>
       <div
         className={styles["mobile-filter-container"]}
-        onClick={toggleShowSidebarFilter}
+        onClick={toggleShowSidebar}
       >
         Filters
       </div>
       <div className={styles["mobile-filter-sidebar-container"]}>
         <SidebarFilter
-          showSidebarFilter={showSidebarFilter}
-          toggleShowSidebarFilter={toggleShowSidebarFilter}
+          showSidebar={showSidebar}
+          toggleShowSidebar={toggleShowSidebar}
         />
       </div>
       <div className={styles["mobile-sortby-dropdown-container"]}>

@@ -3,3 +3,9 @@
   flex-wrap: wrap;
   /* background-color: lightpink; */
 }
+
+@media only screen and (max-width: 600px) {
+  .wishlist {
+    padding: 10px;
+  }
+}

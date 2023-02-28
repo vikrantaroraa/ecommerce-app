@@ -104,7 +104,7 @@ const Header = () => {
       <div className={styles["app-name-and-main-navigation-menu"]}>
         <div className={styles["app-name"]}>
           <Link to="/">
-            <img src={mountainLogo} />
+            <img src={mountainLogo} alt="app-logo" />
           </Link>
         </div>
         <div className={styles["navigation-link"]}>

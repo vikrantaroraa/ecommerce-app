@@ -14,10 +14,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import MobileAndTabletSidebar from "src/components/MobileAndTabletSidebar/MobileAndTabletSidebar";
 
-function SidebarFilter({
-  showSidebarFilter,
-  toggleShowSidebarFilter,
-}: SidebarFilterProps) {
+function SidebarFilter({ showSidebar, toggleShowSidebar }: SidebarFilterProps) {
   const [searchParams, setSearchParams] = useSearchParams();
   const { state, dispatch: sortAndFilterDispatch } = useSortAndFilter();
   const { priceRange } = state;
@@ -54,7 +51,7 @@ function SidebarFilter({
   };
 
   return (
-    <MobileAndTabletSidebar showSidebarFilter={showSidebarFilter}>
+    <MobileAndTabletSidebar showSidebar={showSidebar}>
       <div className={styles["sidebar-filter-data-container"]}>
         <div className={styles["filter-products-heading-and-close-icon"]}>
           <span className={styles["filter-products-heading"]}>
@@ -62,7 +59,7 @@ function SidebarFilter({
           </span>
           <span
             className={styles["filter-close-icon"]}
-            onClick={toggleShowSidebarFilter}
+            onClick={toggleShowSidebar}
           >
             <FontAwesomeIcon icon={faXmark} style={{ fontSize: "26px" }} />
             {/* <FontAwesomeIcon
@@ -132,14 +129,14 @@ function SidebarFilter({
             onClick={() => {
               sortAndFilterDispatch({ type: "REMOVE_ALL_FILTERS" });
               setSearchParams({});
-              toggleShowSidebarFilter();
+              toggleShowSidebar();
             }}
           >
             Clear
           </button>
           <button
             className={styles["apply-filters-button"]}
-            onClick={toggleShowSidebarFilter}
+            onClick={toggleShowSidebar}
           >
             Apply
           </button>

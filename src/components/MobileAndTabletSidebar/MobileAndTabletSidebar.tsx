@@ -3,21 +3,22 @@ import styles from "src/components/MobileAndTabletSidebar/MobileAndTabletSidebar
 
 function MobileAndTabletSidebar({
   children,
-  showSidebarFilter,
+  showSidebar,
 }: MobileAndTabletSidebarProps) {
   return (
     <div
       className={
-        showSidebarFilter
+        showSidebar
           ? `${styles["sidebar-filter"]} ${styles["active"]}`
           : styles["sidebar-filter"]
       }
       style={{
-        width: showSidebarFilter
+        width: showSidebar
           ? window.innerWidth > 500
             ? 500
             : window.innerWidth
           : 0,
+        backgroundColor: "#efefee",
       }}
     >
       {children}

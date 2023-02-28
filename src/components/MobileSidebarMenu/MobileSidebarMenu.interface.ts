@@ -1,4 +1,4 @@
-export interface SidebarFilterProps {
+export interface MobileSidebarMenuProps {
   showSidebar: boolean;
   toggleShowSidebar: () => void;
 }

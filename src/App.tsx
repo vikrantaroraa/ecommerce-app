@@ -13,11 +13,13 @@ import ProductDetails from "src/pages/ProductDetails/ProductDetails";
 import Shipping from "src/pages/Shipping/Shipping";
 import LandingPage from "src/pages/LandingPage/LandingPage";
 import Footer from "src/components/Footer/Footer";
+import MobileHeader from "src/components/MobileHeader/MobileHeader";
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <MobileHeader />
+      {/* <Header /> */}
       <Routes>
         <Route path="/all-products" element={<AllProducts />} />
         {/* <Route path="/product" element={<ProductDetails />} /> */}
