@@ -13,6 +13,9 @@ import { useSortAndFilter } from "src/context/sort-and-filter-store/sort-and-fil
 import wishlistIcon from "src/assets/images/wishlist-icon2.svg";
 import cartIcon from "src/assets/images/cart-icon2.svg";
 import mountainLogo from "src/assets/images/app-logo/mountain.png";
+import userIcon from "src/assets/images/user-icon.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const [searchString, setSearchString] = useState("");
@@ -148,7 +151,15 @@ const Header = () => {
         <span className={styles["wishlist-button"]}>
           <Link to="/wishlist">
             <span className={styles["wishlist-icon-container"]}>
-              <img src={wishlistIcon} alt="Wishlist" />
+              {wishlist.length ? (
+                <FontAwesomeIcon
+                  style={{ fontSize: "20px" }}
+                  color={"red"}
+                  icon={faHeart}
+                />
+              ) : (
+                <img src={wishlistIcon} alt="Wishlist" title="Wishlist" />
+              )}
             </span>
             {/* <span className={styles["wishlist-length"]}>
               ({wishlist.length})
@@ -158,16 +169,23 @@ const Header = () => {
         <span className={styles["cart-button"]}>
           <Link to="/cart">
             <span className={styles["cart-icon-container"]}>
-              <img src={cartIcon} alt="Cart" />
+              <img src={cartIcon} alt="Cart" title="Cart" />
             </span>
             {/* <span className={styles["cart-length"]}>
               ({totalItemsInCart()})
             </span> */}
           </Link>
         </span>
-        <button className={styles["signin-button"]} onClick={logoutUser}>
+        {/* We will use this logout button and feature when implementing actual login */}
+        {/* <button className={styles["signin-button"]} onClick={logoutUser}>
           Logout
-        </button>
+        </button> */}
+
+        <Link to="/">
+          <span className={styles["wishlist-icon-container"]}>
+            <img src={userIcon} alt="Sign In" title="Sign In" />
+          </span>
+        </Link>
       </div>
     </div>
   );

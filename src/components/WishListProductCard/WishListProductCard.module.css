@@ -83,7 +83,8 @@
   flex: 1;
   padding: 8px 0;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 4px;
+  background-color: transparent;
   border: 1px solid #2c2c2c;
 }
 

@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <MobileHeader />
-      {/* <Header /> */}
+      <Header />
       <Routes>
         <Route path="/all-products" element={<AllProducts />} />
         {/* <Route path="/product" element={<ProductDetails />} /> */}

@@ -18,7 +18,7 @@ function TrendingProductsCard({
         <div className={styles["product-name"]}>{productName}</div>
         <div className={styles["price-and-discount"]}>
           <span className={styles["price"]}>₹ {price}</span>
-          <s className={styles["actual-price"]}>₹ 5500</s>
+          <s className={styles["actual-price"]}>₹ {actualPrice}</s>
         </div>
       </div>
     </div>

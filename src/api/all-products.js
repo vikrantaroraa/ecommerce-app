@@ -81,46 +81,46 @@ import darkgreyJoggers6 from "src/assets/images/Men/Joggers/darkgrey-joggers/dar
 // import sageSweatshirt5 from "src/assets/images/Men/Sweatshirts/sage-sweatshirt/sage-sweatshirt-5.svg";
 // import sageSweatshirt6 from "src/assets/images/Men/Sweatshirts/sage-sweatshirt/sage-sweatshirt-6.svg";
 
-// import lilacTshirt1 from "src/assets/images/Men/Tshirts/lilac-tshirt/lilac-tshirt-1.svg";
-// import lilacTshirt2 from "src/assets/images/Men/Tshirts/lilac-tshirt/lilac-tshirt-2.svg";
-// import lilacTshirt3 from "src/assets/images/Men/Tshirts/lilac-tshirt/lilac-tshirt-3.svg";
-// import lilacTshirt4 from "src/assets/images/Men/Tshirts/lilac-tshirt/lilac-tshirt-4.svg";
-// import lilacTshirt5 from "src/assets/images/Men/Tshirts/lilac-tshirt/lilac-tshirt-5.svg";
-// import lilacTshirt6 from "src/assets/images/Men/Tshirts/lilac-tshirt/lilac-tshirt-6.svg";
+import lilacTshirt1 from "src/assets/images/Men/Tshirts/lilac-tshirt/lilac-tshirt-1.svg";
+import lilacTshirt2 from "src/assets/images/Men/Tshirts/lilac-tshirt/lilac-tshirt-2.svg";
+import lilacTshirt3 from "src/assets/images/Men/Tshirts/lilac-tshirt/lilac-tshirt-3.svg";
+import lilacTshirt4 from "src/assets/images/Men/Tshirts/lilac-tshirt/lilac-tshirt-4.svg";
+import lilacTshirt5 from "src/assets/images/Men/Tshirts/lilac-tshirt/lilac-tshirt-5.svg";
+import lilacTshirt6 from "src/assets/images/Men/Tshirts/lilac-tshirt/lilac-tshirt-6.svg";
 
-// import yellowTshirt1 from "src/assets/images/Men/Tshirts/yellow-tshirt/yellow-tshirt-1.svg";
-// import yellowTshirt2 from "src/assets/images/Men/Tshirts/yellow-tshirt/yellow-tshirt-2.svg";
-// import yellowTshirt3 from "src/assets/images/Men/Tshirts/yellow-tshirt/yellow-tshirt-3.svg";
-// import yellowTshirt4 from "src/assets/images/Men/Tshirts/yellow-tshirt/yellow-tshirt-4.svg";
-// import yellowTshirt5 from "src/assets/images/Men/Tshirts/yellow-tshirt/yellow-tshirt-5.svg";
-// import yellowTshirt6 from "src/assets/images/Men/Tshirts/yellow-tshirt/yellow-tshirt-6.svg";
+import yellowTshirt1 from "src/assets/images/Men/Tshirts/yellow-tshirt/yellow-tshirt-1.svg";
+import yellowTshirt2 from "src/assets/images/Men/Tshirts/yellow-tshirt/yellow-tshirt-2.svg";
+import yellowTshirt3 from "src/assets/images/Men/Tshirts/yellow-tshirt/yellow-tshirt-3.svg";
+import yellowTshirt4 from "src/assets/images/Men/Tshirts/yellow-tshirt/yellow-tshirt-4.svg";
+import yellowTshirt5 from "src/assets/images/Men/Tshirts/yellow-tshirt/yellow-tshirt-5.svg";
+import yellowTshirt6 from "src/assets/images/Men/Tshirts/yellow-tshirt/yellow-tshirt-6.svg";
 
-// import blackTshirt1 from "src/assets/images/Men/Tshirts/black-tshirt/black-tshirt-1.svg";
-// import blackTshirt2 from "src/assets/images/Men/Tshirts/black-tshirt/black-tshirt-2.svg";
-// import blackTshirt3 from "src/assets/images/Men/Tshirts/black-tshirt/black-tshirt-3.svg";
-// import blackTshirt4 from "src/assets/images/Men/Tshirts/black-tshirt/black-tshirt-4.svg";
-// import blackTshirt5 from "src/assets/images/Men/Tshirts/black-tshirt/black-tshirt-5.svg";
-// import blackTshirt6 from "src/assets/images/Men/Tshirts/black-tshirt/black-tshirt-6.svg";
+import blackTshirt1 from "src/assets/images/Men/Tshirts/black-tshirt/black-tshirt-1.svg";
+import blackTshirt2 from "src/assets/images/Men/Tshirts/black-tshirt/black-tshirt-2.svg";
+import blackTshirt3 from "src/assets/images/Men/Tshirts/black-tshirt/black-tshirt-3.svg";
+import blackTshirt4 from "src/assets/images/Men/Tshirts/black-tshirt/black-tshirt-4.svg";
+import blackTshirt5 from "src/assets/images/Men/Tshirts/black-tshirt/black-tshirt-5.svg";
+import blackTshirt6 from "src/assets/images/Men/Tshirts/black-tshirt/black-tshirt-6.svg";
 
-// import blackShorts1 from "src/assets/images/Women/Shorts/black-shorts/black-shorts-1.svg";
-// import blackShorts2 from "src/assets/images/Women/Shorts/black-shorts/black-shorts-2.svg";
-// import blackShorts3 from "src/assets/images/Women/Shorts/black-shorts/black-shorts-3.svg";
-// import blackShorts4 from "src/assets/images/Women/Shorts/black-shorts/black-shorts-4.svg";
-// import blackShorts5 from "src/assets/images/Women/Shorts/black-shorts/black-shorts-5.svg";
-// import blackShorts6 from "src/assets/images/Women/Shorts/black-shorts/black-shorts-6.svg";
+import blackShorts1 from "src/assets/images/Women/Shorts/black-shorts/black-shorts-1.svg";
+import blackShorts2 from "src/assets/images/Women/Shorts/black-shorts/black-shorts-2.svg";
+import blackShorts3 from "src/assets/images/Women/Shorts/black-shorts/black-shorts-3.svg";
+import blackShorts4 from "src/assets/images/Women/Shorts/black-shorts/black-shorts-4.svg";
+import blackShorts5 from "src/assets/images/Women/Shorts/black-shorts/black-shorts-5.svg";
+import blackShorts6 from "src/assets/images/Women/Shorts/black-shorts/black-shorts-6.svg";
 
-// import smokegreenShorts1 from "src/assets/images/Women/Shorts/smokegreen-shorts/smokegreen-shorts-1.svg";
-// import smokegreenShorts2 from "src/assets/images/Women/Shorts/smokegreen-shorts/smokegreen-shorts-2.svg";
-// import smokegreenShorts3 from "src/assets/images/Women/Shorts/smokegreen-shorts/smokegreen-shorts-3.svg";
-// import smokegreenShorts4 from "src/assets/images/Women/Shorts/smokegreen-shorts/smokegreen-shorts-4.svg";
-// import smokegreenShorts5 from "src/assets/images/Women/Shorts/smokegreen-shorts/smokegreen-shorts-5.svg";
+import smokegreenShorts1 from "src/assets/images/Women/Shorts/smokegreen-shorts/smokegreen-shorts-1.svg";
+import smokegreenShorts2 from "src/assets/images/Women/Shorts/smokegreen-shorts/smokegreen-shorts-2.svg";
+import smokegreenShorts3 from "src/assets/images/Women/Shorts/smokegreen-shorts/smokegreen-shorts-3.svg";
+import smokegreenShorts4 from "src/assets/images/Women/Shorts/smokegreen-shorts/smokegreen-shorts-4.svg";
+import smokegreenShorts5 from "src/assets/images/Women/Shorts/smokegreen-shorts/smokegreen-shorts-5.svg";
 
-// import peachShorts1 from "src/assets/images/Women/Shorts/peach-shorts/peach-shorts-1.svg";
-// import peachShorts2 from "src/assets/images/Women/Shorts/peach-shorts/peach-shorts-2.svg";
-// import peachShorts3 from "src/assets/images/Women/Shorts/peach-shorts/peach-shorts-3.svg";
-// import peachShorts4 from "src/assets/images/Women/Shorts/peach-shorts/peach-shorts-4.svg";
-// import peachShorts5 from "src/assets/images/Women/Shorts/peach-shorts/peach-shorts-5.svg";
-// import peachShorts6 from "src/assets/images/Women/Shorts/peach-shorts/peach-shorts-6.svg";
+import peachShorts1 from "src/assets/images/Women/Shorts/peach-shorts/peach-shorts-1.svg";
+import peachShorts2 from "src/assets/images/Women/Shorts/peach-shorts/peach-shorts-2.svg";
+import peachShorts3 from "src/assets/images/Women/Shorts/peach-shorts/peach-shorts-3.svg";
+import peachShorts4 from "src/assets/images/Women/Shorts/peach-shorts/peach-shorts-4.svg";
+import peachShorts5 from "src/assets/images/Women/Shorts/peach-shorts/peach-shorts-5.svg";
+import peachShorts6 from "src/assets/images/Women/Shorts/peach-shorts/peach-shorts-6.svg";
 
 export const allProducts = [
   {
@@ -198,7 +198,7 @@ export const allProducts = [
     ],
     sizesAvailable: ["S", "M", "L", "XL", "2XL"],
     deliveryTime: "8",
-    gender: "Women",
+    gender: "Men",
     introduced_on: "10/10/2022",
     units_sold: "649",
     product_reviews: "700",
@@ -278,7 +278,7 @@ export const allProducts = [
     ],
     sizesAvailable: ["XS", "S", "M", "L", "XL"],
     deliveryTime: "5",
-    gender: "Women",
+    gender: "Men",
     introduced_on: "10/16/2022",
     units_sold: "67",
     product_reviews: "342",
@@ -566,198 +566,246 @@ export const allProducts = [
   //   units_sold: "48",
   //   product_reviews: "60",
   // },
-  // {
-  //   id: 13,
-  //   brand: "Levi's",
-  //   category: "Tshirt",
-  //   name: "Men's Lilac Tshirt",
-  //   description: "A very nice pair of lilac blue t-shirt for men",
-  //   rating: "4.5",
-  //   price: "799",
-  //   actualPrice: "1299",
-  //   images: [
-  //     lilacTshirt1,
-  //     lilacTshirt2,
-  //     lilacTshirt3,
-  //     lilacTshirt4,
-  //     lilacTshirt5,
-  //     lilacTshirt6,
-  //   ],
-  //   discount: "30",
-  //   color: "lilac",
-  //   colorsAvailable: ["lilac", "yellow", "black"],
-  //   sizesAvailable: ["XS", "S", "M", "L", "XL"],
-  //   deliveryTime: "15",
-  //   gender: "Men",
-  // },
-  // {
-  //   id: 14,
-  //   brand: "Tommy Hilfiger",
-  //   category: "Tshirt",
-  //   name: "Men's Yellow Tshirt",
-  //   description: "A very nice pair of yellow t-shirt for men",
-  //   rating: "4.5",
-  //   price: "799",
-  //   actualPrice: "1299",
-  //   images: [
-  //     yellowTshirt1,
-  //     yellowTshirt2,
-  //     yellowTshirt3,
-  //     yellowTshirt4,
-  //     yellowTshirt5,
-  //     yellowTshirt6,
-  //   ],
-  //   discount: "40",
-  //   color: "yellow",
-  //   colorsAvailable: ["lilac", "yellow", "black"],
-  //   sizesAvailable: ["S", "M", "L", "XL", "2XL"],
-  //   deliveryTime: "3",
-  //   gender: "Men",
-  // },
-  // {
-  //   id: 15,
-  //   brand: "Under Armour",
-  //   category: "Tshirt",
-  //   name: "Men's Black Tshirt",
-  //   description: "A very nice pair of black t-shirt for men",
-  //   rating: "4.5",
-  //   price: "799",
-  //   actualPrice: "1299",
-  //   images: [
-  //     blackTshirt1,
-  //     blackTshirt2,
-  //     blackTshirt3,
-  //     blackTshirt4,
-  //     blackTshirt5,
-  //     blackTshirt6,
-  //   ],
-  //   discount: "50",
-  //   color: "black",
-  //   colorsAvailable: ["lilac", "yellow", "black"],
-  //   sizesAvailable: ["M", "L", "XL", "2XL", "3XL"],
-  //   deliveryTime: "9",
-  //   gender: "Men",
-  // },
+  {
+    id: 13,
+    brand: "Levi's",
+    category: "Tshirt",
+    name: "Men's Lilac Tshirt",
+    description: "A very nice pair of lilac blue t-shirt for men",
+    rating: "4.5",
+    price: "999",
+    actualPrice: "1499",
+    images: [
+      lilacTshirt1,
+      lilacTshirt2,
+      lilacTshirt3,
+      lilacTshirt4,
+      lilacTshirt5,
+      lilacTshirt6,
+    ],
+    discount: "30",
+    color: "lilac",
+    colorsAvailable: [
+      {
+        color: "#e2cddd",
+        productId: 13,
+      },
+      {
+        color: "#fffbc2",
+        productId: 14,
+      },
+      {
+        color: "black",
+        productId: 15,
+      },
+    ],
+    sizesAvailable: ["XS", "S", "M", "L", "XL"],
+    deliveryTime: "15",
+    gender: "Men",
+    introduced_on: "16/01/2022",
+    units_sold: "49",
+    product_reviews: "24",
+  },
+  {
+    id: 14,
+    brand: "Tommy Hilfiger",
+    category: "Tshirt",
+    name: "Men's Yellow Tshirt",
+    description: "A very nice pair of yellow t-shirt for men",
+    rating: "4.5",
+    price: "799",
+    actualPrice: "1299",
+    images: [
+      yellowTshirt1,
+      yellowTshirt2,
+      yellowTshirt3,
+      yellowTshirt4,
+      yellowTshirt5,
+      yellowTshirt6,
+    ],
+    discount: "40",
+    color: "yellow",
+    colorsAvailable: [
+      {
+        color: "#e2cddd",
+        productId: 13,
+      },
+      {
+        color: "#fffbc2",
+        productId: 14,
+      },
+      {
+        color: "black",
+        productId: 15,
+      },
+    ],
+    sizesAvailable: ["S", "M", "L", "XL", "2XL"],
+    deliveryTime: "3",
+    gender: "Men",
+    introduced_on: "18/02/2022",
+    units_sold: "324",
+    product_reviews: "245",
+  },
+  {
+    id: 15,
+    brand: "Under Armour",
+    category: "Tshirt",
+    name: "Men's Black Tshirt",
+    description: "A very nice pair of black t-shirt for men",
+    rating: "4.5",
+    price: "799",
+    actualPrice: "1299",
+    images: [
+      blackTshirt1,
+      blackTshirt2,
+      blackTshirt3,
+      blackTshirt4,
+      blackTshirt5,
+      blackTshirt6,
+    ],
+    discount: "50",
+    color: "black",
+    colorsAvailable: [
+      {
+        color: "#e2cddd",
+        productId: 13,
+      },
+      {
+        color: "#fffbc2",
+        productId: 14,
+      },
+      {
+        color: "black",
+        productId: 15,
+      },
+    ],
+    sizesAvailable: ["M", "L", "XL", "2XL", "3XL"],
+    deliveryTime: "9",
+    gender: "Men",
+    introduced_on: "23/02/2022",
+    units_sold: "675",
+    product_reviews: "634",
+  },
 
   // WOMEN PRODUCTS START FROM HERE
 
-  // {
-  //   id: 22,
-  //   brand: "Bewakoof",
-  //   category: "Shorts",
-  //   name: "Women's black Shorts",
-  //   description: "A very nice pair of black shorts for women",
-  //   rating: "4.5",
-  //   price: "1000",
-  //   actualPrice: "1499",
-  //   images: [
-  //     blackShorts1,
-  //     blackShorts2,
-  //     blackShorts3,
-  //     blackShorts4,
-  //     blackShorts5,
-  //     blackShorts6,
-  //   ],
-  //   discount: "20",
-  //   color: "black",
-  //   colorsAvailable: [
-  //     {
-  //       color: "black",
-  //       productId: 22,
-  //     },
-  //     {
-  //       color: "smokegreen",
-  //       productId: 23,
-  //     },
-  //     {
-  //       color: "peach",
-  //       productId: 24,
-  //     },
-  //   ],
-  //   sizesAvailable: ["XS", "S", "M", "L", "XL"],
-  //   deliveryTime: "25",
-  //   gender: "Women",
-  //   introduced_on: "11/12/2021",
-  //   units_sold: "1400",
-  //   product_reviews: "60",
-  // },
-  // {
-  //   id: 23,
-  //   brand: "Bewakoof",
-  //   category: "Shorts",
-  //   name: "Women's smokegreen Shorts",
-  //   description: "A very nice pair of smokegreen shorts for women",
-  //   rating: "4.5",
-  //   price: "800",
-  //   actualPrice: "1699",
-  //   images: [
-  //     smokegreenShorts1,
-  //     smokegreenShorts2,
-  //     smokegreenShorts3,
-  //     smokegreenShorts4,
-  //     smokegreenShorts5,
-  //   ],
-  //   discount: "20",
-  //   color: "smokegreen",
-  //   colorsAvailable: [
-  //     {
-  //       color: "black",
-  //       productId: 22,
-  //     },
-  //     {
-  //       color: "smokegreen",
-  //       productId: 23,
-  //     },
-  //     {
-  //       color: "peach",
-  //       productId: 24,
-  //     },
-  //   ],
-  //   sizesAvailable: ["XS", "S", "M", "L", "XL"],
-  //   deliveryTime: "25",
-  //   gender: "Women",
-  //   introduced_on: "08/12/2021",
-  //   units_sold: "1300",
-  //   product_reviews: "460",
-  // },
-  // {
-  //   id: 24,
-  //   brand: "Bewakoof",
-  //   category: "Shorts",
-  //   name: "Women's peach Shorts",
-  //   description: "A very nice pair of peach shorts for women",
-  //   rating: "4.5",
-  //   price: "900",
-  //   actualPrice: "1899",
-  //   images: [
-  //     peachShorts1,
-  //     peachShorts2,
-  //     peachShorts3,
-  //     peachShorts4,
-  //     peachShorts5,
-  //     peachShorts6,
-  //   ],
-  //   discount: "20",
-  //   color: "peach",
-  //   colorsAvailable: [
-  //     {
-  //       color: "black",
-  //       productId: 22,
-  //     },
-  //     {
-  //       color: "smokegreen",
-  //       productId: 23,
-  //     },
-  //     {
-  //       color: "peach",
-  //       productId: 24,
-  //     },
-  //   ],
-  //   sizesAvailable: ["XS", "S", "M", "L", "XL"],
-  //   deliveryTime: "25",
-  //   gender: "Women",
-  //   introduced_on: "09/12/2021",
-  //   units_sold: "1100",
-  //   product_reviews: "220",
-  // },
+  {
+    id: 22,
+    brand: "Bewakoof",
+    category: "Shorts",
+    name: "Women's black Shorts",
+    description: "A very nice pair of black shorts for women",
+    rating: "4.5",
+    price: "1000",
+    actualPrice: "1499",
+    images: [
+      blackShorts1,
+      blackShorts2,
+      blackShorts3,
+      blackShorts4,
+      blackShorts5,
+      blackShorts6,
+    ],
+    discount: "20",
+    color: "black",
+    colorsAvailable: [
+      {
+        color: "black",
+        productId: 22,
+      },
+      {
+        color: "#d6e7cf",
+        productId: 23,
+      },
+      {
+        color: "#fdcdbd",
+        productId: 24,
+      },
+    ],
+    sizesAvailable: ["XS", "S", "M", "L", "XL"],
+    deliveryTime: "25",
+    gender: "Women",
+    introduced_on: "11/12/2021",
+    units_sold: "1400",
+    product_reviews: "60",
+  },
+  {
+    id: 23,
+    brand: "Bewakoof",
+    category: "Shorts",
+    name: "Women's smokegreen Shorts",
+    description: "A very nice pair of smokegreen shorts for women",
+    rating: "4.5",
+    price: "800",
+    actualPrice: "1699",
+    images: [
+      smokegreenShorts1,
+      smokegreenShorts2,
+      smokegreenShorts3,
+      smokegreenShorts4,
+      smokegreenShorts5,
+    ],
+    discount: "20",
+    color: "smokegreen",
+    colorsAvailable: [
+      {
+        color: "black",
+        productId: 22,
+      },
+      {
+        color: "#d6e7cf",
+        productId: 23,
+      },
+      {
+        color: "#fdcdbd",
+        productId: 24,
+      },
+    ],
+    sizesAvailable: ["XS", "S", "M", "L", "XL"],
+    deliveryTime: "25",
+    gender: "Women",
+    introduced_on: "08/12/2021",
+    units_sold: "1300",
+    product_reviews: "460",
+  },
+  {
+    id: 24,
+    brand: "Bewakoof",
+    category: "Shorts",
+    name: "Women's peach Shorts",
+    description: "A very nice pair of peach shorts for women",
+    rating: "4.5",
+    price: "900",
+    actualPrice: "1899",
+    images: [
+      peachShorts1,
+      peachShorts2,
+      peachShorts3,
+      peachShorts4,
+      peachShorts5,
+      peachShorts6,
+    ],
+    discount: "20",
+    color: "peach",
+    colorsAvailable: [
+      {
+        color: "black",
+        productId: 22,
+      },
+      {
+        color: "#d6e7cf",
+        productId: 23,
+      },
+      {
+        color: "#fdcdbd",
+        productId: 24,
+      },
+    ],
+    sizesAvailable: ["XS", "S", "M", "L", "XL"],
+    deliveryTime: "25",
+    gender: "Women",
+    introduced_on: "09/12/2021",
+    units_sold: "1100",
+    product_reviews: "220",
+  },
 ];

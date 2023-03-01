@@ -1,5 +1,6 @@
 .mobile-header {
   display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
   padding: 20px 25px;
@@ -31,4 +32,11 @@
   height: 100%;
   width: 100%;
   object-fit: contain;
+}
+
+@media only screen and (max-width: 600px) {
+  .mobile-header {
+    display: block;
+    display: flex;
+  }
 }

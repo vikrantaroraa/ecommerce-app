@@ -10,28 +10,35 @@ const Wishlist = () => {
 
   return (
     <div className={styles["wishlist"]}>
-      {/* <h1 className={styles["wishlist-heading"]}>Wishlist</h1> */}
-      {wishlist.map((item: any) => {
-        return (
-          <WishListProductCard
-            id={item.id}
-            productName={item.name}
-            price={item.price}
-            brandName={item.brand}
-            actualPrice={item.actualPrice}
-            imageSrc={item.images[1]}
-            onRemoveFromWishListClick={() =>
-              wishlistDispatch({
-                type: "REMOVE_FROM_WISHLIST",
-                payload: item.id,
-              })
-            }
-            onMoveToCartClick={() =>
-              wishlistDispatch({ type: "MOVE_TO_CART", payload: item })
-            }
-          />
-        );
-      })}
+      <div className={styles["wishlist-heading"]}>
+        Wishlist{" "}
+        <span className={styles["number-of-items-text"]}>
+          {wishlist.length} item(s)
+        </span>
+      </div>
+      <div className={styles["wishlist-products-container"]}>
+        {wishlist.map((item: any) => {
+          return (
+            <WishListProductCard
+              id={item.id}
+              productName={item.name}
+              price={item.price}
+              brandName={item.brand}
+              actualPrice={item.actualPrice}
+              imageSrc={item.images[1]}
+              onRemoveFromWishListClick={() =>
+                wishlistDispatch({
+                  type: "REMOVE_FROM_WISHLIST",
+                  payload: item.id,
+                })
+              }
+              onMoveToCartClick={() =>
+                wishlistDispatch({ type: "MOVE_TO_CART", payload: item })
+              }
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };

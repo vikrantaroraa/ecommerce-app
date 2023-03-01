@@ -1,17 +1,12 @@
 import TrendingProducts from "src/components/TrendingProducts/TrendingProducts";
-import blackShorts from "src/assets/images/Women/Shorts/black-shorts/black-shorts-1.svg";
-import userReviewsHero from "src/assets/images/user-reviews-hero.svg";
 import styles from "src/pages/LandingPage/LandingPage.module.css";
 import CollectionsCard from "src/components/CollectionsCard/CollectionsCard";
 import greyCollection from "src/assets/images/grey-collection.svg";
 import tshirtCollection from "src/assets/images/tshirt-collection.jpg";
-import subscriptionHero1 from "src/assets/images/subscriptions-hero.svg";
-import subscriptionHero2 from "src/assets/images/subscriptions-hero-updated.svg";
+import subscriptionHero from "src/assets/images/subscriptions-hero-updated.svg";
 import landingHeroYellow from "src/assets/images/landing-page-hero/hero-yellow.png";
-import landingHeroYellowOriginal from "src/assets/images/landing-page-hero/hero-yellow-original.png";
-import landingHeroYellowOriginalNew from "src/assets/images/landing-page-hero/hero-yellow-original-new.png";
-import landingHeroGreenOriginal from "src/assets/images/landing-page-hero/hero-green-original.png";
 import landingHeroGreen from "src/assets/images/landing-page-hero/hero-green.png";
+import landingHeroBrown from "src/assets/images/landing-page-hero/hero-brown-3.png";
 import ShopByCategory from "src/components/ShopByCategory/ShopByCategory";
 import InstagramWall from "src/components/InstagramWall/InstagramWall";
 import HomepageFeatureTiles from "src/components/HomepageFeatureTiles/HomepageFeatureTiles";
@@ -27,7 +22,7 @@ const landingHeroImagesArray = [
     text: "Choose from a wide variety of ambient colors.",
   },
   {
-    icon: landingHeroYellow,
+    icon: landingHeroBrown,
     text: "Get your product made from the fabric of your choice.",
   },
 ];
@@ -164,7 +159,7 @@ function LandingPage() {
           </div>
           <div className={styles["subscription-hero-container"]}>
             <div className={styles["subscription-hero-image"]}>
-              <img src={subscriptionHero2} />
+              <img src={subscriptionHero} />
             </div>
           </div>
         </div>

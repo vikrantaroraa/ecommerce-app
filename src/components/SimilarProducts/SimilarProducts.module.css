@@ -8,13 +8,14 @@
 .similar-products-heading {
   font-size: 24px;
   font-weight: 600;
-  padding-left: 40px;
+  padding-left: 45px;
+  /* background-color: red; */
 }
 
 .similar-products-horizontal-grid {
   display: flex;
   justify-content: space-around;
-  padding: 50px;
+  padding: 30px 10px;
   height: 400px;
   height: auto;
   /* background-color: wheat; */

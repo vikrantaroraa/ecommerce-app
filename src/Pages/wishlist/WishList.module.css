@@ -1,11 +1,35 @@
 .wishlist {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  /* background-color: lightblue; */
+}
+
+.wishlist-products-container {
   display: flex;
   flex-wrap: wrap;
   /* background-color: lightpink; */
 }
 
+.wishlist-heading {
+  padding: 20px 30px;
+  font-size: 22px;
+  font-weight: 600;
+  /* background-color: red; */
+}
+
+.number-of-items-text {
+  font-size: 20px;
+  font-weight: 400;
+}
+
 @media only screen and (max-width: 600px) {
   .wishlist {
     padding: 10px;
+  }
+
+  .wishlist-heading {
+    padding: 15px 5px;
   }
 }
