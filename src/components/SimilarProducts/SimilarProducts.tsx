@@ -1,10 +1,5 @@
 import styles from "src/components/SimilarProducts/SimilarProducts.module.css";
 import SimilarProductsCard from "src/components/SimilarProductsCard/SimilarProductsCard";
-import bewakoof from "src/assets/images/bewakoof.jpg";
-import roadster from "src/assets/images/roadster.jpg";
-import handm from "src/assets/images/handm.jpg";
-import campusSutra from "src/assets/images/campusSutra.jpg";
-
 import lilacTshirt from "src/assets/images/Men/Tshirts/lilac-tshirt/lilac-tshirt-2.svg";
 import yellowTshirt from "src/assets/images/Men/Tshirts/yellow-tshirt/yellow-tshirt-3.svg";
 import blackShorts from "src/assets/images/Women/Shorts/black-shorts/black-shorts-2.svg";
@@ -78,7 +73,13 @@ function SimilarProducts() {
             discount,
           }) => {
             return (
-              <Link to={redirectUrl}>
+              <Link
+                to={redirectUrl}
+                style={{
+                  textDecoration: "none",
+                  color: "#000",
+                }}
+              >
                 <SimilarProductsCard
                   brandName={brandName}
                   productName={productName}
