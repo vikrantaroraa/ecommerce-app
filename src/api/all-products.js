@@ -733,7 +733,7 @@ export const allProducts = [
     id: 23,
     brand: "Bewakoof",
     category: "Shorts",
-    name: "Women's smokegreen Shorts",
+    name: "Women's green Shorts",
     description: "A very nice pair of smokegreen shorts for women",
     rating: "4.5",
     price: "800",

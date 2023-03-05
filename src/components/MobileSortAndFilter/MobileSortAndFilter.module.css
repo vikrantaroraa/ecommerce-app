@@ -5,12 +5,13 @@
   justify-content: space-between;
   padding: 20px 15px;
   border: 1px solid #cecdcd;
-  border-radius: 8px;
+  border-radius: 6px;
+  width: 95%;
 }
 
 .mobile-filter-container {
   cursor: pointer;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
 }
 
