@@ -22,7 +22,18 @@ function ProductInfo() {
   useEffect(() => {
     localStorage.removeItem("selectedSize");
     localStorage.removeItem("selectedColor");
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }, []);
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [productId]);
 
   function getProductDetails(allProducts: any, productId: any) {
     return allProducts.find((product: any) => product.id === Number(productId));
