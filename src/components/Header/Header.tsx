@@ -5,7 +5,7 @@ import {
   useNavigate,
   useSearchParams,
 } from "react-router-dom";
-import { useAuth } from "src/context/auth-context";
+import { useAuth } from "src/context/auth-store/auth-context";
 import styles from "src/components/Header/Header.module.css";
 import React, { useState } from "react";
 import { checkboxFiltersList } from "src/context/sort-and-filter-store/checkboxFiltersList";
