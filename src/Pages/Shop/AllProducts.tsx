@@ -24,50 +24,7 @@ import MobileSortAndFilter from "src/components/MobileSortAndFilter/MobileSortAn
 
 const AllProducts = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const { dispatch: productDispatch } = useCart();
   const { state, dispatch: sortAndFilterDispatch } = useSortAndFilter();
-
-  const allStateVariablesArray = Object.keys(state);
-  const indexOfOriginalDataList =
-    allStateVariablesArray.indexOf("originalDataList");
-  allStateVariablesArray.splice(indexOfOriginalDataList, 1);
-  const indexOfSortBy = allStateVariablesArray.indexOf("sortBy");
-  allStateVariablesArray.splice(indexOfSortBy, 1);
-  const indexOfPriceRange = allStateVariablesArray.indexOf("priceRange");
-  allStateVariablesArray.splice(indexOfPriceRange, 1);
-  const allFiltersStateVariableArray = [...allStateVariablesArray];
-
-  const stateVariableToFilteredProductsArray = {
-    showMenProducts: "filteredMenProducts",
-    showWomenProducts: "filteredWomenProducts",
-    showExtraSmallSize: "filteredXSSizeProducts",
-    showSmallSize: "filteredSSizeProducts",
-    showMediumSize: "filteredMSizeProducts",
-    showLargeSize: "filteredLSizeProducts",
-    showExtraLargeSize: "filteredXLSizeProducts",
-    show2ExtraLargeSize: "filtered2XLSizeProducts",
-    show3ExtraLargeSize: "filtered3XLSizeProducts",
-    showBewakoofProducts: "filteredBewakoofProducts",
-    showRoadsterProducts: "filteredRoadsterProducts",
-    showLevisProducts: "filteredLevisProducts",
-    showTommyHilfigerProducts: "filteredTommyHilfigerProducts",
-    showUnderArmourProducts: "filteredUnderArmourProducts",
-    showSweatShirts: "filteredSweatshirtProducts",
-    showHoodies: "filteredHoodieProducts",
-    showTshirts: "filteredTshirtProducts",
-    showJoggers: "filteredJoggersProducts",
-    showPyjamas: "filteredPyjamaProducts",
-    showShorts: "filteredShortsProducts",
-    showBoxers: "filteredBoxersProducts",
-    show10PercentDiscountProducts: "filtered10PercentDiscountProducts",
-    show20PercentDiscountProducts: "filtered20PercentDiscountProducts",
-    show30PercentDiscountProducts: "filtered30PercentDiscountProducts",
-    show40PercentDiscountProducts: "filtered40PercentDiscountProducts",
-    show50PercentDiscountProducts: "filtered50PercentDiscountProducts",
-    show1DayDeliveryProducts: "filtered1DayDeliveryProducts",
-    show7DaysDeliveryProducts: "filtered7DayDeliveryProducts",
-    show15DaysDeliveryProducts: "filtered15DayDeliveryProducts",
-  };
 
   useEffect(() => {
     const currentStatefulUrl = window.location;
@@ -186,123 +143,98 @@ const AllProducts = () => {
       show15DaysDeliveryProducts,
     }: any
   ) => {
-    let allNewFilteredProducts: any[] = [];
-    let filteredAllNewFilteredProducts: any[] = [];
-
     const filteredMenProducts = sortedData.filter(({ gender }: any) =>
       showMenProducts ? gender === "Men" : true
     );
     const filteredWomenProducts = sortedData.filter(({ gender }) =>
       showWomenProducts ? gender === "Women" : true
     );
-    const filteredXSSizeProducts = sortedData.filter(({ sizesAvailable }) =>
-      showExtraSmallSize ? sizesAvailable.includes("XS") : true
-    );
-    const filteredSSizeProducts = sortedData.filter(({ sizesAvailable }) =>
-      showSmallSize ? sizesAvailable.includes("S") : true
-    );
-    const filteredMSizeProducts = sortedData.filter(({ sizesAvailable }) =>
-      showMediumSize ? sizesAvailable.includes("M") : true
-    );
-    const filteredLSizeProducts = sortedData.filter(({ sizesAvailable }) =>
-      showLargeSize ? sizesAvailable.includes("L") : true
-    );
-    const filteredXLSizeProducts = sortedData.filter(({ sizesAvailable }) =>
-      showExtraLargeSize ? sizesAvailable.includes("XL") : true
-    );
-    const filtered2XLSizeProducts = sortedData.filter(({ sizesAvailable }) =>
-      show2ExtraLargeSize ? sizesAvailable.includes("2XL") : true
-    );
-    const filtered3XLSizeProducts = sortedData.filter(({ sizesAvailable }) =>
-      show3ExtraLargeSize ? sizesAvailable.includes("3XL") : true
-    );
-    const filteredBewakoofProducts = sortedData.filter(({ brand }) =>
-      showBewakoofProducts ? brand === "Bewakoof" : true
-    );
-    const filteredRoadsterProducts = sortedData.filter(({ brand }) =>
-      showRoadsterProducts ? brand === "Roadster" : true
-    );
-    const filteredLevisProducts = sortedData.filter(({ brand }) =>
-      showLevisProducts ? brand === "Levi's" : true
-    );
-    const filteredTommyHilfigerProducts = sortedData.filter(({ brand }) =>
-      showTommyHilfigerProducts ? brand === "Tommy Hilfiger" : true
-    );
-    const filteredUnderArmourProducts = sortedData.filter(({ brand }) =>
-      showUnderArmourProducts ? brand === "Under Armour" : true
-    );
-    const filteredSweatshirtProducts = sortedData.filter(({ category }) =>
-      showSweatShirts ? category === "Sweatshirt" : true
-    );
-    const filteredHoodieProducts = sortedData.filter(({ category }) =>
-      showHoodies ? category === "Hoodie" : true
-    );
-    const filteredTshirtProducts = sortedData.filter(({ category }) =>
-      showTshirts ? category === "Tshirt" : true
-    );
-    const filteredJoggersProducts = sortedData.filter(({ category }) =>
-      showJoggers ? category === "Joggers" : true
-    );
-    const filteredPyjamaProducts = sortedData.filter(({ category }) =>
-      showPyjamas ? category === "Pyjama" : true
-    );
-    const filteredShortsProducts = sortedData.filter(({ category }) =>
-      showShorts ? category === "Shorts" : true
-    );
-    const filteredBoxersProducts = sortedData.filter(({ category }) =>
-      showBoxers ? category === "Boxers" : true
-    );
-    const filtered10PercentDiscountProducts = sortedData.filter(
-      ({ discount }) =>
-        show10PercentDiscountProducts ? Number(discount) >= 10 : true
-    );
-    const filtered20PercentDiscountProducts = sortedData.filter(
-      ({ discount }) =>
-        show20PercentDiscountProducts ? Number(discount) >= 20 : true
-    );
-    const filtered30PercentDiscountProducts = sortedData.filter(
-      ({ discount }) =>
-        show30PercentDiscountProducts ? Number(discount) >= 30 : true
-    );
-    const filtered40PercentDiscountProducts = sortedData.filter(
-      ({ discount }) =>
-        show40PercentDiscountProducts ? Number(discount) >= 40 : true
-    );
-    const filtered50PercentDiscountProducts = sortedData.filter(
-      ({ discount }) =>
-        show50PercentDiscountProducts ? Number(discount) >= 50 : true
-    );
-    const filtered1DayDeliveryProducts = sortedData.filter(
-      ({ deliveryTime }: any) =>
-        show1DayDeliveryProducts ? Number(deliveryTime) <= 1 : true
-    );
-    const filtered7DayDeliveryProducts = sortedData.filter(
-      ({ deliveryTime }: any) =>
-        show7DaysDeliveryProducts ? Number(deliveryTime) <= 7 : true
-    );
-    const filtered15DayDeliveryProducts = sortedData.filter(
-      ({ deliveryTime }: any) =>
-        show15DaysDeliveryProducts ? Number(deliveryTime) <= 15 : true
-    );
 
-    allFiltersStateVariableArray.map((filterStateVariable) => {
-      if (state[filterStateVariable]) {
-        const currentlyFilteredProducts = [...allNewFilteredProducts];
-        allNewFilteredProducts = [
-          ...currentlyFilteredProducts,
-          ...eval(
-            stateVariableToFilteredProductsArray[
-              filterStateVariable as keyof typeof stateVariableToFilteredProductsArray
-            ]
-          ),
-        ];
+    const filteredGenderProducts = [
+      ...(showMenProducts ? filteredMenProducts : []),
+      ...(showWomenProducts ? filteredWomenProducts : []),
+    ];
 
-        filteredAllNewFilteredProducts = allNewFilteredProducts.filter(
-          (a, b) => allNewFilteredProducts.indexOf(a) === b
-        );
-      }
-    });
-    return filteredAllNewFilteredProducts;
+    return showMenProducts === true || showWomenProducts === true
+      ? filteredGenderProducts
+      : sortedData
+          .filter(({ sizesAvailable }) =>
+            showExtraSmallSize ? sizesAvailable.includes("XS") : true
+          )
+          .filter(({ sizesAvailable }) =>
+            showSmallSize ? sizesAvailable.includes("S") : true
+          )
+          .filter(({ sizesAvailable }) =>
+            showMediumSize ? sizesAvailable.includes("M") : true
+          )
+          .filter(({ sizesAvailable }) =>
+            showLargeSize ? sizesAvailable.includes("L") : true
+          )
+          .filter(({ sizesAvailable }) =>
+            showExtraLargeSize ? sizesAvailable.includes("XL") : true
+          )
+          .filter(({ sizesAvailable }) =>
+            show2ExtraLargeSize ? sizesAvailable.includes("2XL") : true
+          )
+          .filter(({ sizesAvailable }) =>
+            show3ExtraLargeSize ? sizesAvailable.includes("3XL") : true
+          )
+          .filter(({ brand }) =>
+            showBewakoofProducts ? brand === "Bewakoof" : true
+          )
+          .filter(({ brand }) =>
+            showRoadsterProducts ? brand === "Roadster" : true
+          )
+          .filter(({ brand }) =>
+            showLevisProducts ? brand === "Levi's" : true
+          )
+          .filter(({ brand }) =>
+            showTommyHilfigerProducts ? brand === "Tommy Hilfiger" : true
+          )
+          .filter(({ brand }) =>
+            showUnderArmourProducts ? brand === "Under Armour" : true
+          )
+          .filter(({ category }) =>
+            showSweatShirts ? category === "Sweatshirt" : true
+          )
+          .filter(({ category }) =>
+            showHoodies ? category === "Hoodie" : true
+          )
+          .filter(({ category }) =>
+            showTshirts ? category === "Tshirt" : true
+          )
+          .filter(({ category }) =>
+            showJoggers ? category === "Joggers" : true
+          )
+          .filter(({ category }) =>
+            showPyjamas ? category === "Pyjama" : true
+          )
+          .filter(({ category }) => (showShorts ? category === "Shorts" : true))
+          .filter(({ category }) => (showBoxers ? category === "Boxers" : true))
+          .filter(({ discount }) =>
+            show10PercentDiscountProducts ? Number(discount) >= 10 : true
+          )
+          .filter(({ discount }) =>
+            show20PercentDiscountProducts ? Number(discount) >= 20 : true
+          )
+          .filter(({ discount }) =>
+            show30PercentDiscountProducts ? Number(discount) >= 30 : true
+          )
+          .filter(({ discount }) =>
+            show40PercentDiscountProducts ? Number(discount) >= 40 : true
+          )
+          .filter(({ discount }) =>
+            show50PercentDiscountProducts ? Number(discount) >= 50 : true
+          )
+          .filter(({ deliveryTime }: any) =>
+            show1DayDeliveryProducts ? Number(deliveryTime) <= 1 : true
+          )
+          .filter(({ deliveryTime }: any) =>
+            show7DaysDeliveryProducts ? Number(deliveryTime) <= 7 : true
+          )
+          .filter(({ deliveryTime }: any) =>
+            show15DaysDeliveryProducts ? Number(deliveryTime) <= 15 : true
+          );
   };
 
   const getProductsUnderPriceRange = (
