@@ -761,7 +761,7 @@ export const allProducts = [
         productId: 24,
       },
     ],
-    sizesAvailable: ["XS", "S", "M", "L", "XL"],
+    sizesAvailable: ["S", "M", "L", "XL", "2XL"],
     deliveryTime: "25",
     gender: "Women",
     introduced_on: "08/12/2021",
