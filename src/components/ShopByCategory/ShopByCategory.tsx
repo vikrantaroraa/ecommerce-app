@@ -1,4 +1,4 @@
-import categoryBottomsHero from "src/assets/images/category-hero-images/category-bottoms-hero.svg";
+import categoryBottomsHero from "src/assets/images/category-hero-images/category-bottoms-hero.webp";
 import categoryHoodiesHero from "src/assets/images/category-hero-images/category-hoodies-hero.svg";
 import categoryJacketsHero from "src/assets/images/category-hero-images/category-jackets-hero.svg";
 import categoryKidsHero from "src/assets/images/category-hero-images/category-kids-hero.svg";

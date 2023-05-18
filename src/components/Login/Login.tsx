@@ -1,4 +1,4 @@
-import { useAuth } from "src/context/auth-context";
+import { useAuth } from "src/context/auth-store/auth-context";
 
 const Login = () => {
   const { isUserLoggedIn, loginUserWithCredentials } = useAuth();

@@ -5,6 +5,8 @@
   height: auto;
   /* background-color: lightgreen; */
   margin: 30px 30px;
+  /* height: 305px;
+  width: 170px; */
 }
 
 .product-image {
@@ -67,6 +69,9 @@
 @media only screen and (max-width: 600px) {
   .similar-product-card {
     margin: 7px 7px;
+    height: 305px;
+    width: 170px;
+    overflow: hidden;
   }
   .product-image {
     height: 230px;
@@ -96,4 +101,40 @@
   /* .discount {
     font-size: 10px;
   } */
+}
+
+@media only screen and (max-width: 370px) {
+  .similar-product-card {
+    margin: 5px;
+    height: 280px;
+    width: 150px;
+    overflow: hidden;
+  }
+  .product-image {
+    height: 210px;
+    width: 150px;
+  }
+
+  .brand-name {
+    font-size: 16px;
+  }
+
+  .product-name {
+    font-size: 12px;
+    /* font-weight: 500;
+    color: #4c4c4c; */
+    margin-bottom: 5px;
+  }
+
+  .price {
+    font-size: 14px;
+  }
+
+  .actual-price {
+    font-size: 12px;
+  }
+
+  .discount {
+    font-size: 10px;
+  }
 }

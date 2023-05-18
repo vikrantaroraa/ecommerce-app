@@ -1,9 +1,10 @@
 .wishlist-product-card {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  /* background-color: lightgreen; */
   height: auto;
   margin: 30px 30px;
+  cursor: pointer;
   /* height: 360px;
   width: 200px; */
 }
@@ -24,13 +25,6 @@
   width: 100%;
   object-fit: cover;
   border-radius: 8px;
-}
-
-.item-details-and-button-container {
-  /* background-color: lightcyan; */
-  /* border-right: 1px solid #cdeded;
-  border-left: 1px solid #cdeded;
-  border-bottom: 1px solid #cdeded; */
 }
 
 .brand-name {
@@ -103,13 +97,57 @@
 @media only screen and (max-width: 600px) {
   .wishlist-product-card {
     margin: 5px;
+    height: 320px;
+    width: 170px;
+    /* background-color: lightgreen; */
   }
   .product-image {
     height: 230px;
     width: 170px;
   }
 
+  .item-details-and-button-container {
+    margin-top: 4px;
+    /* background-color: lightblue; */
+  }
+
+  .brand-name {
+    font-size: 20px;
+    font-weight: 500;
+    /* background-color: lightgreen; */
+  }
+
+  .product-name {
+    font-size: 14px;
+  }
+
   .remove-and-wishlist-button button {
     font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .wishlist-product-card {
+    margin: 7px;
+    height: 280px;
+    width: 150px;
+  }
+
+  .product-image {
+    height: 210px;
+    width: 150px;
+  }
+
+  .brand-name {
+    font-size: 18px;
+    /* background-color: lightblue; */
+  }
+
+  .product-name {
+    font-size: 13px;
+  }
+
+  .remove-and-wishlist-button button {
+    font-size: 10px;
   }
 }

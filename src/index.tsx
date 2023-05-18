@@ -3,11 +3,9 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-// import { CartProvider } from "src/context/cart-context";
-import { WishListProvider } from "src/context/wishlist-context";
 import { CartProvider } from "src/context/cart-and-wishlist-context";
 import { BrowserRouter as Router } from "react-router-dom";
-import { AuthProvider } from "src/context/auth-context";
+import { AuthProvider } from "src/context/auth-store/auth-context";
 import { SortAndFilterProvider } from "src/context/sort-and-filter-store/sort-and-filter-context";
 import { SidebarFilterProvider } from "src/context/sidebar-filter-context";
 
@@ -16,13 +14,11 @@ ReactDOM.render(
     <Router>
       <SidebarFilterProvider>
         <AuthProvider>
-          <WishListProvider>
-            <CartProvider>
-              <SortAndFilterProvider>
-                <App />
-              </SortAndFilterProvider>
-            </CartProvider>
-          </WishListProvider>
+          <CartProvider>
+            <SortAndFilterProvider>
+              <App />
+            </SortAndFilterProvider>
+          </CartProvider>
         </AuthProvider>
       </SidebarFilterProvider>
     </Router>

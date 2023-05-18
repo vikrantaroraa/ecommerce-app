@@ -58,7 +58,13 @@ function TrendingProducts() {
             actualPrice,
           }) => {
             return (
-              <Link to={redirectUrl}>
+              <Link
+                to={redirectUrl}
+                style={{
+                  textDecoration: "none",
+                  color: "#000",
+                }}
+              >
                 <TrendingProductsCard
                   productCategory={productCategory}
                   productName={productName}

@@ -5,7 +5,7 @@ import {
   useNavigate,
   useSearchParams,
 } from "react-router-dom";
-import { useAuth } from "src/context/auth-context";
+import { useAuth } from "src/context/auth-store/auth-context";
 import styles from "src/components/Header/Header.module.css";
 import React, { useState } from "react";
 import { checkboxFiltersList } from "src/context/sort-and-filter-store/checkboxFiltersList";
@@ -113,18 +113,18 @@ const Header = () => {
         <div className={styles["navigation-link"]}>
           <Link to="/all-products">ALL PRODUCTS</Link>
         </div>
-        {/* <div className={styles["navigation-link"]}>
+        <div className={styles["navigation-link"]}>
           <Link to={"/all-products?gender=women"}>WOMEN</Link>
         </div>
         <div className={styles["navigation-link"]}>
-          <Link to={"/all-products?gender=women"}>MEN</Link>
-        </div> */}
-        <div className={styles["navigation-link"]}>
+          <Link to={"/all-products?gender=men"}>MEN</Link>
+        </div>
+        {/* <div className={styles["navigation-link"]}>
           <Link to="/address">ADDRESS</Link>
         </div>
         <div className={styles["navigation-link"]}>
           <Link to={"/shipping"}>SHIPPING</Link>
-        </div>
+        </div> */}
         {/* <div className={styles["navigation-link"]}>Beauty</div>
         <div className={styles["navigation-link"]}>Decor</div> */}
       </div>

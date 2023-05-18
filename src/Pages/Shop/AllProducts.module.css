@@ -182,11 +182,10 @@
   }
 
   .products-container {
-    align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     padding-left: 0px;
     width: 100%;
-    /* background-color: red; */
+    /* background-color: lightpink; */
   }
 
   .product-category-info-and-sortby-container {
@@ -195,6 +194,11 @@
 
   .mobile-sort-and-filter-container {
     display: block;
+    display: flex;
+    /* background-color: lightpink; */
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
   }
 }
 
