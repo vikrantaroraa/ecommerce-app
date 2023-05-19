@@ -261,7 +261,7 @@ const AllProducts = () => {
         </div>
         <div className={styles["products-container"]}>
           {filteredData.map((product: any) => {
-            console.log({ filteredData });
+            // console.log({ filteredData });
             const { id, brand, name, price, actualPrice, images, discount } =
               product;
             return (

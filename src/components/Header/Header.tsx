@@ -44,7 +44,7 @@ const Header = () => {
   const searchProducts = (e: React.ChangeEvent<HTMLInputElement>) => {
     const currentSearchParams = new URLSearchParams(searchParams);
     const userLocationBeforeRedirect = location.pathname;
-    console.log({ userLocationBeforeRedirect });
+    // console.log({ userLocationBeforeRedirect });
     const { value } = e.currentTarget;
     setSearchString(value);
     if (value !== "") {
@@ -55,7 +55,7 @@ const Header = () => {
         const categoryObject = checkboxFiltersList.Category.find(
           ({ filterLabel }) => filterLabel === value
         );
-        console.log("Hello categoryObject:", categoryObject);
+        // console.log("Hello categoryObject:", categoryObject);
         const urlParameter = categoryObject?.urlParameter;
         const dispatchAction = categoryObject?.dispatchAction;
         setUrlParameterSearched(urlParameter!);
@@ -75,7 +75,7 @@ const Header = () => {
         setUrlParameterSearched(urlParameter!);
         setActionDispatched(dispatchAction!);
         setFilterTypeSearched("brand");
-        console.log("Hello brandObject:", brandObject);
+        // console.log("Hello brandObject:", brandObject);
         if (userLocationBeforeRedirect !== "/all-products") {
           navigate(`/all-products?brand=${urlParameter}`);
         } else {
