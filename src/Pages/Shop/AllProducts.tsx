@@ -91,6 +91,7 @@ const AllProducts = () => {
   const sortedData = getSortedData(productsUnderPriceRange, sortBy);
 
   const filteredData = getFilteredData(sortedData, onlyFilterVariablesObject);
+  // console.log("ye hai filtered data - data:", filteredData);
 
   const handleCheckboxFilterClick = (
     event: React.ChangeEvent<HTMLInputElement>
