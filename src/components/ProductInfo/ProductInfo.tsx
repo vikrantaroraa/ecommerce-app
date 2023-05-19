@@ -13,22 +13,18 @@ import { useCart } from "src/context/cart-and-wishlist-context";
 
 function ProductInfo() {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [userSelectedColor, setUserSelectedColor] = useState("");
+  const [userSelectedSize, setUserSelectedSize] = useState("");
   const { productId } = useParams();
   const {
     dispatch: productDispatch,
     state: { wishlist },
   } = useCart();
 
+  // This useEffect removes all previous selections from local storage on page load.
   useEffect(() => {
     localStorage.removeItem("selectedSize");
     localStorage.removeItem("selectedColor");
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }, []);
-
-  useEffect(() => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -40,34 +36,6 @@ function ProductInfo() {
   }
 
   const product = getProductDetails(allProducts, productId);
-
-  const showSelectedColorTile = (color: string) => {
-    const allColorTileBorderDivs = document.querySelectorAll(
-      `.${styles["color-tile-border"]}`
-    );
-
-    allColorTileBorderDivs.forEach((div) =>
-      div.classList.remove(`${styles["color-tile-selected"]}`)
-    );
-
-    const selectedColorTile = document.getElementById(color);
-    // console.log("selectedTile:", selectedTile);
-    selectedColorTile?.classList.add(`${styles["color-tile-selected"]}`);
-  };
-
-  const showSelectedSizeTile = (size: string) => {
-    const allSizeTileDivs = document.querySelectorAll(
-      `.${styles["size-tile"]}`
-    );
-
-    allSizeTileDivs.forEach((div) =>
-      div.classList.remove(`${styles["size-tile-selected"]}`)
-    );
-
-    const selectedSizeTile = document.getElementById(size);
-    // console.log("selectedTile:", selectedTile);
-    selectedSizeTile?.classList.add(`${styles["size-tile-selected"]}`);
-  };
 
   const {
     id,
@@ -85,6 +53,15 @@ function ProductInfo() {
     sizesAvailable,
     deliveryTime,
   } = product;
+
+  // This useEffect makes changes so that proper color tile and no size tile is selected on page load.
+  useEffect(() => {
+    // setting the product color in local storage and highlighting color-tile's brown border when product page is opened.
+    localStorage.setItem("selectedColor", color);
+    setUserSelectedColor(color);
+    // removing previously selected size tile.
+    setUserSelectedSize("");
+  }, [productId]);
 
   const itemIndexInWishlist = wishlist.findIndex((item: any) => item.id === id);
 
@@ -150,25 +127,30 @@ function ProductInfo() {
               <span className={styles["color-name"]}>{color}</span>
             </div>
             <div className={styles["color-options"]}>
-              {colorsAvailable.map(({ color, productId }: any) => {
-                return (
-                  <Link to={`/product/${productId}`}>
-                    <div
-                      id={color}
-                      className={styles["color-tile-border"]}
-                      onClick={() => {
-                        showSelectedColorTile(color);
-                        localStorage.setItem("selectedColor", color);
-                      }}
-                    >
+              {colorsAvailable.map(
+                ({ colorName, colorHexCode, productId }: any) => {
+                  return (
+                    <Link to={`/product/${productId}`}>
                       <div
-                        style={{ backgroundColor: color }}
-                        className={styles["color-tile"]}
-                      ></div>
-                    </div>
-                  </Link>
-                );
-              })}
+                        className={`${styles["color-tile-border"]} ${
+                          userSelectedColor === colorName
+                            ? styles["color-tile-selected"]
+                            : ""
+                        }`}
+                        onClick={() => {
+                          setUserSelectedColor(colorName);
+                          localStorage.setItem("selectedColor", colorName);
+                        }}
+                      >
+                        <div
+                          style={{ backgroundColor: colorHexCode }}
+                          className={styles["color-tile"]}
+                        ></div>
+                      </div>
+                    </Link>
+                  );
+                }
+              )}
             </div>
           </div>
           <div className={styles["size-grid"]}>
@@ -180,10 +162,13 @@ function ProductInfo() {
               {sizesAvailable.map((size: string) => {
                 return (
                   <div
-                    id={size}
-                    className={styles["size-tile"]}
+                    className={`${styles["size-tile"]} ${
+                      userSelectedSize === size
+                        ? styles["size-tile-selected"]
+                        : ""
+                    }`}
                     onClick={() => {
-                      showSelectedSizeTile(size);
+                      setUserSelectedSize(size);
                       localStorage.setItem("selectedSize", size);
                     }}
                   >

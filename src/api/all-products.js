@@ -144,15 +144,18 @@ export const allProducts = [
     color: "black",
     colorsAvailable: [
       {
-        color: "black",
+        colorName: "black",
+        colorHexCode: "black",
         productId: 1,
       },
       {
-        color: "green",
+        colorName: "blue",
+        colorHexCode: "#418189",
         productId: 2,
       },
       {
-        color: "olive",
+        colorName: "olive grey",
+        colorHexCode: "#98a089",
         productId: 3,
       },
     ],
@@ -167,8 +170,8 @@ export const allProducts = [
     id: 2,
     brand: "Roadster",
     category: "Boxers",
-    name: "Men's Green Boxers",
-    description: "A very nice pair of green boxers for men",
+    name: "Men's Blue Boxers",
+    description: "A very nice pair of blue boxers for men",
     rating: "4.5",
     price: "400",
     actualPrice: "1299",
@@ -181,18 +184,21 @@ export const allProducts = [
       greenBoxer6,
     ],
     discount: "20",
-    color: "green",
+    color: "blue",
     colorsAvailable: [
       {
-        color: "black",
+        colorName: "black",
+        colorHexCode: "black",
         productId: 1,
       },
       {
-        color: "green",
+        colorName: "blue",
+        colorHexCode: "#418189",
         productId: 2,
       },
       {
-        color: "olive",
+        colorName: "olive grey",
+        colorHexCode: "#98a089",
         productId: 3,
       },
     ],
@@ -207,8 +213,8 @@ export const allProducts = [
     id: 3,
     brand: "Levi's",
     category: "Boxers",
-    name: "Men's Olive Boxers",
-    description: "A very nice pair of olive boxers for men",
+    name: "Men's Olive Grey Boxers",
+    description: "A very nice pair of olive grey boxers for men",
     rating: "4.5",
     price: "600",
     actualPrice: "1299",
@@ -221,18 +227,21 @@ export const allProducts = [
       oliveBoxer6,
     ],
     discount: "30",
-    color: "olive",
+    color: "olive grey",
     colorsAvailable: [
       {
-        color: "black",
+        colorName: "black",
+        colorHexCode: "black",
         productId: 1,
       },
       {
-        color: "green",
+        colorName: "blue",
+        colorHexCode: "#418189",
         productId: 2,
       },
       {
-        color: "olive",
+        colorName: "olive grey",
+        colorHexCode: "#98a089",
         productId: 3,
       },
     ],
@@ -264,15 +273,18 @@ export const allProducts = [
     color: "grey",
     colorsAvailable: [
       {
-        color: "grey",
+        colorName: "grey",
+        colorHexCode: "#737277",
         productId: 4,
       },
       {
-        color: "red",
+        colorName: "red",
+        colorHexCode: "#b42737",
         productId: 5,
       },
       {
-        color: "darkgrey",
+        colorName: "darkgrey",
+        colorHexCode: "#53525c",
         productId: 6,
       },
     ],
@@ -304,15 +316,18 @@ export const allProducts = [
     color: "red",
     colorsAvailable: [
       {
-        color: "grey",
+        colorName: "grey",
+        colorHexCode: "#737277",
         productId: 4,
       },
       {
-        color: "red",
+        colorName: "red",
+        colorHexCode: "#b42737",
         productId: 5,
       },
       {
-        color: "darkgrey",
+        colorName: "darkgrey",
+        colorHexCode: "#53525c",
         productId: 6,
       },
     ],
@@ -344,15 +359,18 @@ export const allProducts = [
     color: "darkgrey",
     colorsAvailable: [
       {
-        color: "grey",
+        colorName: "grey",
+        colorHexCode: "#737277",
         productId: 4,
       },
       {
-        color: "red",
+        colorName: "red",
+        colorHexCode: "#b42737",
         productId: 5,
       },
       {
-        color: "darkgrey",
+        colorName: "darkgrey",
+        colorHexCode: "#53525c",
         productId: 6,
       },
     ],
@@ -587,15 +605,18 @@ export const allProducts = [
     color: "lilac",
     colorsAvailable: [
       {
-        color: "#e2cddd",
+        colorName: "lilac",
+        colorHexCode: "#e2cddd",
         productId: 13,
       },
       {
-        color: "#fffbc2",
+        colorName: "yellow",
+        colorHexCode: "#fffbc2",
         productId: 14,
       },
       {
-        color: "black",
+        colorName: "black",
+        colorHexCode: "black",
         productId: 15,
       },
     ],
@@ -627,15 +648,18 @@ export const allProducts = [
     color: "yellow",
     colorsAvailable: [
       {
-        color: "#e2cddd",
+        colorName: "lilac",
+        colorHexCode: "#e2cddd",
         productId: 13,
       },
       {
-        color: "#fffbc2",
+        colorName: "yellow",
+        colorHexCode: "#fffbc2",
         productId: 14,
       },
       {
-        color: "black",
+        colorName: "black",
+        colorHexCode: "black",
         productId: 15,
       },
     ],
@@ -667,15 +691,18 @@ export const allProducts = [
     color: "black",
     colorsAvailable: [
       {
-        color: "#e2cddd",
+        colorName: "lilac",
+        colorHexCode: "#e2cddd",
         productId: 13,
       },
       {
-        color: "#fffbc2",
+        colorName: "yellow",
+        colorHexCode: "#fffbc2",
         productId: 14,
       },
       {
-        color: "black",
+        colorName: "black",
+        colorHexCode: "black",
         productId: 15,
       },
     ],
@@ -710,15 +737,18 @@ export const allProducts = [
     color: "black",
     colorsAvailable: [
       {
-        color: "black",
+        colorName: "black",
+        colorHexCode: "black",
         productId: 22,
       },
       {
-        color: "#d6e7cf",
+        colorName: "smokegreen",
+        colorHexCode: "#d6e7cf",
         productId: 23,
       },
       {
-        color: "#fdcdbd",
+        colorName: "peach",
+        colorHexCode: "#fdcdbd",
         productId: 24,
       },
     ],
@@ -749,15 +779,18 @@ export const allProducts = [
     color: "smokegreen",
     colorsAvailable: [
       {
-        color: "black",
+        colorName: "black",
+        colorHexCode: "black",
         productId: 22,
       },
       {
-        color: "#d6e7cf",
+        colorName: "smokegreen",
+        colorHexCode: "#d6e7cf",
         productId: 23,
       },
       {
-        color: "#fdcdbd",
+        colorName: "peach",
+        colorHexCode: "#fdcdbd",
         productId: 24,
       },
     ],
@@ -789,15 +822,18 @@ export const allProducts = [
     color: "peach",
     colorsAvailable: [
       {
-        color: "black",
+        colorName: "black",
+        colorHexCode: "black",
         productId: 22,
       },
       {
-        color: "#d6e7cf",
+        colorName: "smokegreen",
+        colorHexCode: "#d6e7cf",
         productId: 23,
       },
       {
-        color: "#fdcdbd",
+        colorName: "peach",
+        colorHexCode: "#fdcdbd",
         productId: 24,
       },
     ],
