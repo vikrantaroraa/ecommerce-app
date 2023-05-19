@@ -103,6 +103,8 @@ export const getFilteredData = (
       ? filteredGenderProducts
       : sortedData;
 
+  // console.log("newSortedData - data:", newSortedData);
+
   return newSortedData
     .filter(({ sizesAvailable }) =>
       showExtraSmallSize ? sizesAvailable.includes("XS") : true
