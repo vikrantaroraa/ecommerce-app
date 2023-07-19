@@ -11,6 +11,33 @@ function BillingComponent() {
     state: { cart },
   } = useCart();
 
+  const getStripePayloadBody = () => {
+    const items = cart.map((item: any) => {
+      return { id: item.id, quantity: item.quantity };
+    });
+    return items;
+  };
+
+  const makePayment = () => {
+    fetch("/create-checkout-session", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        items: getStripePayloadBody(),
+      }),
+    })
+      .then((res) => {
+        if (res.ok) return res.json();
+        return res.json().then((json) => Promise.reject(json));
+      })
+      .then(({ url }) => {
+        window.location = url;
+      })
+      .then((error) => {
+        console.log(error);
+      });
+  };
+
   const calculateCartTotal = () => {
     let cartTotal = 0;
     cart.map((item: any) => {
@@ -95,35 +122,34 @@ function BillingComponent() {
         <span>You Pay</span>
         <span>Rs. {CalculateSubTotalAfterDiscount()}</span>
       </div>
-      <button className={styles["proceed-to-buy-button"]}>
-        {currentPage === "/cart" && (
-          <Link
-            to="/shipping"
-            style={{
-              textDecoration: "none",
-              color: "#FFF",
-            }}
-          >
-            {" "}
+      {currentPage === "/cart" && (
+        <Link
+          to="/shipping"
+          style={{
+            textDecoration: "none",
+            color: "#FFF",
+            width: "100%",
+          }}
+        >
+          <button className={styles["proceed-to-buy-button"]}>
             Continue to Shipping
-          </Link>
-        )}
-        {currentPage === "/shipping" && (
-          <Link
-            to="/shipping"
-            style={{
-              textDecoration: "none",
-              color: "#FFF",
-            }}
-          >
-            {" "}
-            Continue to Checkout
-          </Link>
-        )}
-        <span>
-          <img src={proceedToBuyArrow} />
-        </span>
-      </button>
+            <span>
+              <img src={proceedToBuyArrow} />
+            </span>
+          </button>
+        </Link>
+      )}
+      {currentPage === "/shipping" && (
+        <button
+          className={styles["proceed-to-buy-button"]}
+          onClick={makePayment}
+        >
+          Continue to Payment
+          <span>
+            <img src={proceedToBuyArrow} />
+          </span>
+        </button>
+      )}
     </div>
   );
 }
