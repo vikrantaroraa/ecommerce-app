@@ -2,15 +2,23 @@ require("dotenv").config();
 // This is your test secret API key.
 const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
 const express = require("express");
+const serverless = require("serverless-http");
 var bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
+const router = express.Router();
 app.use(express.static("public"));
 app.use(bodyParser.json());
 app.use(
   cors({
     origin: "http://localhost:3000",
     // origin: "https://curious-crumble-3f54ff.netlify.app/",
+  })
+);
+
+router.get("/hello", (req, res) =>
+  res.json({
+    message: "Hello World! - from stripe server file",
   })
 );
 
@@ -128,8 +136,8 @@ const storeItems = new Map([
   ],
 ]);
 
-app.post("/create-checkout-session", async (req, res) => {
-  // console.log("Ye hai body: ", req.body);
+router.post("/create-checkout-session", async (req, res) => {
+  console.log("Ye hai body: ", req.body);
   try {
     const session = await stripe.checkout.sessions.create({
       line_items: req.body.items.map((item) => {
@@ -150,7 +158,6 @@ app.post("/create-checkout-session", async (req, res) => {
       success_url: `${YOUR_DOMAIN}`,
       cancel_url: `${YOUR_DOMAIN}`,
     });
-
     res.json({ url: session.url });
   } catch (error) {
     console.log(error.message);
@@ -158,3 +165,6 @@ app.post("/create-checkout-session", async (req, res) => {
 });
 
 app.listen(4242, () => console.log("Running on port 4242"));
+
+app.use(`/.netlify/functions/server`, router);
+module.exports.handler = serverless(app);
