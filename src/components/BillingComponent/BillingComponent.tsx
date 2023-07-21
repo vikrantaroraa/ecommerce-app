@@ -19,7 +19,7 @@ function BillingComponent() {
   };
 
   const makePayment = () => {
-    fetch("/create-checkout-session", {
+    fetch("/.netlify/functions/server/create-checkout-session", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -134,7 +134,7 @@ function BillingComponent() {
           <button className={styles["proceed-to-buy-button"]}>
             Continue to Shipping
             <span>
-              <img src={proceedToBuyArrow} />
+              <img src={proceedToBuyArrow} alt="proceed to buy" />
             </span>
           </button>
         </Link>
@@ -146,7 +146,7 @@ function BillingComponent() {
         >
           Continue to Payment
           <span>
-            <img src={proceedToBuyArrow} />
+            <img src={proceedToBuyArrow} alt="proceed to buy" />
           </span>
         </button>
       )}
