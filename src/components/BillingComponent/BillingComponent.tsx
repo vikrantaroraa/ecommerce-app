@@ -114,7 +114,7 @@ function BillingComponent() {
           <img src={orderSavingsCheckmark} alt="Order Savings Checkmark" />
         </span>
         <p>
-          Yayy! You are saving Rs.{" "}
+          Yay! You are saving Rs.{" "}
           {calculateCartDiscount() + calculateCouponDiscount()} on this order{" "}
         </p>
       </div>
