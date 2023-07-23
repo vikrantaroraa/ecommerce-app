@@ -1,6 +1,13 @@
 require("dotenv").config();
 // This is your test secret API key.
-const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
+const STRIPE_PRIVATE_KEY =
+  "sk_test_51NHC0JSJVpwTA4mqmEGDJ9Vwf0D4Hb9AIOuefwkBVT5sZweCmsvqCNXlMQ1Jc6qVm0mj6lxBZx79kdFtwKnKpd5t00gbnvdGjd";
+
+//getting API key from environment variable
+// const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
+
+//getting API key from local variable in file
+const stripe = require("stripe")(STRIPE_PRIVATE_KEY); //getting API key from environment variable
 const express = require("express");
 const serverless = require("serverless-http");
 var bodyParser = require("body-parser");
@@ -22,7 +29,11 @@ router.get("/hello", (req, res) =>
   })
 );
 
-const YOUR_DOMAIN = "http://localhost:3000";
+// for local dev environment
+// const YOUR_DOMAIN = "http://localhost:3000";
+
+// for production
+const YOUR_DOMAIN = "https://beautiful-cobbler-7d0481.netlify.app/";
 // const YOUR_DOMAIN = "https://curious-crumble-3f54ff.netlify.app/";
 
 const storeItems = new Map([
