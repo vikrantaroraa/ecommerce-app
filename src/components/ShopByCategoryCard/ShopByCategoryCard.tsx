@@ -8,7 +8,7 @@ function ShopByCategoryCard({
   return (
     <div className={styles["shop-by-category-card"]}>
       <div className={styles["hero-category-image-container"]}>
-        <img src={imageUrl} />
+        <img src={imageUrl} alt="shop by category card" />
       </div>
       <div className={styles["category-name"]}>{categoryName}</div>
     </div>

@@ -51,7 +51,7 @@ const collectionsCardDataList = [
     redirectUrl: "/",
     collectionInfo: "All gray collection to meet your gray personality",
     textAlignment: "left",
-    imageAlignment: "center",
+    imageAlignment: "right",
   },
   {
     imageSrc: tshirtCollection,
@@ -140,10 +140,10 @@ function LandingPage() {
         <div className={styles["email-subscription"]}>
           <div className={styles["text-and-email-input-container"]}>
             <div className={styles["primary-subscription-text"]}>
-              Stay tune with us for latest collection update
+              Stay tuned with us for latest collection updates
             </div>
             <div className={styles["secondary-subscription-text"]}>
-              We collect and process your personal data to better responsd to
+              We collect and process your personal data to better respond to
               your requests.
             </div>
             <div
@@ -159,7 +159,7 @@ function LandingPage() {
           </div>
           <div className={styles["subscription-hero-container"]}>
             <div className={styles["subscription-hero-image"]}>
-              <img src={subscriptionHero} />
+              <img src={subscriptionHero} alt="subscription hero icon" />
             </div>
           </div>
         </div>

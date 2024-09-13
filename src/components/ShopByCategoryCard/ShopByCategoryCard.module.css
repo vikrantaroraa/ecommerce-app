@@ -1,20 +1,23 @@
 .shop-by-category-card {
   display: flex;
   flex-direction: column;
-  /* background-color: red; */
+  background-color: lightgreen;
   height: auto;
-  width: 190px;
-  margin: 10px 10px;
+  /* width: 180px; */
+  /* margin: 10px 10px; */
   cursor: pointer;
   overflow: hidden;
+
+  border: 1px solid black;
+  /* width: 100%; */
 }
 
 .hero-category-image-container {
-  height: 190px;
-  width: 190px;
+  height: 180px;
+  width: 180px;
   border-radius: 10px;
   overflow: hidden;
-  /* background-color: yellow; */
+  background-color: yellow;
 }
 
 .hero-category-image-container img {

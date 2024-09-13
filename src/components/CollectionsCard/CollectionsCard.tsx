@@ -1,6 +1,8 @@
 import styles from "src/components/CollectionsCard/CollectionsCard.module.css";
 import { CollectionsCardProps } from "src/components/CollectionsCard/CollectionsCard.interface";
 import { Link } from "react-router-dom";
+import greyCollection from "src/assets/images/grey-collection.svg";
+import tshirtCollection from "src/assets/images/tshirt-collection.jpg";
 
 function CollectionsCard({
   collectionInfo,
@@ -31,7 +33,7 @@ function CollectionsCard({
         }}
       >
         <div className={styles["collections-image"]}>
-          <img src={imageSrc} />
+          <img src={imageSrc} alt="collections-icon" />
         </div>
       </div>
     </div>
